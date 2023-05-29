@@ -1,5 +1,6 @@
 import React from 'react'
-import './Events.css'
+import '../styles/Events.css'
+
 const Events = () => {
   return (
     <div>Events</div>

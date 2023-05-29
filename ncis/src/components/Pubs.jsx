@@ -1,5 +1,5 @@
 import React from 'react'
-import './Pubs.css'
+import '../styles/Pubs.css'
 const Pubs = () => {
   return (
     <div>Pubs</div>

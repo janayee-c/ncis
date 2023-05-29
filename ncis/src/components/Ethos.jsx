@@ -1,5 +1,5 @@
 import React from 'react'
-import './Ethos.css'
+import '../styles/Ethos.css'
 
 const Ethos = () => {
   return (

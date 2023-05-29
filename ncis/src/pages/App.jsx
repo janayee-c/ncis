@@ -1,6 +1,6 @@
 import React from 'react'
-import './App.css'
-import { About, Contact, Ethos, Events, Execs, Goals, Hero, Navbar, PS, Pubs } from './components/export'
+import '../styles/App.css'
+import { About, Contact, Ethos, Events, Execs, Goals, Hero, Navbar, PS, Pubs } from '../components/export'
 function App() {
 
   return (

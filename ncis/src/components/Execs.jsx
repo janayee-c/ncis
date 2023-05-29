@@ -1,5 +1,6 @@
 import React from 'react'
-import './Execs.css'
+import '../styles/Execs.css'
+
 const Execs = () => {
   return (
     <div>Execs</div>

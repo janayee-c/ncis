@@ -1,5 +1,5 @@
 import React from 'react'
-import './PS.css'
+import '../styles/PS.css'
 const PS = () => {
   return (
     <div>PS</div>
