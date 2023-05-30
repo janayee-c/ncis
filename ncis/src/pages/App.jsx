@@ -1,23 +1,24 @@
 import React from 'react'
-import './App.css'
-import { About, Contact, Ethos, Events, Execs, Goals, Hero, Navbar, PS, Pubs } from './components/export'
-function App() {
+import '../styles/App.css'
+import Homepage from "./Homepage.jsx"
+import Manual from "./Manual.jsx"
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+
+  // router and routes 
+
+  const router = createBrowserRouter(
+    createRoutesFromElements (
+      <Route>
+      <Route path="/" element = {<Homepage />} />
+      <Route path="manual" element = {<Manual />} />
+      </Route>
+    )
+  )
+
+  function App() {
 
   return (
-    <div>
-  
-    <Navbar></Navbar>
-    <Hero></Hero>
-    <Ethos></Ethos>
-    <About></About>
-    <Goals></Goals>
-    <PS></PS>
-    <Execs></Execs>
-    <Pubs></Pubs>
-    <Events></Events>
-    <Contact></Contact>
-    
-    </div>
+  <RouterProvider router = {router} />
   )
 }
 
