@@ -6,13 +6,13 @@ import '../styles/Manual.css'
 function Manual() {
 
     return (
-      <Tabs size='md' variant='enclosed' colorScheme='ncis.100'>
+      <Tabs isFitted size='md' variant='enclosed' colorScheme='ncis.100'>
       <TabList className='headers'>
         <Tab>Introduction</Tab>
         <Tab>Before Building</Tab>
         <Tab>During Building</Tab>
         <Tab>After Building</Tab>
-        <Tab>Case Study: NCIS</Tab>
+        <Tab>NCIS Case Study</Tab>
         <Tab>Conclusion</Tab>
       </TabList>
       <TabPanels className="content">
