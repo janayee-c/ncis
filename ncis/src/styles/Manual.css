@@ -11,3 +11,31 @@
     padding-top: 0;
     text-indent: 1.25rem;
 }
+
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 100%;
+}
+
+.page > .head, p {
+    margin-top: 3%;
+}
+
+.next {
+    margin: 5% 0;
+    margin-right: 3%;
+    float: right;
+}
+
+.back {
+    margin: 5% 0;
+    margin-left: 3%;
+    float: left;
+}
+
+
+

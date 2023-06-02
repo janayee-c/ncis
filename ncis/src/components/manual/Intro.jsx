@@ -1,27 +1,28 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Heading, Button } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
-import '../../styles/manual/Intro.css'
+
+/* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
 const Intro = () => {
   const [page, setPage] = useState(0);
 
   const renderContent = () => {
-    if (page == 0) {
-      return <section className='page'>
+    if (page === 0) {
+      return <>
       <Heading className='head'>Introduction</Heading>
     <p>Welcome to the NCIS (Nautical Crime Investigation Services) Artificial Intelligence (AI) Ethics Manual. This manual/workshop aims to provide an introduction to AI ethics, with a focus on how the topic pertains to the maritime space and its related fields. 
     </p>
     <p>As we enter an emergent age of AI development, AI becomes more and more intertwined with our lives. Particularly, in the maritime space, AI systems can be a massive help across all areas of the industry. This includes personnel, logistics, process optimization, protections (i.e ensuring law is enforced), supply chains, situational understanding, and more. Thus, regardless of your background, learning more about AI Ethics and how we can critically analyze current and future systems to ensure they perform their tasks ethically will inevitably benefit you and allow you to better navigate this shifting landscape.
     </p>
-    <p>In this manual, we will provide a general overview of AI ethics, and discuss pertinent topics such as the importance of data and understanding bias at each stage of AI development. Additionally, one of NCIS’ current AI systems, Ada, will be used as a case study to see how it fits within the modern standard of AI ethics. 
+    <p>In this manual, we will provide a general overview of AI ethics and discuss pertinent topics such as the importance of data and understanding bias at each stage of AI development. Additionally, one of NCIS’ current AI systems, Ada, will be used as a case study to see how it fits within the modern standard of AI ethics. 
     </p>
     <p><strong>We hope you're as excited to learn about ethics in AI as we are to teach you about it!
     </strong>   Before moving on, take a look at the next page for some important definitions that will come in handy while going through this manual.</p>
-    </section>
-    } else if (page == 1) {
-      return <section className='page'>
+    </>
+    } else if (page === 1) {
+      return <>
         <Heading className='head'>Definitions</Heading>
         <p><strong>Artificial Intelligence (AI) system</strong> → in a legal context, a system that uses machine learning and GENERATES output such as predictions, recommendations, or decisions influencing the environments they interact with.
 </p>
@@ -48,16 +49,18 @@ const Intro = () => {
         <p>
         <strong>Deployment</strong> → stage in the artificial intelligence lifecycle where a trained model or AI system is put into active use to perform its intended tasks or provide specific service (i.e brought into the real world for actual use)
         </p>
-        </section>
+        </>
     }
   }
 
   return (
-    <div className='intro'>
-        {renderContent()}
+    <>
+        {<section className='page'>
+    {renderContent()}
+    </section>}
       {page > 0 && <Button leftIcon={<ArrowBackIcon/>} className='back' onClick={() => setPage(page - 1)}>Back</Button>}
       {page < 1 && <Button rightIcon={<ArrowForwardIcon/>} className='next' onClick={() => setPage(page + 1)}>Next</Button>}
-    </div>
+    </>
   )
 }
 
