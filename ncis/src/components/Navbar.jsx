@@ -5,12 +5,10 @@ import {
   } from 'react-router-dom';
 
 import {
-  Button,
+  IconButton,
   Box,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
   Drawer, 
   DrawerBody, 
   DrawerFooter, 
@@ -18,6 +16,7 @@ import {
   DrawerOverlay, 
   DrawerContent,
   DrawerCloseButton, 
+ 
   Flex, 
   Text,
   List,
@@ -27,7 +26,7 @@ import {
 } from '@chakra-ui/react';
 
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 
 
 const Navbar = () => {
@@ -66,9 +65,15 @@ const Navbar = () => {
     fontSize="40px"
   >
     <Menu> 
-      <MenuButton as={Button} ref={btnRef} onClick={onOpen} rightIcon={<ChevronDownIcon />}>
-    NavBar
-      </MenuButton>
+      <IconButton
+        ref={btnRef} 
+        onClick={onOpen} 
+        variant='outline'
+        colorScheme='black'
+        size="lg"
+        aria-label="Open Dropdown"
+        icon={<HamburgerIcon />}/>
+
       <Drawer
         isOpen={isOpen}
         placement={placeDrawer()}
