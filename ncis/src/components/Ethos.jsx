@@ -3,7 +3,7 @@ import '../styles/Ethos.css'
 
 const Ethos = () => {
   return (
-    <div>Ethos</div>
+    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> ETHOS</div>
   )
 }
 

@@ -3,7 +3,7 @@ import '../styles/Events.css'
 
 const Events = () => {
   return (
-    <div>Events</div>
+    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> EVENTS </div>
   )
 }
 
