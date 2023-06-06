@@ -27,18 +27,16 @@ import {
 } from '@chakra-ui/react';
 
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react'
-
 import { ChevronDownIcon } from '@chakra-ui/icons'
-
-import { COLORS } from '../constants/themes'
 
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
-    const [isTopDrawer] = useMediaQuery('(min-width: 700px)')
+    const [isTopDrawer] = useMediaQuery('(min-width: 900px)')
+    const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full']
 
-    function determineDrawer() {
+    function placeDrawer() {
       if (isTopDrawer) {
         return 'top';
       }
@@ -47,12 +45,22 @@ const Navbar = () => {
       }
     }
 
+
+    function stackDirection() {
+      if (isTopDrawer) {
+        return 'row';
+      }
+      else {
+        return 'column';
+      }
+    }
+
   return (
     <Box
     display="flex"
     w="100%"
     backgroundColor="white"
-    height="80px"
+    height="100px"
     justifyContent="space-between"
     alignItems="center"
     fontSize="40px"
@@ -63,7 +71,7 @@ const Navbar = () => {
       </MenuButton>
       <Drawer
         isOpen={isOpen}
-        placement={determineDrawer()}
+        placement={placeDrawer()}
         onClose={onClose}
         finalFocusRef={btnRef}
       >
@@ -71,8 +79,16 @@ const Navbar = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerBody>
-            <Stack direction='row'>
-              <Link>Home</Link>
+            <Stack direction={stackDirection()} spacing={4}>
+              <Link>Ethos</Link>
+              <Link>About</Link>
+              <Link>Goals</Link>
+              <Link>Products and Services</Link>
+              <Link>Executive Team</Link>
+              <Link>Publications and Media</Link>
+              <Link>Events</Link>
+              <Link>Contact</Link>
+              <Link to="/Manual">Manual</Link>
             </Stack>
           </DrawerBody>
         </DrawerContent>

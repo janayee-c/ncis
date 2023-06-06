@@ -10,7 +10,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
     createRoutesFromElements (
       <Route>
       <Route path="/" element = {<Homepage />} />
-      <Route path="/" element = {<Manual />} />
+      <Route path="/Manual" element = {<Manual />} />
       </Route>
     )
   )

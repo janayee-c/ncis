@@ -11,3 +11,7 @@
     padding-top: 0;
     text-indent: 1.25rem;
 }
+
+#logo {
+    max-width: 300px;
+}
