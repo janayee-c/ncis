@@ -3,6 +3,7 @@ import '../styles/Navbar.css'
 import {
   Link
   } from 'react-router-dom';
+
 import {
   Button,
   Box,
@@ -18,15 +19,34 @@ import {
   DrawerContent,
   DrawerCloseButton, 
   Flex, 
-  Text
+  Text,
+  List,
+  ListItem,
+  Stack,
   
 } from '@chakra-ui/react';
 
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import { useDisclosure, useMediaQuery } from '@chakra-ui/react'
 
-import { COLORS } from '../constants/themes';;
+import { ChevronDownIcon } from '@chakra-ui/icons'
+
+import { COLORS } from '../constants/themes'
+
 
 const Navbar = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+    const [isTopDrawer] = useMediaQuery('(min-width: 700px)')
+
+    function determineDrawer() {
+      if (isTopDrawer) {
+        return 'top';
+      }
+      else {
+        return 'right';
+      }
+    }
+
   return (
     <Box
     display="flex"
@@ -38,16 +58,26 @@ const Navbar = () => {
     fontSize="40px"
   >
     <Menu> 
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+      <MenuButton as={Button} ref={btnRef} onClick={onOpen} rightIcon={<ChevronDownIcon />}>
     NavBar
       </MenuButton>
-        <MenuList>
-          <MenuItem>Download</MenuItem>
-          <MenuItem>Create a Copy</MenuItem>
-          <MenuItem>Mark as Draft</MenuItem>
-          <MenuItem>Delete</MenuItem>
-          <MenuItem>Attend a Workshop</MenuItem>
-        </MenuList>
+      <Drawer
+        isOpen={isOpen}
+        placement={determineDrawer()}
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerBody>
+            <Stack direction='row'>
+              <Link>Home</Link>
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+
+      </Drawer>
     </Menu>
   </Box>
   )
