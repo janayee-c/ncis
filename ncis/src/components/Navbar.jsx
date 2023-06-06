@@ -74,21 +74,22 @@ const Navbar = () => {
         placement={placeDrawer()}
         onClose={onClose}
         finalFocusRef={btnRef}
+        width="400px"
       >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerBody>
-            <Stack direction={stackDirection()} spacing={4}>
-              <Link>Ethos</Link>
-              <Link>About</Link>
-              <Link>Goals</Link>
-              <Link>Products and Services</Link>
-              <Link>Executive Team</Link>
-              <Link>Publications and Media</Link>
-              <Link>Events</Link>
-              <Link>Contact</Link>
-              <Link to="/Manual">Manual</Link>
+            <Stack direction={stackDirection()} spacing={2} textAlign="center" justifyContent="center">
+              <Link >ETHOS</Link>
+              <Link class="links">ABOUT</Link>
+              <Link class="links">GOALS</Link>
+              <Link class="links">PRODUCTS AND SERVICES</Link>
+              <Link class="links">EXECUTIVE TEAM</Link>
+              <Link class="links">PUBLICATIONS AND MEDIA</Link>
+              <Link class="links">EVENTS</Link>
+              <Link class="links">CONTACT</Link>
+              <Link class="links" to="/Manual">MANUAL</Link>
             </Stack>
           </DrawerBody>
         </DrawerContent>
