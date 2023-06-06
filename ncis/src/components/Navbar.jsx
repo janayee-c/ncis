@@ -8,6 +8,7 @@ import {
   IconButton,
   Box,
   Menu,
+  Img,
   MenuButton,
   Drawer, 
   DrawerBody, 
@@ -58,15 +59,18 @@ const Navbar = () => {
     <Box
     display="flex"
     w="100%"
-    backgroundColor="white"
+    backgroundColor="#F5F5F5"
     height="100px"
     justifyContent="space-between"
     alignItems="center"
     fontSize="40px"
   >
+    <Img id="logo" src={require('../images/NCIS_logo_mantra.png')}/>
     <Menu> 
       <IconButton
         ref={btnRef} 
+        edge="end"
+        float="right"
         onClick={onOpen} 
         variant='outline'
         colorScheme='black'
@@ -83,7 +87,7 @@ const Navbar = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton/>
           <DrawerBody>
             <Stack direction={stackDirection()} spacing={2} textAlign="center" justifyContent="center">
               <Link >ETHOS</Link>

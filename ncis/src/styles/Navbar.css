@@ -1,7 +1,15 @@
 :link {
     font-family: 'Beckman';
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     padding-top: 0;
     text-indent: 1.25rem;
+}
+
+#logo {
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
