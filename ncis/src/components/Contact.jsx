@@ -1,9 +1,13 @@
 import React from 'react'
 import '../styles/Contact.css'
+import { Heading } from '../components/export'
+
 
 const Contact = () => {
   return (
-    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> CONTACT </div>
+    <div> 
+      <Heading title="CONTACT"></Heading>
+    </div>
   )
 }
 

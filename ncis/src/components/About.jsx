@@ -1,9 +1,12 @@
 import React from 'react'
 import '../styles/About.css'
+import { Heading } from '../components/export'
 
 const About = () => {
   return (
-    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> ABOUT</div>
+    <div>
+    <Heading title="ABOUT"></Heading>
+    </div>
   )
 }
 

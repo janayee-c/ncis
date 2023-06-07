@@ -1,9 +1,13 @@
 import React from 'react'
 import '../styles/Ethos.css'
+import { Heading } from '../components/export'
 
 const Ethos = () => {
   return (
-    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> ETHOS</div>
+    <div>
+    <Heading title="ETHOS"></Heading>
+    
+    </div>
   )
 }
 

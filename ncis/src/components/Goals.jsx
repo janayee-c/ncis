@@ -1,8 +1,12 @@
 import React from 'react'
 import '../styles/Goals.css'
+import { Heading } from '../components/export'
+
 const Goals = () => {
   return (
-    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> GOALS </div>
+    <div>
+       <Heading title="GOALS"></Heading>
+    </div>
   )
 }
 

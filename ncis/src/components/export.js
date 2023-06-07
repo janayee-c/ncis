@@ -8,6 +8,7 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import PS from "./PS";
 import Pubs from "./Pubs";
+import Heading from "./Heading";
 
 export {
     About,
@@ -19,5 +20,6 @@ export {
     Hero,
     Navbar,
     PS,
-    Pubs
+    Pubs,
+    Heading
 }

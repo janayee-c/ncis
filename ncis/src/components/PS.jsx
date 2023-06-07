@@ -1,8 +1,12 @@
 import React from 'react'
 import '../styles/PS.css'
+import { Heading } from '../components/export'
+
 const PS = () => {
   return (
-    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> PRODUCTS & SERVICES </div>
+    <div>
+    <Heading title="PRODUCTS & SERVICES"></Heading>
+    </div>
   )
 }
 

@@ -22,18 +22,3 @@ code {
     monospace;
 }
 
-.web-heading {
-  font-family: "Beckman";
-  font-size: x-large;
-  text-align: center;
-  padding: 50px;
-  font-weight: 700;
-  text-indent: 1.25rem;
-  letter-spacing: 2px;
-}
-
-.triangle {
-  display: inline-block;
-  float: center;
-  width: 15px;
-}

@@ -1,8 +1,12 @@
 import React from 'react'
 import '../styles/Pubs.css'
+import { Heading } from '../components/export'
+
 const Pubs = () => {
   return (
-    <div className="web-heading"> <img class="triangle" src={require('../images/triangle.png')}/> PUBLICATIONS & MEDIA </div>
+    <div>
+    <Heading title="PUBLICATIONS & MEDIA"></Heading>
+    </div>
   )
 }
 
