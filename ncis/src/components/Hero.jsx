@@ -3,15 +3,6 @@ import '../styles/Hero.css';
 
 const Hero = () => {
   useEffect(() => {
-    function resizeCube() {
-      var cubeElement = document.getElementById('cube');
-      var windowHeight = window.innerHeight;
-      var cubeSize = windowHeight / 1.45; // Adjust the size ratio as needed
-      
-      cubeElement.style.width = cubeSize + 'px';
-      cubeElement.style.height = cubeSize + 'px';
-    }
-    
     function scrollAnimate() {
       window.addEventListener('scroll', function() {
         var scrollPosition = window.scrollY || window.pageYOffset;
@@ -19,22 +10,17 @@ const Hero = () => {
         var cubeElement = document.getElementById('cube');
         var refElement = document.querySelector('.ref');
         
-        cubeElement.style.transform = 'translateY(' + (-scrollPosition / 20) + 'px)';
+        cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
         refElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
       });
     }
 
-    window.addEventListener('resize', resizeCube);
-    
-    resizeCube();
     scrollAnimate();
     
-    
-
     return () => {
       window.removeEventListener('scroll', scrollAnimate);
     };
-  }, []);
+  }, []); //empty dependencies runs only on initial mount 
 
   return (
     <div className="hero">

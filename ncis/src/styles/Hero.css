@@ -5,9 +5,10 @@ img {
 .bg {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     background-color: #F5F5F5;
-    height: 700px;
+    height: 100vh;
 }
 
 .hero .bg .content {
@@ -31,6 +32,7 @@ img {
 .hero .bg .content .little {
     font-size: 18px;
     font-weight: 500;
+    transform: translate(-50%, -50%);
 }
 
 .hero .bg .welcome {
@@ -42,19 +44,28 @@ img {
     transition: 0.5s ease;
     color: white;
     cursor: pointer;
+    transform: translate(50%, 0%);
 }
 
 .hero .bg .welcome {
-    transition: 0.25s ease;
+    transition: all 0.25s ease;
     transform: translateY(0%);
   }
   
 #cube {
-    transition: 0.25s ease;
-    transform: translateY(0%);
+    width: 100vw; /* Default size */
+    height: 60wh; /* Default size */
+    transform: translateY(12.5%);
+    transition: all 0.25s ease;
+    scale: 0.8;
+    
   }
   
-.ref {
-    transition: 0.25s ease;
-    transform: translateY(0%);
+  .ref {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0); /* Initial position */
+    transition: transform 0.3s ease; /* Add transition for smooth scrolling animation */
   }
+  
