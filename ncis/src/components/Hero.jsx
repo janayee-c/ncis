@@ -25,9 +25,6 @@ const Hero = () => {
       <div className="bg">
         <img  id="cube" src={require('../images/cube.png')} alt="Cube" />
         <div className="content"></div>
-        <a className="welcome" href="#cube"> 
-        <i className="fa-solid fa-angles-down"></i>
-        </a>
       </div>
     </div>
   );

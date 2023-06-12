@@ -9,31 +9,23 @@ import {
   Box,
   Menu,
   Img,
-  MenuButton,
   Drawer, 
-  DrawerBody, 
-  DrawerFooter, 
-  DrawerHeader, 
+  DrawerBody,  
   DrawerOverlay, 
   DrawerContent,
   DrawerCloseButton, 
- 
-  Flex, 
-  Text,
-  List,
-  ListItem,
   Stack,
   
 } from '@chakra-ui/react';
 
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react'
-import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = React.useRef()
-    const [isTopDrawer] = useMediaQuery('(min-width: 900px)')
+    const btnRef = React.useRef() //uses current / mutable value 
+    const [isTopDrawer] = useMediaQuery('(min-width: 990px)')
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full']
 
     function placeDrawer() {
@@ -60,28 +52,33 @@ const Navbar = () => {
     display="flex"
     w="100%"
     backgroundColor="#F5F5F5"
-    height="200px"
+    height="300px"
     justifyContent="space-between"
     alignItems="center"
     fontSize="40px"
-  >
-    <Img id="logo" src={require('../images/ncis_test.png')}/>
+    >
+    <Img 
+        id="logo" 
+        src={require('../images/ncis_test.png')}/>
+
     <Menu> 
-      <IconButton
-        ref={btnRef} 
-        edge="end"
-        float="right"
-        onClick={onOpen} 
-        variant='outline'
-        colorScheme='black'
-        size="lg"
-        aria-label="Open Dropdown"
-        icon={<HamburgerIcon />}/>
+    <IconButton
+    ref={btnRef} 
+    edge="end"
+    float="right"
+    onClick={onOpen} 
+    variant="unstyled"
+    color="black"
+    size="xl"
+    aria-label="Open Dropdown"
+    icon={<HamburgerIcon/>}
+    className="centered-icon"
+    />
 
       <Drawer
         isOpen={isOpen}
-        placement={placeDrawer()}
         onClose={onClose}
+        placement={placeDrawer()}
         finalFocusRef={btnRef}
         width="100%"
         size="xl"

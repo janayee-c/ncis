@@ -22,57 +22,34 @@ img {
     transform: translate(-50%, -150%);
 }
 
-.hero .bg .content .title {
-    font-size: 50px;
-    font-weight: bolder;
-    color: #5B8ADC;
-    padding-bottom: 20px !important;
-}
-
-.hero .bg .content .little {
-    font-size: 18px;
-    font-weight: 500;
-    transform: translate(-50%, -50%);
-}
-
-.hero .bg .welcome {
-    font-size: 18px;
-    font-weight: 500;
-    position: absolute;
-    bottom: 12%;
-    right: 45%;
-    transition: 0.5s ease;
-    color: white;
-    cursor: pointer;
-    transform: translate(50%, 0%);
-}
   
-#cube {
-    width: 100vw; /* Default size */
-    height: 60wh; /* Default size */
-    transform: translateY(10.5%);
+#cube { /* sizing in below code */
+    margin-top: 50px;
+    transform: translateY(20%);
     transition: all 0.25s ease;
     scale: 0.8;
     
   }
 
-  @media (max-width: 800px) {
-    /* Cube size for smaller screens */
+
+  @media (max-width: 1022px) {
+    /* Cube size for medium screens */
     #cube {
-      width: 100vw;
+      width: 150vw;
+      height: 120vw; /* Adjusted height for better proportions */
+    }
+  }
+
+  @media (min-width: 1022px) and (max-width: 1400px) {
+    /* Cube size for medium screens */
+    #cube {
+      width: 120vw;
       height: 100vw; /* Adjusted height for better proportions */
     }
   }
 
-  @media (min-width: 800px) and (max-width: 1024px) {
-    /* Cube size for medium screens */
-    #cube {
-      width: 100vw;
-      height: 80vw; /* Adjusted height for better proportions */
-    }
-  }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1400px) {
     /* Cube size for larger screens  */
     #cube {
       width: 100vw;

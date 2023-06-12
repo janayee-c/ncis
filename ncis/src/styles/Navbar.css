@@ -15,4 +15,9 @@
     text-indent: 1.25rem;
 }
 
+.centered-icon {
+    transform: translateX(-150%);
+  }
+
+
 
