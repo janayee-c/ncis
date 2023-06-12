@@ -50,7 +50,7 @@ img {
 #cube {
     width: 100vw; /* Default size */
     height: 60wh; /* Default size */
-    transform: translateY(12.5%);
+    transform: translateY(10.5%);
     transition: all 0.25s ease;
     scale: 0.8;
     

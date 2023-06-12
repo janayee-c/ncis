@@ -4,10 +4,12 @@ import { Heading } from '../components/export'
 
 const Goals = () => {
   return (
-    <div>
-       <Heading title="GOALS"></Heading>
-    </div>
+  <section id="goals">
+  <div className="gcontainer">
+     <Heading title="GOALS"></Heading>
+  </div>
+</section>
   )
 }
 
-export default Goals
+export default Goals;

@@ -5,10 +5,12 @@ import { Heading } from '../components/export'
 
 const About = () => {
   return (
-    <div>
-    <Heading title="ABOUT"></Heading>
-    <p id="about">{ABOUT}</p>
-    </div>
+    <section id="about">
+      <div className="acontainer">
+         <Heading title="ABOUT"></Heading>
+         <p>{ABOUT}</p>
+      </div>
+    </section>
   )
 }
 

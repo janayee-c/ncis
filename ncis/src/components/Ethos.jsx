@@ -5,12 +5,11 @@ import { Container } from '@chakra-ui/react'
 
 const Ethos = () => {
   return (
-    <div>
-    <Heading title="ETHOS"></Heading>
-    <Container id="main">
-      
-    </Container>
-    </div>
+    <section id="ethos">
+      <div className="econtainer">
+         <Heading title="ETHOS"></Heading>
+      </div>
+    </section>
   )
 }
 
