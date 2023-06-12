@@ -56,18 +56,27 @@ img {
     
   }
 
-  @media (min-width: 1024px) {
+  @media (max-width: 800px) {
+    /* Cube size for smaller screens */
+    #cube {
+      width: 100vw;
+      height: 100vw; /* Adjusted height for better proportions */
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 1024px) {
     /* Cube size for medium screens */
+    #cube {
+      width: 100vw;
+      height: 80vw; /* Adjusted height for better proportions */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Cube size for larger screens  */
     #cube {
       width: 100vw;
       height: 60vw; /* Adjusted height for better proportions */
     }
   }
 
-  @media (max-width: 1024px) {
-    /* Cube size for medium screens */
-    #cube {
-      width: 100vw;
-      height: 100vw; /* Adjusted height for better proportions */
-    }
-  }
