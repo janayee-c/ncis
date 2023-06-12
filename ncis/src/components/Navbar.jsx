@@ -60,12 +60,12 @@ const Navbar = () => {
     display="flex"
     w="100%"
     backgroundColor="#F5F5F5"
-    height="100px"
+    height="200px"
     justifyContent="space-between"
     alignItems="center"
     fontSize="40px"
   >
-    <Img id="logo" src={require('../images/NCIS_logo_mantra.png')}/>
+    <Img id="logo" src={require('../images/ncis_test.png')}/>
     <Menu> 
       <IconButton
         ref={btnRef} 
@@ -83,13 +83,15 @@ const Navbar = () => {
         placement={placeDrawer()}
         onClose={onClose}
         finalFocusRef={btnRef}
-        width="400px"
+        width="100%"
+        size="xl"
       >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton/>
           <DrawerBody>
-            <Stack direction={stackDirection()} spacing={2} textAlign="center" justifyContent="center">
+            <Box height="100px">
+            <Stack direction={stackDirection()} spacing={0.8} textAlign="center" justifyContent="center">
               <Link >ETHOS</Link>
               <Link class="links">ABOUT</Link>
               <Link class="links">GOALS</Link>
@@ -100,6 +102,7 @@ const Navbar = () => {
               <Link class="links">CONTACT</Link>
               <Link class="links" to="/Manual">MANUAL</Link>
             </Stack>
+            </Box>
           </DrawerBody>
         </DrawerContent>
 

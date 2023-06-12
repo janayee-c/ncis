@@ -8,10 +8,8 @@ const Hero = () => {
         var scrollPosition = window.scrollY || window.pageYOffset;
         
         var cubeElement = document.getElementById('cube');
-        var refElement = document.querySelector('.ref');
-        
         cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
-        refElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
+      
       });
     }
 
@@ -25,9 +23,9 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="bg">
-        <img className="ref" id="cube" src={require('../images/cube.png')} alt="Cube" />
+        <img  id="cube" src={require('../images/cube.png')} alt="Cube" />
         <div className="content"></div>
-        <a className="ref welcome" href="#about"> 
+        <a className="welcome" href="#cube"> 
         <i className="fa-solid fa-angles-down"></i>
         </a>
       </div>

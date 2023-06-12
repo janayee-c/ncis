@@ -46,11 +46,6 @@ img {
     cursor: pointer;
     transform: translate(50%, 0%);
 }
-
-.hero .bg .welcome {
-    transition: all 0.25s ease;
-    transform: translateY(0%);
-  }
   
 #cube {
     width: 100vw; /* Default size */
@@ -60,12 +55,19 @@ img {
     scale: 0.8;
     
   }
-  
-  .ref {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(0); /* Initial position */
-    transition: transform 0.3s ease; /* Add transition for smooth scrolling animation */
+
+  @media (min-width: 1024px) {
+    /* Cube size for medium screens */
+    #cube {
+      width: 100vw;
+      height: 60vw; /* Adjusted height for better proportions */
+    }
   }
-  
+
+  @media (max-width: 1024px) {
+    /* Cube size for medium screens */
+    #cube {
+      width: 100vw;
+      height: 100vw; /* Adjusted height for better proportions */
+    }
+  }
