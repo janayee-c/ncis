@@ -33,7 +33,7 @@ img {
     font-weight: 500;
 }
 
-.hero .bg .learn {
+.hero .bg .welcome {
     font-size: 18px;
     font-weight: 500;
     position: absolute;
@@ -44,15 +44,17 @@ img {
     cursor: pointer;
 }
 
-.hero .bg .learn:hover {
-    transform: translateY(-50%);
-}
-
-.hero .bg #cube:hover {
-    transform: translateY(-5%);
-}
-
+.hero .bg .welcome {
+    transition: 0.25s ease;
+    transform: translateY(0%);
+  }
+  
+#cube {
+    transition: 0.25s ease;
+    transform: translateY(0%);
+  }
+  
 .ref {
     transition: 0.25s ease;
-    size:"500px";
-}
+    transform: translateY(0%);
+  }
