@@ -11,6 +11,7 @@ img {
     height: 100vh;
 }
 
+/* not used for content 
 .hero .bg .content {
     display: flex;
     flex-direction: column;
@@ -21,6 +22,7 @@ img {
     left: 50%;
     transform: translate(-50%, -150%);
 }
+*/
 
   
 #cube { /* sizing in below code */

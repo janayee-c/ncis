@@ -25,11 +25,11 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef() //uses current / mutable value 
-    const [isTopDrawer] = useMediaQuery('(min-width: 990px)')
+    const [isDesktopMode] = useMediaQuery('(min-width: 990px)')
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full']
 
     function placeDrawer() {
-      if (isTopDrawer) {
+      if (isDesktopMode) {
         return 'top';
       }
       else {
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
     function stackDirection() {
-      if (isTopDrawer) {
+      if (isDesktopMode) {
         return 'row';
       }
       else {

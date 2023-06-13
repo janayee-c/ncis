@@ -24,7 +24,6 @@ const Hero = () => {
     <div className="hero">
       <div className="bg">
         <img  id="cube" src={require('../images/cube.png')} alt="Cube" />
-        <div className="content"></div>
       </div>
     </div>
   );
