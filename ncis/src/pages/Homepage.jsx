@@ -5,7 +5,6 @@ function Homepage() {
 
   return (
     <div>
-  
     <Navbar></Navbar>
     <Hero></Hero>
     <Ethos></Ethos>
