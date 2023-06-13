@@ -4,9 +4,9 @@ import { Heading } from '../components/export'
 
 const PS = () => {
   return (
-    <div>
+    <section>
     <Heading title="PRODUCTS & SERVICES"></Heading>
-    </div>
+    </section>
   )
 }
 

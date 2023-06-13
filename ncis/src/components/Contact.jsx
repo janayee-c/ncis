@@ -5,9 +5,9 @@ import { Heading } from '../components/export'
 
 const Contact = () => {
   return (
-    <div> 
+    <section> 
       <Heading title="CONTACT"></Heading>
-    </div>
+    </section>
   )
 }
 

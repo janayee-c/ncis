@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import PS from "./PS";
 import Pubs from "./Pubs";
 import Heading from "./Heading";
+import EthosElement from "./EthosElement"
 
 export {
     About,
@@ -21,5 +22,6 @@ export {
     Navbar,
     PS,
     Pubs,
-    Heading
+    Heading,
+    EthosElement,
 }

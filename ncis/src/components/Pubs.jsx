@@ -4,9 +4,9 @@ import { Heading } from '../components/export'
 
 const Pubs = () => {
   return (
-    <div>
+    <section>
     <Heading title="PUBLICATIONS & MEDIA"></Heading>
-    </div>
+    </section>
   )
 }
 

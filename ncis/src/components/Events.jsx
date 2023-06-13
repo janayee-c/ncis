@@ -4,9 +4,9 @@ import { Heading } from '../components/export'
 
 const Events = () => {
   return (
-    <div>
+    <section>
       <Heading title="EVENTS"></Heading>
-    </div>
+    </section>
   )
 }
 
