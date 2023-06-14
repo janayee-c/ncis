@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { Intro, Before, During, After, Case, Conclusion } from '../components/manual/export'
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react' 
 import '../styles/Manual.css'
