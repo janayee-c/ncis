@@ -55,7 +55,7 @@ const Navbar = () => {
     display="flex"
     w="100%"
     backgroundColor="#F5F5F5"
-    height="300px"
+    height="20vh"
     justifyContent="space-between"
     alignItems="center"
     fontSize="40px"
