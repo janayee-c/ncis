@@ -2,8 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import { Heading, Button, ButtonGroup, SlideFade, useDisclosure, Box } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
-import '../../styles/manual/Before.css'
-import { Ocean } from '../../images/export'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 

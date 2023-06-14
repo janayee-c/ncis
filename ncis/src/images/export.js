@@ -8,11 +8,11 @@ import Twitter from './twitter.svg'
 import Linkedin from './linkedin.svg'
 import Location from './location.png'
 import Mail from './mail.png'
-import Capacity from './NCIS_Icons_CapacityBuilding-03-01.svg'
-import Ethical from './NCIS_Icons_EthicalTechnology-03-01.svg'
-import Ocean from './NCIS_Icons_OceanGovernance-03-01.svg'
-import Transparency from './NCIS_Icons_Transparency-03-01.svg'
-import Mantra from './NCIS_logo mantra.png'
+import Capacity from './CapacityBuilding.svg'
+import Ethical from './EthicalTechnology.svg'
+import Ocean from './OceanGovernance.svg'
+import Transparency from './Transparency.svg'
+import Mantra from './NCIS_logo_mantra.png'
 
 export {
     Cube,
