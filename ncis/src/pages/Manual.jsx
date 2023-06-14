@@ -6,8 +6,7 @@ import {
     Link
     } from 'react-router-dom';
 
-function Manual() {
-
+const Manual = () => {
     return (
       <Tabs size='md' variant='enclosed' colorScheme='ncis.100'>
         <Box>
