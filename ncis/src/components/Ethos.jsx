@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import '../styles/Ethos.css';
 
 /* Ethos Components */
@@ -9,27 +9,14 @@ import { ReactComponent as OceanGovernance } from '../images/OceanGovernance.svg
 import { ReactComponent as Transparency } from '../images/Transparency.svg';
 
 import { Heading, EthosElement } from '../components/export';
-import { Container } from '@chakra-ui/react';
+import { Container, useMediaQuery } from '@chakra-ui/react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Ethos = () => {
-  const [isMobile, setIsMobile] = useState(false); //initial state of isMobile is false
   const sliderRef = useRef(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1400); // sets object isMobile as true or false for state
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check for window
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const [isMobile] = useMediaQuery('(max-width: 1400px)')
 
   const ethosElements = [
     { component: EthicalTechnology, title: 'ETHICAL TECHNOLOGY' },

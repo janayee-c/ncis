@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/EthosElement.css";
-import { ReactComponent as CapacityBuilding } from "../images/CapacityBuilding.svg";
 
 const EthosElement = (props) => {
   const { component: EthosPicture, title, id } = props;

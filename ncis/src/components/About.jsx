@@ -7,7 +7,7 @@ import { Heading } from '../components/export'
 const About = () => {
   return (
     <section id="about">
-      <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="50px">
+      <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="3%">
         <div className="content" textAlign="center">
          <Heading title="ABOUT"></Heading>
          <p>{ABOUT}</p>
