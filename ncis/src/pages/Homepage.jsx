@@ -7,7 +7,7 @@ function Homepage() {
     <div>
     <Navbar></Navbar>
     <Hero></Hero>
-    <Ethos></Ethos>
+    <Ethos id="ethos"></Ethos>
     <About></About>
     <Goals></Goals>
     <PS></PS>
@@ -15,7 +15,6 @@ function Homepage() {
     <Pubs></Pubs>
     <Events></Events>
     <Contact></Contact>
-    
     </div>
   )
 }

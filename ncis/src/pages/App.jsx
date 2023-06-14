@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/App.css'
 import Homepage from "./Homepage.jsx"
 import Manual from "./Manual.jsx"
+import About from '../components/About';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 
   // router and routes 
@@ -11,6 +12,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
       <Route>
       <Route path="/" element = {<Homepage />} />
       <Route path="/Manual" element = {<Manual />} />
+      <Route path="/About" component={About}/>
       </Route>
     )
   )

@@ -1,12 +1,13 @@
 
 .acontainer {
     height: 40vh;
+    width: 100%;
     background-color: #F5F5F5;
     margin-bottom: 10px;
 }
 
 .content {
-    padding: 10 x;
+    padding: 10px;
     overflow-y:scroll;
     word-break: normal;
 }

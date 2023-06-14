@@ -24,17 +24,24 @@ const Ethos = () => {
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check for window 
+    handleResize(); // Initial check for window
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
+  const ethosElements = [
+    { component: EthicalTechnology, title: 'ETHICAL TECHNOLOGY' },
+    { component: OceanGovernance, title: 'OCEAN GOVERNANCE' },
+    { component: Transparency, title: 'TRANSPARENCY' },
+    { component: CapacityBuilding, title: 'CAPACITY BUILDING' },
+    { component: InformationAtHand, title: 'INFORMATION AT HAND' },
+  ];
+
   const settings = {
     dots: false,
-
-    infinite: isMobile, // infinite carousel only when in mobile mode 
+    infinite: isMobile, // infinite carousel only when in mobile mode
     speed: 500,
     slidesToShow: isMobile ? 3 : 5, // Show 3 elements on mobile, 1 element on larger screens
     slidesToScroll: 1,
@@ -42,31 +49,26 @@ const Ethos = () => {
     draggable: true,
   };
 
+  const editFourthComponent = () => {
+    // Modify the component or title of the fourth Ethos element here
+    // For example, you can change the title of the fourth element like this:
+    const updatedElements = [...ethosElements];
+    updatedElements[3].title = "20px";
+    // Set the updated array back to the state or wherever it's being used
+  };
+
   return (
     <section id="ethos">
       <Container className="econtainer" maxW="100%">
         <Heading title="ETHOS" />
-        <div
-          className="slider-container"
-        >
+        <div className="slider-container ethos-slider-container">
           <Slider {...settings} ref={sliderRef}>
-            <div>
-            <EthosElement component={EthicalTechnology} title="ETHICAL TECHNOLOGY" className="ethical-tech"></EthosElement>
-            </div>
-            <div>
-            <EthosElement component={OceanGovernance} title="OCEAN GOVERNANCE" ></EthosElement>
-            </div>
-            <div>
-            <EthosElement component={Transparency} title="TRANSPARENCY" ></EthosElement>
-            </div>
-            <div>
-            <EthosElement component={CapacityBuilding} title="CAPACITY BUILDING" ></EthosElement>
-            </div>
-            <div>
-            <EthosElement component={InformationAtHand} title="INFORMATION AT HAND" ></EthosElement>
-            </div>
+            {ethosElements.map((element, index) => (
+              <div>
+                <EthosElement id={index} component={element.component} title={element.title}></EthosElement>
+              </div>
+            ))}
           </Slider>
-
         </div>
       </Container>
     </section>

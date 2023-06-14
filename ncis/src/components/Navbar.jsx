@@ -25,11 +25,11 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef() //uses current / mutable value 
-    const [isDesktopMode] = useMediaQuery('(min-width: 990px)')
+    const [isTopDrawer] = useMediaQuery('(min-width: 990px)')
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full']
 
     function placeDrawer() {
-      if (isDesktopMode) {
+      if (isTopDrawer) {
         return 'top';
       }
       else {
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
     function stackDirection() {
-      if (isDesktopMode) {
+      if (isTopDrawer) {
         return 'row';
       }
       else {
@@ -47,8 +47,11 @@ const Navbar = () => {
       }
     }
 
+    
+
   return (
     <Box
+
     display="flex"
     w="100%"
     backgroundColor="#F5F5F5"
@@ -89,7 +92,13 @@ const Navbar = () => {
           <DrawerBody>
             <Box height="100px">
             <Stack direction={stackDirection()} spacing={0.8} textAlign="center" justifyContent="center">
-              <Link >ETHOS</Link>
+              
+            <a class="links" href="#ethos" onClick={(e) => {
+  e.preventDefault();
+  onClose();
+  document.getElementById("ethos").scrollIntoView({ behavior: "smooth" });
+}}>ETHOS</a>
+
               <Link class="links">ABOUT</Link>
               <Link class="links">GOALS</Link>
               <Link class="links">PRODUCTS AND SERVICES</Link>
