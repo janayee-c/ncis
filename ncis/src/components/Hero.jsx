@@ -4,14 +4,12 @@ import '../styles/Hero.css';
 const Hero = () => {
   useEffect(() => {
     function scrollAnimate() {
-      window.addEventListener('scroll', function() {
-        var scrollPosition = window.scrollY || window.pageYOffset;
-        
-        var cubeElement = document.getElementById('cube');
-        cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
-      
-      });
+      var scrollPosition = window.scrollY || window.pageYOffset;
+      var cubeElement = document.getElementById('cube');
+      cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
     }
+
+    window.addEventListener('scroll', scrollAnimate())
 
     scrollAnimate();
     
