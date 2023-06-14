@@ -9,8 +9,8 @@ import {
 function Manual() {
 
     return (
-      <Tabs size='md' variant='enclosed' colorScheme='ncis.100'>
-        <Box>
+      <Tabs isFitted size='md' variant='enclosed' colorScheme='ncis.100'>
+         <Box>
         <Link to="/"><img id="logo" src={require('../images/NCIS_logo_mantra.png')}/></Link>
         </Box>
       <TabList className='headers'>
@@ -18,7 +18,7 @@ function Manual() {
         <Tab>Before Building</Tab>
         <Tab>During Building</Tab>
         <Tab>After Building</Tab>
-        <Tab>Case Study: NCIS</Tab>
+        <Tab>NCIS Case Study</Tab>
         <Tab>Conclusion</Tab>
       </TabList>
       <TabPanels className="content">
