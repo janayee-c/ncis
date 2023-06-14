@@ -1,12 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "../styles/EthosElement.css";
+import { ReactComponent as CapacityBuilding } from "../images/CapacityBuilding.svg";
 
 const EthosElement = (props) => {
-  const { component: EthosPicture, title, id } = props; //MyComponent is the reassigned variable to prop with name 'component'
+  const { component: EthosPicture, title, id } = props;
+  const etContainerStyle = id === 0 ? { marginTop: "-12px", alignItems:"center", justifyContent:"center"} : {}; //styles specific for Ethical Technology component
+  const etImageStyle = (id === 0)  ? { scale:"80%", marginBottom:"-5px"} : {}; //styles specific for Ethical Technology component
+
   return (
-    <div className="ethos-element-container">
+    <div className="ethos-element-container" style={etContainerStyle}>
       <div className="ethos-element-content">
-        <EthosPicture style={id === 0 ? {width: '18vh', height: '8.80vh'} : {}}/>
+        <EthosPicture style={etImageStyle}/>
         <h2 className="caption">{title}</h2>
       </div>
     </div>

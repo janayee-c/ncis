@@ -48,15 +48,7 @@ const Ethos = () => {
     swipeToSlide: true,
     draggable: true,
   };
-
-  const editFourthComponent = () => {
-    // Modify the component or title of the fourth Ethos element here
-    // For example, you can change the title of the fourth element like this:
-    const updatedElements = [...ethosElements];
-    updatedElements[3].title = "20px";
-    // Set the updated array back to the state or wherever it's being used
-  };
-
+  
   return (
     <section id="ethos">
       <Container className="econtainer" maxW="100%">
