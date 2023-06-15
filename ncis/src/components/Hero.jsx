@@ -11,15 +11,8 @@ const Hero = () => {
   useEffect(() => {
     window.addEventListener('scroll', scrollAnimate);
 
-    const handleBeforeUnload = () => {
-      window.removeEventListener('scroll', scrollAnimate);
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
     return () => {
       window.removeEventListener('scroll', scrollAnimate);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
 
