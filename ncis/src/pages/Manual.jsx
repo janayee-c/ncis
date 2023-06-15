@@ -9,7 +9,7 @@ import {
 
 const Manual = () => {
     return (
-      <Tabs size='md' variant='enclosed' colorScheme='ncis.100'>
+      <Tabs size='md' variant='enclosed' colorScheme='ncis.100' className='tabs'>
         <Box>
         <Link to="/"><img id="logo" src={require('../images/NCIS_logo_mantra.png')}/></Link>
         </Box>

@@ -8,25 +8,8 @@
 
 .content {
     padding: 10px;
-    overflow-y:scroll;
+    overflow-y: scroll;
     word-break: normal;
-}
-
-p {
-    font-family: "Montserrat";
-    font-size:  15px;
-    text-align: justify;
-    text-indent: 0px;
-    letter-spacing: 1.5px;
-    line-height: 25px;
-    font-weight:lighter;
-    padding-right: 12%;
-    padding-left: 12%;
-    padding-top: 10px;
-    padding-bottom: 60px;
-    margin-bottom: 10px;
-    width: auto;
-
 }
 
 .bg {

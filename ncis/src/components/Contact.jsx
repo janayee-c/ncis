@@ -6,7 +6,7 @@ import { Heading } from '../components/export'
 const Contact = () => {
   return (
     <section> 
-      <Heading title="CONTACT"></Heading>
+      <Heading center={true} title="CONTACT"></Heading>
     </section>
   )
 }

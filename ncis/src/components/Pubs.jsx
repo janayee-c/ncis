@@ -5,7 +5,7 @@ import { Heading } from '../components/export'
 const Pubs = () => {
   return (
     <section>
-    <Heading title="PUBLICATIONS & MEDIA"></Heading>
+    <Heading center={true} title="PUBLICATIONS & MEDIA"></Heading>
     </section>
   )
 }

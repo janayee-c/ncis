@@ -9,7 +9,7 @@ const About = () => {
     <section id="about">
       <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="3%">
         <div className="content" textAlign="center">
-         <Heading title="ABOUT"></Heading>
+         <Heading center={true} title="ABOUT"></Heading>
          <p>{ABOUT}</p>
         </div>
       </Container>

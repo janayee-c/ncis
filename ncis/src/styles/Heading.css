@@ -1,7 +1,6 @@
 .web-heading {
   font-family: "Beckman";
   font-size: 30px;
-  text-align: center;
   padding: 20px;
   font-weight: 600;
   text-indent: 5px;
@@ -12,4 +11,8 @@
   display: inline-block;
   float: center;
   width: 17px;
+}
+
+.centered {
+  text-align: center;
 }

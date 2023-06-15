@@ -1,7 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Heading, Button, SlideFade, useDisclosure, Box } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
+import { Page } from './export'
 import '../../styles/manual/Before.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
@@ -11,6 +12,15 @@ const Before = () => {
   const [prevId, setPrevId] = useState(0);
   const [text, setText] = useState('');
   const { isOpen, onToggle } = useDisclosure();
+
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    scrollToTop();
+  }, [page]);
+
 
   const renderCollapse = (id) => {
     if (!isOpen) {
@@ -36,17 +46,12 @@ const Before = () => {
 
   const renderContent = () => {
     if (page === 0) {
-      return (<>
-      <Heading as='h4' size='md' className='head'>Section 1: Common Considerations</Heading>
-      <p>Before we begin, it is important to clarify the definition of AI; AI is the simulation of human intelligence in machines (particularly computer systems) such that these machines can complete typically human associated tasks. Each AI system has data it is trained on, live data input returning a prediction, and another system/person taking some action on the prediction. </p>
-      <p>For example, Youtube uses similar user data and serves predictions for recommended watches to which the user can choose to interact. AI is capable of amazing things, and can complete tasks that would take humans months or even years to complete in a fraction of the time. That being said, the process of building these AI systems requires a lot of careful consideration. As we all know, with great power comes great responsibility, and we must be conscientious in preventing harm to stakeholders in the project.</p>
-      {/*<img alt='' src={Ocean}></img>*/}
-    </>)
+      return (
+        <Page title="BEFORE BUILDING AI SYSTEMS" sub="Section 1: Common Considerations" text={["Before we begin, it is important to clarify the definition of AI; AI is the simulation of human intelligence in machines (particularly computer systems) such that these machines can complete typically human associated tasks. Each AI system has data it is trained on, live data input returning a prediction, and another system/person taking some action on the prediction.", "For example, Youtube uses similar user data and serves predictions for recommended watches to which the user can choose to interact. AI is capable of amazing things, and can complete tasks that would take humans months or even years to complete in a fraction of the time. That being said, the process of building these AI systems requires a lot of careful consideration. As we all know, with great power comes great responsibility, and we must be conscientious in preventing harm to stakeholders in the project."]}></Page>
+)
     } else if (page === 1) {
       return (<>
-      <Heading as='h4' size='md' className='head'>Section 1: Common Considerations</Heading>
-        <p>By laying the necessary groundwork, we can better ensure we are being proactive in creating ethical AI. You don’t want to heavily invest in developing an AI system only to have to go back to the drawing board because you realized your dataset was biased or the AI itself doesn’t comply with policies or regulations! </p>
-        <p>There are many ways to approach AI ethics, including Big “E” ethics and little “e” ethics, each of which cover different domains of AI ethics. More generally, common themes in AI ethics currently include a human centric focus on accountability, fairness/non-discrimination (ensure bias is not harmful if it does exist, i.e equitable), transparency and explainability, privacy/security, and reliability. It is pertinent to keep these topics in mind when building AI and each of these characteristics will help make your system more ethical and helpful. Click each of the buttons below to learn more about the characteristics.</p>
+      <Page title="BEFORE BUILDING AI SYSTEMS" sub="Section 1: Common Considerations" text={["By laying the necessary groundwork, we can better ensure we are being proactive in creating ethical AI. You don’t want to heavily invest in developing an AI system only to have to go back to the drawing board because you realized your dataset was biased or the AI itself doesn’t comply with policies or regulations!", "There are many ways to approach AI ethics, including Big “E” ethics and little “e” ethics, each of which cover different domains of AI ethics. More generally, common themes in AI ethics currently include a human centric focus on accountability, fairness/non-discrimination (ensure bias is not harmful if it does exist, i.e equitable), transparency and explainability, privacy/security, and reliability. It is pertinent to keep these topics in mind when building AI and each of these characteristics will help make your system more ethical and helpful. Click each of the buttons below to learn more about the characteristics."]}></Page>
         <section className='page_collapses'>
         <Button variant={prevId === 1 ? 'solid' : 'outline'} onClick={() => renderCollapse(1)}>Accountability</Button>
         <Button variant={prevId === 2 ? 'solid' : 'outline'} onClick={() => renderCollapse(2)}>Fairness</Button>
@@ -55,11 +60,10 @@ const Before = () => {
         <Button variant={prevId === 5 ? 'solid' : 'outline'} onClick={() => renderCollapse(5)}>Reliability</Button>
         </section>
         <SlideFade in={isOpen} offsetY='20px'>
-        <Box
-          p='40px'
-          color='white'
+        <Box className="text-box"
+        backgroundColor="#F5F5F5"
+          p='40px'color='black'
           mt='4'
-          bg='facebook.600'
           rounded='md'
           shadow='md'
         >
@@ -69,16 +73,15 @@ const Before = () => {
       <p>One more important note to make is human involvement in these AI systems. Humans are undoubtedly still needed to oversee the processes of AI because no matter how advanced or reliable AI is, they can oftentimes still make mistakes. It is important to train users on how to properly use these AI and treat them as useful tools, rather than a replacements!</p>
         </>)
     } else if (page === 2) {
-      return (<>
-      <Heading as='h4' size='md' className='head'>Section 2: Frameworks</Heading>
-        </>)
+      return (
+      <Page title="BEFORE BUILDING AI SYSTEMS" sub="Section 2: Frameworks"></Page>
+      )
     }
   }
 
   return (
     <>
     <section className='page'>
-         <Heading className='head'>Before Building AI Systems</Heading> 
          {renderContent()}
     </section>
       {page > 0 && <Button leftIcon={<ArrowBackIcon/>} className='back' onClick={() => setPage(page - 1)}>Back</Button>}

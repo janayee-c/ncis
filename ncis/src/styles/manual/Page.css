@@ -1,0 +1,11 @@
+.layout {
+    display: flex;
+    align-items: center;
+}
+
+.layout-graphic {
+   width: 40%;
+   height: 40%;
+   margin-top: 5%
+
+}

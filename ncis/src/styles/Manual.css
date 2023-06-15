@@ -1,3 +1,4 @@
+
 .headers {
     font-family: 'Beckman';
     margin: 3%;
@@ -16,7 +17,6 @@
     max-width: 300px;
 }
 
-
 .page {
     display: flex;
     flex-direction: column;
@@ -24,8 +24,9 @@
     height: 100%;
 }
 
-.page > .head, p {
-    margin-top: 3%;
+.page > .head, p, .text-box {
+    margin: 3% 0;
+    line-height: 1.8rem;
 }
 
 .next {
@@ -40,5 +41,7 @@
     float: left;
 }
 
-
+.tabs {
+    margin-top: 2%
+}
 
