@@ -8,8 +8,8 @@ const About = () => {
   return (
     <section id="about">
       <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="3%">
+      <Heading title="ABOUT"></Heading>
         <div className="content" textAlign="center">
-         <Heading title="ABOUT"></Heading>
          <p>{ABOUT}</p>
         </div>
       </Container>
