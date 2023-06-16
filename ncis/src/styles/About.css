@@ -13,6 +13,7 @@
   
   .content {
     padding: 10px;
+<<<<<<< HEAD
     word-break: break-word;
     max-height: 90%;
     display: flex;
@@ -40,3 +41,14 @@
     
   }
   
+=======
+    overflow-y: scroll;
+    word-break: normal;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+>>>>>>> b2e8df8276248a3078d2c998f3c95f78254548b1

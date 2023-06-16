@@ -38,9 +38,15 @@ const Ethos = () => {
   
   return (
     <section id="ethos">
+<<<<<<< HEAD
       <Container className="econtainer" maxW="100%" padding="5%">
         <Heading title="ETHOS" />
         <div className="slider-container ethos-slider-container" >
+=======
+      <Container className="econtainer" maxW="100%">
+        <Heading center={true} title="ETHOS" />
+        <div className="slider-container ethos-slider-container">
+>>>>>>> b2e8df8276248a3078d2c998f3c95f78254548b1
           <Slider {...settings} ref={sliderRef}>
             {ethosElements.map((element, index) => (
               <div>

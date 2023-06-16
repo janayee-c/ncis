@@ -8,7 +8,7 @@ img {
     align-items: center;
     position: relative;
     background-color: #F5F5F5;
-    height: 100vh;
+    height: 90vh;
 }
 
 /* not used for content 
@@ -26,10 +26,12 @@ img {
 
   
 #cube { /* sizing in below code */
-    margin-top: 10vh;
-    transform: translateY(20%);
+    transform: translateY(10%);
     transition: all 0.25s ease;
     scale: 0.8;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
     
   }
 
@@ -37,25 +39,16 @@ img {
   @media (max-width: 1022px) {
     /* Cube size for small screens */
     #cube {
-      width: 150vw;
-      height: 75vh; /* Adjusted height for better proportions */
+      width: 60%;
+      height: 60%; /* Adjusted height for better proportions */
     }
   }
 
   @media (min-width: 1022px) and (max-width: 1400px) {
     /* Cube size for medium screens */
     #cube {
-      width: 120vw;
-      height: 70vh; /* Adjusted height for better proportions */
-    }
-  }
-
-
-  @media (min-width: 1400px) {
-    /* Cube size for larger screens  */
-    #cube {
-      width: 80vw;
-      height: 110vh; /* Adjusted height for better proportions */
+      width: 70%;
+      height: 70%; /* Adjusted height for better proportions */
     }
   }
 

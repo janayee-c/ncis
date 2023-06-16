@@ -10,6 +10,10 @@ const About = () => {
       <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="3%">
       <Heading title="ABOUT"></Heading>
         <div className="content" textAlign="center">
+<<<<<<< HEAD
+=======
+         <Heading center={true} title="ABOUT"></Heading>
+>>>>>>> b2e8df8276248a3078d2c998f3c95f78254548b1
          <p>{ABOUT}</p>
         </div>
       </Container>

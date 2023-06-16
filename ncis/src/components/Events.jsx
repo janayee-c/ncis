@@ -5,7 +5,7 @@ import { Heading } from '../components/export'
 const Events = () => {
   return (
     <section>
-      <Heading title="EVENTS"></Heading>
+      <Heading center={true} title="EVENTS"></Heading>
     </section>
   )
 }
