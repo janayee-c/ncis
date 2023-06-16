@@ -1,4 +1,5 @@
 import Cube from './cube.png'
+import Conclusion from './Conclusion.png'
 import Dyhia from './Dyhia.png'
 import Sogol from './Sogol.png'
 import iGoals from './goals-diagram_iphone.png'
@@ -16,6 +17,7 @@ import Mantra from './NCIS_logo_mantra.png'
 
 export {
     Cube,
+    Conclusion,
     Dyhia,
     Sogol,
     iGoals,
