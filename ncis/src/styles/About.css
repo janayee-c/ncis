@@ -22,12 +22,11 @@
   
   p {
     font-family: "Montserrat";
-    line-height: 20px;
-    font-weight: bolder;
+    line-height: 1em;
+    font-weight: bold;
     font-size: 0.75em; /* Relative font size based on viewport width */
     text-align: justify;
     text-indent: 0px;
-    letter-spacing: 1.5px;
     padding-left: 3vh;
     padding-right: 3vh;
     margin: 1vh;
