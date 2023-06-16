@@ -9,8 +9,8 @@ const About = () => {
     <section id="about">
       <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="3%">
       <Heading title="ABOUT" center={true} ></Heading>
-        <div className="content" textAlign="center">
-         <p>{ABOUT}</p>
+        <div className="about-content" textAlign="center">
+         <p className="about-txt">{ABOUT}</p>
         </div>
       </Container>
     </section>

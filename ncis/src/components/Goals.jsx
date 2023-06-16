@@ -5,14 +5,14 @@ import { Container, useMediaQuery } from '@chakra-ui/react';
 
 const Goals = () => {
   const [isDesktopMode] = useMediaQuery('(min-width: 1200px)');
-  const desktopGoals = require('../images/ncis-goals-diagram.png');
-  const mobileGoals = require('../images/goals-diagram_iphone.png');
+  const desktopImg = require('../images/ncis-goals-diagram.png');
+  const mobileImg = require('../images/goals-diagram_iphone.png');
 
   function chooseImage() {
     if (isDesktopMode) {
-      return desktopGoals;
+      return desktopImg;
     } else {
-      return mobileGoals;
+      return mobileImg;
     }
   }
 

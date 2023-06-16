@@ -7,11 +7,11 @@
   
   @media (max-width: 400px) {
     .acontainer {
-      height: auto; /* Change to auto to allow it to grow as needed */
+      height: auto; /* Change to auto to allow text to grow as needed */
     }
   }
   
-  .content {
+  .about-content {
     padding: 10px;
     word-break: break-word;
     max-height: 90%;
@@ -20,16 +20,17 @@
     justify-content: center;
   }
   
-  p {
+ .about-txt{
     font-family: "Montserrat";
     line-height: 20px;
-    font-weight: bolder;
+    font-weight: 500;
     font-size: 0.75em; /* Relative font size based on viewport width */
     text-align: justify;
     text-indent: 0px;
     letter-spacing: 1.5px;
-    padding-left: 3vh;
-    padding-right: 3vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 3vh;
     margin: 1vh;
     width: 100%;
     display: block;
@@ -37,6 +38,5 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    
   }
   
