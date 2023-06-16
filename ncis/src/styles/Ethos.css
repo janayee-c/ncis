@@ -1,5 +1,5 @@
 .econtainer {
-    height: 50vh;
+    height: 70vh;
     background-color: white;
     margin-bottom: 10px;
     text-align: center;
@@ -8,5 +8,5 @@
 
 .slider-container {
     align-items: center;
-    padding: 120px;
+    padding: 15vh;
 }

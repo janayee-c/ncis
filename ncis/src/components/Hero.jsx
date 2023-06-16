@@ -5,8 +5,11 @@ const Hero = () => {
   const scrollAnimate = () => {
     var scrollPosition = window.scrollY || window.pageYOffset;
     var cubeElement = document.getElementById('cube');
-    cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)';
+    cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)'; 
   };
+
+  /* scrollAnimate must be defined before useEffect() or else a new reference to scrollAnimate is defined 
+  each time and the original is not unmounted */
 
   useEffect(() => {
     window.addEventListener('scroll', scrollAnimate);

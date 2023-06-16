@@ -1,19 +1,42 @@
-
 .acontainer {
-    height: 40vh;
+    min-height: 50vh; /* Set a minimum height to ensure it doesn't collapse completely */
     width: 100%;
     background-color: #F5F5F5;
     margin-bottom: 10px;
-}
-
-.content {
+  }
+  
+  @media (max-width: 400px) {
+    .acontainer {
+      height: auto; /* Change to auto to allow it to grow as needed */
+    }
+  }
+  
+  .content {
     padding: 10px;
-    overflow-y: scroll;
-    word-break: normal;
-}
-
-.bg {
+    word-break: break-word;
+    max-height: 90%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    position: relative;
-}
+  }
+  
+  p {
+    font-family: "Montserrat";
+    line-height: 20px;
+    font-weight: bolder;
+    font-size: 0.75em; /* Relative font size based on viewport width */
+    text-align: justify;
+    text-indent: 0px;
+    letter-spacing: 1.5px;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin: 1vh;
+    width: 100%;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+  }
+  
