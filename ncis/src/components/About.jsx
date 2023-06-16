@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section id="about">
       <Container className="acontainer" maxWidth="100%" maxHeight="auto" padding="3%">
-      <Heading title="ABOUT"></Heading>
+      <Heading title="ABOUT" center={true} ></Heading>
         <div className="content" textAlign="center">
          <p>{ABOUT}</p>
         </div>
