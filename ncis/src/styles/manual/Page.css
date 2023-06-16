@@ -6,6 +6,9 @@
 .layout-graphic {
    width: 40%;
    height: 40%;
-   margin-top: 5%
+   max-width: 400px;
+   max-height: 400px;
+   margin-top: 5%;
+   margin-left: 3%;
 
 }
