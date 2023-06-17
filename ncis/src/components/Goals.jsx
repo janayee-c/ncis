@@ -4,7 +4,7 @@ import { Heading } from '../components/export';
 import { Container, useMediaQuery } from '@chakra-ui/react';
 
 const Goals = () => {
-  const [isDesktopMode] = useMediaQuery('(min-width: 1200px)');
+  const [isDesktopMode] = useMediaQuery('(min-width: 750px)');
   const desktopImg = require('../images/ncis-goals-diagram.png');
   const mobileImg = require('../images/goals-diagram_iphone.png');
 

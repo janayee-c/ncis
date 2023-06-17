@@ -16,7 +16,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Ethos = () => {
   const sliderRef = useRef(null);
-  const [isMobile] = useMediaQuery('(max-width: 1400px)')
+  const [isMedium] = useMediaQuery('(max-width: 1200px)')
+  const [isSmall] = useMediaQuery('(max-width: 750px)')
 
   const ethosElements = [
     { component: EthicalTechnology, title: 'ETHICAL TECHNOLOGY' },
@@ -28,9 +29,9 @@ const Ethos = () => {
 
   const settings = {
     dots: false,
-    infinite: isMobile, // infinite carousel only when in mobile mode
+    infinite: isMedium, // infinite carousel only when in mobile mode
     speed: 500,
-    slidesToShow: isMobile ? 3 : 5, // Show 3 elements on mobile, 1 element on larger screens
+    slidesToShow: isMedium ? ( isSmall ? 1 : 3 ) : 5, // Show 3 elements on mobile, 5 elements on larger screens
     slidesToScroll: 1,
     swipeToSlide: true,
     draggable: true,
@@ -40,7 +41,7 @@ const Ethos = () => {
     <section id="ethos">
       <Container className="econtainer" maxW="100%" padding="5%">
         <Heading title="ETHOS" center={true} />
-        <div className="slider-container ethos-slider-container" >
+        <div className="slider-container" >
           <Slider {...settings} ref={sliderRef}>
             {ethosElements.map((element, index) => (
               <div>

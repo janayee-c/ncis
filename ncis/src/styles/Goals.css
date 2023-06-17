@@ -1,10 +1,12 @@
 
 .goal-container {
-    height: 65vh;
+    height: 80vh;
     width: 100%;
     background-color: white;
     justify-content: center;
-    padding-top: 30px;
+    margin-bottom: 0em;
+    padding-top: 3%;
+    border: 0em;
   }
 
   .img-container {
@@ -13,18 +15,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 15px;
-    padding-top: 30px;
+    margin-bottom: 0em;
+    padding-top: 2%;
+    border: 0em;
   }
 
   .desktop-image {
-    max-width: 75%;
-    max-height: 60%;
+    width: 80%;
+    height: 90%;
   }
+
+
+  @media (max-width: 1000px) {
+    /* Goal Image size for smaller desktop screen */
+    .desktop-image {
+      width: 45em;
+      height: 15em; /* Adjusted height for better proportions */
+    }
+  }
+
+
   
   .mobile-image {
-    max-width: 90%;
-    max-height: 100%;
+    max-width: 40%;
+    max-height: 80%;
     width: auto;
     height: auto;
   }
