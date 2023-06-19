@@ -14,6 +14,7 @@ import Ethical from './EthicalTechnology.svg'
 import Ocean from './OceanGovernance.svg'
 import Transparency from './Transparency.svg'
 import Mantra from './NCIS_logo_mantra.png'
+import Splash from './test.mp4'
 
 export {
     Cube,
@@ -31,5 +32,6 @@ export {
     Ethical,
     Ocean,
     Transparency,
-    Mantra
+    Mantra,
+    Splash
 }
