@@ -6,9 +6,11 @@ import '../styles/Manual.css'
 import {
     Link
     } from 'react-router-dom';
+import SplashScreen from '../components/SplashScreen'
 
 const Manual = () => {
     return (
+      <>
       <Tabs size='md' variant='enclosed' colorScheme='ncis.100' className='tabs'>
         <Box>
         <Link to="/"><img id="logo" src={require('../images/NCIS_logo_mantra.png')}/></Link>
@@ -44,6 +46,7 @@ const Manual = () => {
         </TabPanel> 
       </TabPanels>
     </Tabs>
+    </>
     )
   }
   

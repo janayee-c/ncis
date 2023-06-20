@@ -9,7 +9,8 @@ import Navbar from "./Navbar";
 import PS from "./PS";
 import Pubs from "./Pubs";
 import Heading from "./Heading";
-import EthosElement from "./EthosElement"
+import EthosElement from "./EthosElement";
+import SplashScreen from "./SplashScreen";
 
 export {
     About,
@@ -24,4 +25,5 @@ export {
     Pubs,
     Heading,
     EthosElement,
+    SplashScreen
 }
