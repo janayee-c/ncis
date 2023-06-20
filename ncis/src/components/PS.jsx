@@ -5,7 +5,7 @@ import { Container } from '@chakra-ui/react'
 
 const PS = () => {
   return (
-    <section>
+    <section id="products-section">
     <Container className="ps-container" maxW="100%">
     <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
     </Container>

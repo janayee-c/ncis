@@ -4,7 +4,7 @@ import { Heading } from '../components/export'
 
 const Execs = () => {
   return (
-    <section>
+    <section id="execs-section">
     <Heading center={true} title="EXECUTIVE TEAM"></Heading>
     </section>
   )

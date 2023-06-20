@@ -5,7 +5,7 @@ import { Heading } from '../components/export'
 
 const Contact = () => {
   return (
-    <section> 
+    <section id="contact-section"> 
       <Heading center={true} title="CONTACT"></Heading>
     </section>
   )

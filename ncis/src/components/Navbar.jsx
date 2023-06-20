@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Navbar.css'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import {
   Link
   } from 'react-router-dom';
@@ -92,21 +93,41 @@ const Navbar = () => {
           <DrawerBody>
             <Box height="100px">
             <Stack direction={stackDirection()} spacing={0.8} textAlign="center" justifyContent="center">
-              
-            <a class="links" href="#ethos" onClick={(e) => {
-  e.preventDefault();
-  onClose();
-  document.getElementById("ethos").scrollIntoView({ behavior: "smooth" });
-}}>ETHOS</a>
 
-              <Link class="links">ABOUT</Link>
-              <Link class="links">GOALS</Link>
-              <Link class="links">PRODUCTS AND SERVICES</Link>
-              <Link class="links">EXECUTIVE TEAM</Link>
-              <Link class="links">PUBLICATIONS AND MEDIA</Link>
-              <Link class="links">EVENTS</Link>
-              <Link class="links">CONTACT</Link>
-              <Link class="links" to="/Manual">MANUAL</Link>
+              <ScrollLink className="slink" to="ethos-section" 
+              smooth={true} offset={-50} onClick={onClose}>ETHOS
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="about-section" 
+              smooth={true} offset={-50} onClick={onClose}>ABOUT
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="goals-section" 
+              smooth={true} offset={-50} onClick={onClose}>GOALS
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="products-section" 
+              smooth={true} offset={-50} onClick={onClose}>PRODUCTS & SERVICES
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="execs-section" 
+              smooth={true} offset={-50} onClick={onClose}>EXECUTIVE TEAM
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="publications-section" 
+              smooth={true} offset={-50} onClick={onClose}>PUBLICATIONS & MEDIA
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="events-section" 
+              smooth={true} offset={-50} onClick={onClose}>EVENTS 
+              </ScrollLink>
+
+              <ScrollLink className="slink" to="contact-section" 
+              smooth={true} offset={-50} onClick={onClose}>CONTACT
+              </ScrollLink>
+
+              <Link class="slink" to="/Manual">MANUAL</Link>
+              
             </Stack>
             </Box>
           </DrawerBody>

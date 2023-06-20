@@ -12,7 +12,7 @@ function Homepage() {
     <SplashScreen></SplashScreen>
     <Navbar></Navbar>
     <Hero></Hero>
-    <Ethos id="ethos"></Ethos> 
+    <Ethos></Ethos> 
     <About></About>
     <Goals></Goals>
     <PS></PS>

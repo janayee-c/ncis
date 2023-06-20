@@ -38,11 +38,11 @@ const Ethos = () => {
   };
   
   return (
-    <section id="ethos">
+    <section id="ethos-section">
       <Container className="econtainer" maxW="100%" padding="5%">
-        <Heading title="ETHOS" center={true} />
+      <Heading id="ethos-heading" title="ETHOS" center={true} />
         <div className="slider-container" >
-          <Slider {...settings} ref={sliderRef}>
+          <Slider  {...settings} ref={sliderRef}>
             {ethosElements.map((element, index) => (
               <div>
                 <EthosElement id={index} component={element.component} title={element.title}></EthosElement>
