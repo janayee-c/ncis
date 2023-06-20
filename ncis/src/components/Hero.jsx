@@ -1,3 +1,4 @@
+import { Container } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 import '../styles/Hero.css';
 
@@ -20,11 +21,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero">
+    <section id="hero-section">
       <div className="bg">
         <img id="cube" src={require('../images/cube.png')} alt="Cube" />
       </div>
-    </div>
+    </section>
   );
 };
 

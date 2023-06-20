@@ -25,12 +25,17 @@ const Navbar = () => {
 
   const [activeLink, setActiveLink] = useState(null);
 
+
   function handleHoverColour(link) {
     setActiveLink(link);
   }
 
   function handleResetColour() {
     setActiveLink(null);
+  }
+
+  function closeDrawer() {
+    onClose();
   }
 
   return (
@@ -42,20 +47,21 @@ const Navbar = () => {
       justifyContent="space-between"
       alignItems="center"
       fontSize="40px"
+      onMouseEnter={closeDrawer}
     >
       <Img id="logo" src={require('../images/ncis_test.png')} />
 
       <Menu>
         <IconButton
           ref={btnRef}
+          icon={<HamburgerIcon />}
           edge="end"
           float="right"
-          onClick={onOpen}
+          onMouseEnter={onOpen}
           variant="unstyled"
           color="black"
           size="xl"
           aria-label="Open Dropdown"
-          icon={<HamburgerIcon />}
           className="centered-icon"
         />
 
@@ -66,12 +72,14 @@ const Navbar = () => {
           finalFocusRef={btnRef}
           width="100%"
           size="xl"
+          isLocked={false}
         >
-          <DrawerOverlay />
+          <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
             <DrawerBody>
-              <Box height="100px">
+              <Box height="100px"
+              >
                 <Stack
                   direction={isTopDrawer ? 'row' : 'column'}
                   spacing={0.8}
@@ -194,6 +202,7 @@ const Navbar = () => {
             </Box>
           </DrawerBody>
         </DrawerContent>
+        </DrawerOverlay>
 
       </Drawer>
     </Menu>

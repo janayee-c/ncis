@@ -8,47 +8,33 @@ img {
     align-items: center;
     position: relative;
     background-color: #F5F5F5;
-    height: 90vh;
+    height: 80vh;
 }
 
-/* not used for content 
-.hero .bg .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -150%);
-}
-*/
 
   
 #cube { /* sizing in below code */
     transform: translateY(10%);
     transition: all 0.25s ease;
-    scale: 0.8;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    
+    scale: 1;
+    width: 40em;
+    height: 40em;  
   }
 
 
   @media (max-width: 1022px) {
     /* Cube size for small screens */
     #cube {
-      width: 60%;
-      height: 60%; /* Adjusted height for better proportions */
+      width: 30em;
+      height: 30em; /* Adjusted height for better proportions */
     }
   }
 
   @media (min-width: 1022px) and (max-width: 1400px) {
     /* Cube size for medium screens */
     #cube {
-      width: 70%;
-      height: 70%; /* Adjusted height for better proportions */
+      width: 40em;
+      height: 40em; /* Adjusted height for better proportions */
     }
   }
 
