@@ -6,7 +6,7 @@ function Homepage() {
 
   return (
     <>
-    <video width="500" height="500" controls autoPlay>
+    <video width="500" height="500" muted autoPlay>
     <source src={Splash} type="video/mp4" />
     Your browser does not support the video tag.
 </video> 
