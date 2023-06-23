@@ -15,6 +15,7 @@ import Ocean from './OceanGovernance.svg'
 import Transparency from './Transparency.svg'
 import Mantra from './NCIS_logo_mantra.png'
 import Splash from './test.mp4'
+import Framework from './Deloitte AI Framework.png'
 
 export {
     Cube,
@@ -33,5 +34,6 @@ export {
     Ocean,
     Transparency,
     Mantra,
-    Splash
+    Splash,
+    Framework,
 }

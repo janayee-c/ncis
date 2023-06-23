@@ -1,13 +1,13 @@
-.page_collapses {
+.page_collapses, .page_collapses2 {
     margin: 2% 0;
     display: flex;
     justify-content: space-around;
 }
 
-.text-box {
+.text-box, .text-box2 {
+    height: 100%;
     font-family: "Montserrat";
     line-height: 1em;
-    font-weight: bold;
     font-size: 0.75em; /* Relative font size based on viewport width */
     text-align: justify;
     text-indent: 0px;
@@ -21,4 +21,32 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     
+}
+
+a {
+    font-weight: bold;
+}
+
+.vert-container {
+    display: flex;
+    gap: 4%;
+
+}
+
+.page_collapses2 {
+    flex-direction: column;
+    height: 300px;
+
+}
+
+.page_collapses2 > * {
+    margin-bottom: 10px;
+}
+
+.accordion {
+    font-size: 0.75em;
+}
+
+.accordion_heading {
+    font-weight: bold;
 }
