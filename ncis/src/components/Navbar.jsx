@@ -155,7 +155,7 @@ const Navbar = () => {
                     offset={-50}
                     onClick={onClose}
                   >
-                    EXECS
+                    EXECUTIVE TEAM
                   </ScrollLink>
 
                   <ScrollLink

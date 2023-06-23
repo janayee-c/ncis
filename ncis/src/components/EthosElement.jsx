@@ -3,7 +3,7 @@ import "../styles/EthosElement.css";
 
 const EthosElement = (props) => {
   const { component: EthosPicture, title, id } = props;
-  const etContainerStyle = id === 0 ? { marginTop: "-3%", alignItems:"center", justifyContent:"center"} : {}; //styles specific for Ethical Technology component
+  const etContainerStyle = id === 0 ? { marginTop: "-8%", alignItems:"center", justifyContent:"center"} : {}; //styles specific for Ethical Technology component
   const etImageStyle = (id === 0)  ? { scale:"70%", marginBottom:"-5px"} : {}; //styles specific for Ethical Technology component
 
   return (
