@@ -2,14 +2,14 @@ import React from "react";
 import "../styles/EthosElement.css";
 
 const EthosElement = (props) => {
-  const { component: EthosPicture, title, id } = props;
-  const etContainerStyle = id === 0 ? { marginTop: "-8%", alignItems:"center", justifyContent:"center"} : {}; //styles specific for Ethical Technology component
-  const etImageStyle = (id === 0)  ? { scale:"70%", marginBottom:"-5px"} : {}; //styles specific for Ethical Technology component
+  const { source, title, id } = props;
+  const etElementStyle = (id === 0)  ? "et-content" : "ethos-element-content" ; //styles specific for Ethical Technology content (img & caption)
+  const etImageStyle = (id === 0)  ? "et-img" : "" ;
 
   return (
-    <div className="ethos-element-container" style={etContainerStyle}>
-      <div className="ethos-element-content">
-        <EthosPicture style={etImageStyle}/>
+    <div className="ethos-element-container">
+      <div className={etElementStyle}>
+        <img className={etImageStyle} src={source}></img>
         <h2 className="caption">{title}</h2>
       </div>
     </div>

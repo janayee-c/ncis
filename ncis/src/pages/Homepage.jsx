@@ -9,7 +9,7 @@ function Homepage() {
   return (
     <>
     <div>
-    <SplashScreen></SplashScreen>
+    {/* <SplashScreen></SplashScreen> */}
     <Navbar></Navbar>
     <Hero></Hero>
     <Ethos></Ethos> 

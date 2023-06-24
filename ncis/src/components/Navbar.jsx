@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../styles/Navbar.css';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Link } from 'react-router-dom';
@@ -13,13 +13,16 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Stack,
-} from '@chakra-ui/react';
+  sizes,
+  Collapse } 
+  from '@chakra-ui/react';
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef(); //uses current / mutable value
+  const btnRef = useRef(); //uses current / mutable value
+  const drawerRef= useRef();
   const [isTopDrawer] = useMediaQuery('(min-width: 990px)');
   const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full'];
 
@@ -35,10 +38,11 @@ const Navbar = () => {
   }
 
   function closeDrawer() {
-    onClose();
+    onClose()
   }
 
   return (
+    <section id="navbar">
     <Box
       display="flex"
       w="100%"
@@ -47,9 +51,9 @@ const Navbar = () => {
       justifyContent="space-between"
       alignItems="center"
       fontSize="40px"
-      onMouseEnter={closeDrawer}
     >
       <Img id="logo" src={require('../images/ncis_test.png')} />
+      
 
       <Menu>
         <IconButton
@@ -70,12 +74,13 @@ const Navbar = () => {
           onClose={onClose}
           placement={isTopDrawer ? 'top' : 'right'}
           finalFocusRef={btnRef}
-          width="100%"
-          size="xl"
+          width= "100%"
+          size= {isTopDrawer ? "xl" : "xs"}
           isLocked={false}
+          ref={drawerRef}
+          className="drawer-transition"  
         >
-          <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent onMouseLeave={onClose}>
             <DrawerCloseButton />
             <DrawerBody>
               <Box height="100px"
@@ -202,11 +207,10 @@ const Navbar = () => {
             </Box>
           </DrawerBody>
         </DrawerContent>
-        </DrawerOverlay>
-
       </Drawer>
     </Menu>
   </Box>
+  </section>
   )
 }
 
