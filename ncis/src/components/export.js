@@ -25,5 +25,5 @@ export {
     Pubs,
     Heading,
     EthosElement,
-    SplashScreen
+    SplashScreen,
 }

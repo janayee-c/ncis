@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/About.css'
-import { ABOUT } from '../constants/texts.js'
+import { ABOUT } from "../constants/export"
 import { Container } from '@chakra-ui/react'
 import { Heading } from '../components/export'
 

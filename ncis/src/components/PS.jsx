@@ -4,6 +4,12 @@ import { Heading } from '../components/export'
 import { Container } from '@chakra-ui/react'
 
 const PS = () => {
+
+  const productPanel = [
+    {title: "Ava", }
+
+  ]
+
   return (
     <section id="products-section">
     <Container className="ps-container" maxW="100%">

@@ -31,7 +31,7 @@ const Ethos = () => {
     swipeToSlide: true,
     draggable: true,
     autoplay: isMedium,
-    autoplaySpeed: 5000
+    autoplaySpeed: 4500
 
   };
   
