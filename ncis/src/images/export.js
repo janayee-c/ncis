@@ -14,7 +14,7 @@ import Ethical from './EthicalTechnology.svg'
 import Ocean from './OceanGovernance.svg'
 import Transparency from './Transparency.svg'
 import Information from "./InformationAtHand.svg"
-import Logo from './NCIS_logo_mantra.png'
+import Mantra from './NCIS_logo_mantra.png'
 import Splash from './test.mp4'
 import Framework from './Deloitte AI Framework.png'
 
