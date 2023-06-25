@@ -1,5 +1,11 @@
 .ps-container {
     background-color: whitesmoke;
-    height: 50vh;
-    padding-top: 30px;
+    height: 60vh;
+    padding-top: 30px;  /* how far heading down */
+    align-items: center;
+    flex-direction: row;
+}
+
+.inactiveProductPanel {
+    padding: 60px;
 }

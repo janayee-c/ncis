@@ -17,6 +17,9 @@ import Information from "./InformationAtHand.svg"
 import Mantra from './NCIS_logo_mantra.png'
 import Splash from './test.mp4'
 import Framework from './Deloitte AI Framework.png'
+import Edith from "./edith.png"
+import Hava from "./hava.png"
+import Grace from "./grace.png"
 
 export {
     Cube,
@@ -38,4 +41,7 @@ export {
     Mantra,
     Splash,
     Framework,
+    Edith,
+    Grace,
+    Hava,
 }
