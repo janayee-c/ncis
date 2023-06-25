@@ -7,7 +7,7 @@ import HAVA from "../images/export"
 
 
 const OneProduct = (props) => {
-    const {name, imgSource, row, col } = props; 
+    const {name, imgSource, row, col, desc, isSelected, onClick, onHover } = props; 
 
     const productStyle = {
         gridRow: row,
@@ -15,9 +15,11 @@ const OneProduct = (props) => {
     }
 
     return (
-        <Box maxW="30%" className="product-container" style={productStyle}>
+        <Box maxW="30%" className={`product-container" ${isSelected ? 'selected' : ''}`}
+            style={productStyle}
+            onClick={onClick}>
             <img className="product-icon" src={imgSource} objectFit={"cover"}></img>
-            <h2 className="product-name">{name}</h2>
+            <h2 onMouseEnter={onHover} className="product-name">{name}</h2>
         </Box>
     );
 }

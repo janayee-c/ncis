@@ -1,8 +1,6 @@
 .product-container {
     height: 200px;
     align-items: center;
-    min-width: 180px;
-
 }
 
 .product-icon {
@@ -27,4 +25,7 @@
     font-family: 'Beckman';
     size: 18px; 
     
+}
+
+.selected {
 }

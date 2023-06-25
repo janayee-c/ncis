@@ -6,6 +6,31 @@
     flex-direction: row;
 }
 
+.panelContainer {
+    padding: 100px;
+}
+
+.relative-wrapper {
+    position: absolute;
+
+}
+
 .inactiveProductPanel {
+    margin:0;
+    align-self:center;
+}
+
+.activeProductPanel {
+    transform: translate(-10%);
     padding: 60px;
+    background-color: whitesmoke;
+    position: absolute;
+    
+}
+
+.fade-out {
+    opacity: 0; /* Adjust the opacity value to control the level of fading */
+    transform: translateY(-50%) 0.5 ease;
+    transition: opacity 1s ease; /* Add transition effect for smooth fading */
+    
 }
