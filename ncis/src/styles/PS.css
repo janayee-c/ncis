@@ -20,17 +20,27 @@
     align-self:center;
 }
 
-.activeProductPanel {
-    transform: translate(-10%);
-    padding: 60px;
-    background-color: whitesmoke;
-    position: absolute;
-    
-}
 
 .fade-out {
     opacity: 0; /* Adjust the opacity value to control the level of fading */
     transform: translateY(-50%) 0.5 ease;
     transition: opacity 1s ease; /* Add transition effect for smooth fading */
     
+}
+
+.panelContainer {
+  padding: 100px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.transform-up .inactiveProductPanel {
+  opacity: 0;
+}
+
+.transform-up .activeProductPanel {
+  transform: translateY(-100%);
+  padding: 60px;
+  background-color: whitesmoke;
+  position: absolute;
 }

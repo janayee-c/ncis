@@ -43,9 +43,9 @@ const PS = () => {
     <Container className="ps-container" maxW="100%">
     <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
 
-    <Container className="panelContainer" maxW="100%">
+    <Container maxW="100%" className={`panelContainer ${activePanelVisible ? 'transform-up' : ''}`}>
 
-    <div className={`inactiveProductPanel ${handlePanelVision()}`} maxW="60%"> 
+    <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
     <Grid templateColumns="1fr 1fr 1fr" justifyItems="center" gap={1} padding="10px">
     {productPanel.map((product, index) => (
 
@@ -65,14 +65,12 @@ const PS = () => {
 
 
       {activePanelVisible && ( /* use && to make rest of rendering true */
-      <div className="relative-wrapper">
         <div className="activeProductPanel" maxW="100%">
           <div className="panel-content">
             <p>{selectedProduct.desc}</p>
               <button onClick={closePanel}> X </button>
             </div>
           </div>
-      </div>
         )}
     </Container>
     </Container>
