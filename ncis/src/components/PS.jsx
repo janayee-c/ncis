@@ -37,9 +37,9 @@ const PS = () => {
     if (activePanelVisible) {
        if (selectedProduct === product) {
         if (selectedProduct.index === 0 ) {
-          return "translateRight"; //translate Hava right, Grace and Edith left 
+          return "translateRight"; //translate Hava right
         } else {
-          return "translateLeft";
+          return "translateLeft"; //translate Grace and Edith left 
        }
       } else {
         return "fade-out";

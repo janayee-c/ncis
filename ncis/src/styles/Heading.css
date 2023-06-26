@@ -5,6 +5,7 @@
   font-weight: 600;
   text-indent: 5px;
   letter-spacing: 4px;
+  z-index: 150; 
 }
 
 .triangle {
