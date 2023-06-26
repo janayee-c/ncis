@@ -8,11 +8,8 @@
 
 .panelContainer {
     padding: 100px;
-}
-
-.relative-wrapper {
-    position: absolute;
-
+    transition-duration: 5s;
+    transition-timing-function: ease-in-out;
 }
 
 .inactiveProductPanel {
@@ -20,27 +17,43 @@
     align-self:center;
 }
 
+.activeProductPanel {
+    align-items: center; 
+    display: inline-flex;
+    text-align: center;
+}
+
+.activePanelContent {
+    width: 60%;
+    text-align: center; 
+}
+
 
 .fade-out {
-    opacity: 0; /* Adjust the opacity value to control the level of fading */
-    transform: translateY(-50%) 0.5 ease;
+    opacity: 0; 
+    transform: translateY(-50%) 0.5 ease; /* remove the elment from pannel */ 
     transition: opacity 1s ease; /* Add transition effect for smooth fading */
     
 }
 
-.panelContainer {
-  padding: 100px;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+.translateRight {
+    transform: translateX(60px);
+    transition-duration: 4s;
 }
 
-.transform-up .inactiveProductPanel {
+.panelSwitch .inactiveProductPanel {
   opacity: 0;
+  transition: opacity 3s ease;
 }
 
-.transform-up .activeProductPanel {
-  transform: translateY(-100%);
-  padding: 60px;
-  background-color: whitesmoke;
-  position: absolute;
+.panelSwitch .activeProductPanel {
+
+    padding: 60px;
+    background-color: whitesmoke;
+    position: absolute;
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 3s; 
+    transition-timing-function: ease; 
+      
 }

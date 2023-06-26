@@ -22,13 +22,13 @@
   
  .about-txt{
     font-family: "Montserrat";
-    line-height: 20px;
+    line-height: 25px;
     font-weight: 590;
-    font-size: 0.75em; /* Relative font size based on viewport width */
+    font-size: 1em; /* Relative font size based on viewport width */
     text-align: justify;
     text-indent: 0px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 3%;
     margin: 1vh;
     width: 100%;

@@ -9,7 +9,7 @@ import OneProduct from "./OneProduct"
 const PS = () => {
 
   const [activePanelVisible, setActivePanelVisible] = React.useState(false)
-  const [selectedProduct, setSelectedProduct] = React.useState(null)
+  const [selectedProduct, setSelectedProduct] = React.useState(null) //ref functionality for product 
 
 
 
@@ -25,17 +25,28 @@ const PS = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product); 
     setActivePanelVisible(true); 
-    return ( (product === selectedProduct)) ? "hide-product" : ""
   }
+
 
   const closePanel = () => {
     setSelectedProduct(null); 
     setActivePanelVisible(false); 
   }
 
-  const handlePanelVision = () => {
-    return activePanelVisible ? 'fade-out' : '';
-  };
+  const handlePanelVision = (product) => {
+    if (activePanelVisible) {
+       if (selectedProduct === product) {
+        if (selectedProduct.index === 0 ) {
+          return "translateRight"; //translate Hava right, Grace and Edith left 
+        } else {
+          return "translateLeft";
+       }
+      } else {
+        return "fade-out";
+      }
+    }
+   return ""; 
+  }
 
 
   return (
@@ -43,12 +54,11 @@ const PS = () => {
     <Container className="ps-container" maxW="100%">
     <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
 
-    <Container maxW="100%" className={`panelContainer ${activePanelVisible ? 'transform-up' : ''}`}>
+    <Container maxW="100%" className={`panelContainer ${activePanelVisible ? 'panelSwitch' : ''}`}>
 
     <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
     <Grid templateColumns="1fr 1fr 1fr" justifyItems="center" gap={1} padding="10px">
     {productPanel.map((product, index) => (
-
               <OneProduct
               key={index}
               name={product.name}
@@ -57,6 +67,7 @@ const PS = () => {
               col={product.col}
               onClick = { () => handleProductClick(product)}
               isSelected={selectedProduct === product} 
+              className={handlePanelVision(product)}
               ></OneProduct>
             ))}
     
@@ -66,7 +77,7 @@ const PS = () => {
 
       {activePanelVisible && ( /* use && to make rest of rendering true */
         <div className="activeProductPanel" maxW="100%">
-          <div className="panel-content">
+          <div className="activePanelContent">
             <p>{selectedProduct.desc}</p>
               <button onClick={closePanel}> X </button>
             </div>
@@ -75,7 +86,7 @@ const PS = () => {
     </Container>
     </Container>
     </section>
-  )
-}
+    )
+  };
 
-export default PS
+export default PS;
