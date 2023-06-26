@@ -11,6 +11,7 @@ import Pubs from "./Pubs";
 import Heading from "./Heading";
 import EthosElement from "./EthosElement";
 import SplashScreen from "./SplashScreen";
+import OneProduct from "./OneProduct"; 
 
 export {
     About,
@@ -25,5 +26,6 @@ export {
     Pubs,
     Heading,
     EthosElement,
-    SplashScreen
+    SplashScreen,
+    OneProduct,
 }

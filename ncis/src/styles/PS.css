@@ -1,5 +1,59 @@
 .ps-container {
     background-color: whitesmoke;
-    height: 50vh;
-    padding-top: 30px;
+    height: 60vh;
+    padding-top: 30px;  /* how far heading down */
+    align-items: center;
+    flex-direction: row;
+}
+
+.panelContainer {
+    padding: 100px;
+    transition-duration: 5s;
+    transition-timing-function: ease-in-out;
+}
+
+.inactiveProductPanel {
+    margin:0;
+    align-self:center;
+}
+
+.activeProductPanel {
+    align-items: center; 
+    display: inline-flex;
+    text-align: center;
+}
+
+.activePanelContent {
+    width: 60%;
+    text-align: center; 
+}
+
+
+.fade-out {
+    opacity: 0; 
+    transform: translateY(-50%) 0.5 ease; /* remove the elment from pannel */ 
+    transition: opacity 1s ease; /* Add transition effect for smooth fading */
+    
+}
+
+.translateRight {
+    transform: translateX(60px);
+    transition-duration: 4s;
+}
+
+.panelSwitch .inactiveProductPanel {
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+.panelSwitch .activeProductPanel {
+
+    padding: 60px;
+    background-color: whitesmoke;
+    position: absolute;
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 3s; 
+    transition-timing-function: ease; 
+      
 }

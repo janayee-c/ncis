@@ -2,17 +2,16 @@ import React from 'react';
 import '../styles/Goals.css';
 import { Heading } from '../components/export';
 import { Container, useMediaQuery } from '@chakra-ui/react';
+import { mobileGoals, desktopGoals } from '../images/export';
 
 const Goals = () => {
   const [isDesktopMode] = useMediaQuery('(min-width: 750px)');
-  const desktopImg = require('../images/ncis-goals-diagram.png');
-  const mobileImg = require('../images/goals-diagram_iphone.png');
 
   function chooseImage() {
     if (isDesktopMode) {
-      return desktopImg;
+      return desktopGoals;
     } else {
-      return mobileImg;
+      return mobileGoals;
     }
   }
 
