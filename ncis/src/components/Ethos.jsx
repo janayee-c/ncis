@@ -37,7 +37,7 @@ const Ethos = () => {
   
   return (
     <section>
-    <section id="ethos-section" className="ethos-container">
+    <section id="ethos-section" className="diag-container">
       </section>
       <Container className="econtainer" maxW="100%">
       <Heading id="ethos-heading" title="ETHOS" center={true} />
