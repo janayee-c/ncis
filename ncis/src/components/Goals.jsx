@@ -5,7 +5,7 @@ import { Container, useMediaQuery } from '@chakra-ui/react';
 import { mobileGoals, desktopGoals } from '../images/export';
 
 const Goals = () => {
-  const [isDesktopMode] = useMediaQuery('(min-width: 750px)');
+  const [isDesktopMode] = useMediaQuery('(min-width: 850px)');
 
   function chooseImage() {
     if (isDesktopMode) {

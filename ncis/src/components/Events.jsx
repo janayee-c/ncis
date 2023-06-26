@@ -4,6 +4,7 @@ import { Heading } from '../components/export'
 
 const Events = () => {
   return (
+    
     <section id="events-section">
       <Heading center={true} title="EVENTS"></Heading>
     </section>
