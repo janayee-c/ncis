@@ -1,4 +1,4 @@
-.ethos-container {
+.diag-container {
     height: 60vh;
 }
 .slider-container {
@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.ethos-container::before {
+.diag-container::before {
     content: "";
     display: block;
     position: relative;
@@ -32,6 +32,6 @@
 .econtainer {
     z-index: 200;
     position: relative;
-    transform:translateY(-130%);
+    transform: translateY(-130%);
     max-height: 300px;
 }
