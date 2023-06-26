@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Heading, Button, Collapse, SlideFade, useDisclosure, Box, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { Page } from './export'
-import { Framework } from '../../images/export'
+import { Framework, Before as Intro } from '../../images/export'
 import '../../styles/manual/Before.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
@@ -74,7 +74,7 @@ const Before = () => {
   const renderContent = () => {
     if (page === 0) {
       return (
-        <Page title="BEFORE BUILDING AI SYSTEMS" sub="Section 1: Common Considerations" text={["Before we begin, it is important to clarify the definition of AI; AI is the simulation of human intelligence in machines (particularly computer systems) such that these machines can complete typically human associated tasks. Each AI system has data it is trained on, live data input returning a prediction, and another system/person taking some action on the prediction.", "For example, Youtube uses similar user data and serves predictions for recommended watches to which the user can choose to interact. AI is capable of amazing things, and can complete tasks that would take humans months or even years to complete in a fraction of the time. That being said, the process of building these AI systems requires a lot of careful consideration. As we all know, with great power comes great responsibility, and we must be conscientious in preventing harm to stakeholders in the project."]}></Page>
+        <Page title="BEFORE BUILDING AI SYSTEMS" sub="Section 1: Common Considerations" image={Intro} text={["Before we begin, it is important to clarify the definition of AI; AI is the simulation of human intelligence in machines (particularly computer systems) such that these machines can complete typically human associated tasks. Each AI system has data it is trained on, live data input returning a prediction, and another system/person taking some action on the prediction.", "For example, Youtube uses similar user data and serves predictions for recommended watches to which the user can choose to interact. AI is capable of amazing things, and can complete tasks that would take humans months or even years to complete in a fraction of the time. That being said, the process of building these AI systems requires a lot of careful consideration. As we all know, with great power comes great responsibility, and we must be conscientious in preventing harm to stakeholders in the project."]}></Page>
 )
     } else if (page === 1) {
       return (<>

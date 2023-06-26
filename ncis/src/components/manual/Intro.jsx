@@ -23,12 +23,18 @@ const Intro = () => {
   const renderContent = () => {
     if (page === 0) {
       return <>
-      <Page image={Cube} title="INTRODUCTION" text={["Welcome to the NCIS (Nautical Crime Investigation Services) Artificial Intelligence (AI) Ethics Manual. This manual/workshop aims to provide an introduction to AI ethics, with a focus on how the topic pertains to the maritime space and its related fields.", "As we enter an emergent age of AI development, AI becomes more and more intertwined with our lives. Particularly, in the maritime space, AI systems can be a massive help across all areas of the industry. This includes personnel, logistics, process optimization, protections (i.e ensuring law is enforced), supply chains, situational understanding, and more. Thus, regardless of your background, learning more about AI Ethics and how we can critically analyze current and future systems to ensure they perform their tasks ethically will inevitably benefit you and allow you to better navigate this shifting landscape.",
-    "In this manual, we will provide a general overview of AI ethics and discuss pertinent topics such as the importance of data and understanding bias at each stage of AI development. Additionally, one of NCIS’ current AI systems, Ada, will be used as a case study to see how it fits within the modern standard of AI ethics.", "We hope you're as excited to learn about ethics in AI as we are to teach you about it! Before moving on, take a look at the next page for some important definitions that will come in handy while going through this manual.",]}></Page>
+      <Heading title="INTRODUCTION"></Heading>
+      <section className="intro-flex">
+      <section>
+        <p>Welcome to the NCIS (Nautical Crime Investigation Services) Artificial Intelligence (AI) Ethics Manual. This manual/workshop aims to provide an introduction to AI ethics, with a focus on how the topic pertains to the maritime space and its related fields.", "As we enter an emergent age of AI development, AI becomes more and more intertwined with our lives. Particularly, in the maritime space, AI systems can be a massive help across all areas of the industry. This includes personnel, logistics, process optimization, protections (i.e ensuring law is enforced), supply chains, situational understanding, and more. Thus, regardless of your background, learning more about AI Ethics and how we can critically analyze current and future systems to ensure they perform their tasks ethically will inevitably benefit you and allow you to better navigate this shifting landscape."</p>
+        <p>In this manual, we will provide a general overview of AI ethics and discuss pertinent topics such as the importance of data and understanding bias at each stage of AI development. Additionally, one of NCIS’ current AI systems, Ada, will be used as a case study to see how it fits within the modern standard of AI ethics.", "We hope you're as excited to learn about ethics in AI as we are to teach you about it! Before moving on, take a look at the next page for some important definitions that will come in handy while going through this manual.</p>
+      </section>
+      <img className='floating layout-graphic' alt="intro cube" src={ Cube }></img>
+      </section>
     </>
     } else if (page === 1) {
       return <>
-        <Heading title='DEFINITIONS'>Definitions</Heading>
+        <Heading title='DEFINITIONS'></Heading>
         <p><strong>Artificial Intelligence (AI) system</strong> → in a legal context, a system that uses machine learning and GENERATES output such as predictions, recommendations, or decisions influencing the environments they interact with.
 </p>
         <p><strong>AI life cycle</strong> → refers to the various stages involved in the development, deployment, and maintenance of an artificial intelligence system, encompassing the entire lifespan of an AI project from the initial ideation and data gathering to the ongoing monitoring and improvement of the deployed AI system

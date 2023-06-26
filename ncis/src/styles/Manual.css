@@ -21,11 +21,14 @@
     flex-direction: column;
     overflow: scroll;
     height: 100%;
+    padding: 2%;
+    padding-right: 3%;
 }
 
 .page > .head, p, .text-box {
     margin: 3% 0;
     line-height: 1.8rem;
+    padding-right: 5%;
     
 }
 
@@ -45,3 +48,20 @@
     margin-top: 2%
 }
 
+
+.intro-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.floating { 
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0); }
+    50%  { transform: translate(0, 8%); }
+    100%   { transform: translate(0, -0%); }   
+}

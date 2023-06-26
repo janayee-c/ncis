@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { Page } from './export'
+import { After as Conc } from '../../images/export'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
@@ -25,7 +26,7 @@ const After = () => {
         {/* Add content for two biases */}
         </>)
     } else if (page === 1) {
-      return(<Page title='AFTER AI SYSTEM DEVELOPMENT' sub='Bias and Looking Ahead' text={["As laws around AI change and are refined, it is crucial to also ensure our AI systems are up to date and still comply with the modern standard. Because AI is still relatively new in a legal sense, laws around AI are rapidly changing and what may be considered acceptable one day may not be the next.", "Some currently emerging trends in regulations include more privacy protection, enforcing developers to reflect on AI and its usefulness/ethical implications at more points of developments, and augmenting and enhancing data regulation. That being said, these trends may also shift eventually and it is up to the individual to keep up with the AI policies that pertain to their system."]}></Page>)
+      return(<Page title='AFTER AI SYSTEM DEVELOPMENT' sub='Bias and Looking Ahead' image={Conc} text={["As laws around AI change and are refined, it is crucial to also ensure our AI systems are up to date and still comply with the modern standard. Because AI is still relatively new in a legal sense, laws around AI are rapidly changing and what may be considered acceptable one day may not be the next.", "Some currently emerging trends in regulations include more privacy protection, enforcing developers to reflect on AI and its usefulness/ethical implications at more points of developments, and augmenting and enhancing data regulation. That being said, these trends may also shift eventually and it is up to the individual to keep up with the AI policies that pertain to their system."]}></Page>)
     } 
 }
 

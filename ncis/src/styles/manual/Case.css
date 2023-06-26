@@ -3,8 +3,15 @@ ul li {
     list-style-type: square;
 }
 
+.system {
+    width: 20%;
+    height: 20%;
+}
 
-
+.ada {
+    width: 15%;
+    height: 15%;
+}
 .questions > * {
     margin-bottom: 2%;
     font-size: 0.85em;
