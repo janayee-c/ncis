@@ -15,7 +15,7 @@ const OneProduct = (props) => {
     }
 
     return (
-        <Box maxW="30%" className={`product-container" ${isSelected ? 'selected' : ''}`}
+        <Box width="140 px" className={`product-container" ${isSelected ? 'selected' : ''}`}
             style={productStyle}
             onClick={onClick}>
             <img className="product-icon" src={imgSource} objectFit={"cover"}></img>

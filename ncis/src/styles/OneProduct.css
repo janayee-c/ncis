@@ -1,11 +1,12 @@
 .product-container {
     height: 200px;
     align-items: center;
+    width: 200px;
 }
 
 .product-icon {
-    min-width: 140px;
-    min-height: 140px;
+    max-width: 140px;
+    max-height: 140px;
 }
 
 .raised { 
