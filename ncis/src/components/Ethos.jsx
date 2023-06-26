@@ -36,7 +36,9 @@ const Ethos = () => {
   };
   
   return (
-    <section id="ethos-section">
+    <section>
+    <section id="ethos-section" className="ethos-container">
+      </section>
       <Container className="econtainer" maxW="100%">
       <Heading id="ethos-heading" title="ETHOS" center={true} />
         <div className="slider-container" > 
