@@ -3,6 +3,8 @@ import '../styles/Events.css'
 import { Heading } from '../components/export'
 
 const Events = () => {
+
+  
   return (
     
     <section id="events-section">
