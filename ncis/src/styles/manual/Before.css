@@ -4,24 +4,6 @@
     justify-content: space-around;
 }
 
-.text-box, .text-box2 {
-    height: 100%;
-    font-family: "Montserrat";
-    line-height: 1em;
-    font-size: 0.75em; /* Relative font size based on viewport width */
-    text-align: justify;
-    text-indent: 0px;
-    padding-left: 3vh;
-    padding-right: 3vh;
-    margin: 1vh;
-    width: 100%;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    
-}
 
 a {
     font-weight: bold;
@@ -43,11 +25,11 @@ a {
     margin-bottom: 10px;
 }
 
-.accordion {
-    font-size: 0.75em;
-}
-
 .accordion_heading {
     font-weight: bold;
+    text-align: justify;
+    margin: 1vh;
+    width: 100%;
+    font-size: 1.1em;
 }
 

@@ -23,6 +23,7 @@ import After from './02.svg'
 import Grace from './Grace.png'
 import Hava from './hava.png'
 import Edith from './Edith.png'
+import Sage from './amazon_sagemaker.png'
 
 export {
     Cube,
@@ -49,5 +50,6 @@ export {
     Ada,
     Grace,
     Hava,
-    Edith
+    Edith,
+    Sage,
 }

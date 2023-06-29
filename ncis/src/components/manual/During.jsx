@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { Page } from './export'
+import { Sage } from '../../images/export'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
@@ -36,7 +37,7 @@ const During = () => {
       </Page>)
   } else if (page === 3) {
     return (
-      <Page title="DURING AI SYSTEM DEVELOPMENT" sub="Tools To Prevent AI Bias" text={["A useful tool that is commonly used to help with building your model (particularly in regards to data management and determining whether bias exists) is Amazon Sagemaker Clarify. Clarify helps ML developers address potential bias and maintain transparency, which can be otherwise difficult to achieve.", "For example, one feature of Clarify includes determining if a negative result is produced for one group more than others. This information makes otherwise unseen bias very clear, and developers can take relevant action to fix this issue. AI development tools like Clarify are crucial to reducing bias throughout the entire ML lifecycle, and if applicable developers should aim to use tools to help make the goal of AI ethics more accurate and reliable."]}>
+      <Page title="DURING AI SYSTEM DEVELOPMENT" image={Sage} sub="Tools To Prevent AI Bias" text={["A useful tool that is commonly used to help with building your model (particularly in regards to data management and determining whether bias exists) is Amazon Sagemaker Clarify. Clarify helps ML developers address potential bias and maintain transparency, which can be otherwise difficult to achieve.", "For example, one feature of Clarify includes determining if a negative result is produced for one group more than others. This information makes otherwise unseen bias very clear, and developers can take relevant action to fix this issue. AI development tools like Clarify are crucial to reducing bias throughout the entire ML lifecycle, and if applicable developers should aim to use tools to help make the goal of AI ethics more accurate and reliable."]}>
       </Page>
 )
   }

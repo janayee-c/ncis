@@ -9,12 +9,9 @@ import {
   Img,
   Drawer,
   DrawerBody,
-  DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Stack,
-  sizes,
-  Collapse } 
+  Stack,} 
   from '@chakra-ui/react';
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -81,7 +78,6 @@ const Navbar = () => {
           className="drawer-transition"  
         >
           <DrawerContent onMouseLeave={onClose}>
-            <DrawerCloseButton />
             <DrawerBody>
               <Box height="100px"
               >
