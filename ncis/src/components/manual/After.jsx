@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Button } from '@chakra-ui/react'
-import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
+import { ArrowForwardIcon, ArrowBackIcon, ViewIcon, WarningTwoIcon  } from '@chakra-ui/icons'
 import { Page } from './export'
 import { After as Conc } from '../../images/export'
 
