@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { Page } from './export'
 import { Heading } from '../export'
 import { Systems } from '../../images/export'
-import '../../styles/manual/Conclusion.css'
+import '../../styles/Manual.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 

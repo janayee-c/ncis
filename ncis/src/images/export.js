@@ -27,6 +27,7 @@ import Systems from './systems.png'
 import Sage from './amazon_sagemaker.png'
 import Aggregation from './aggre.svg'
 import Evaluation from './Eval.svg'
+import Laws from './laws.svg'
 
 export {
     Cube,
@@ -58,5 +59,5 @@ export {
     Sage,
     Evaluation,
     Aggregation,
-    
+    Laws, 
 }

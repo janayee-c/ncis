@@ -4,7 +4,7 @@ import { Button } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { Page } from './export'
 import { Sage, Transparency, Aggregation, Evaluation } from '../../images/export'
-import '../../styles/manual/During.css'
+import '../../styles/Manual.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 

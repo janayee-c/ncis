@@ -4,7 +4,7 @@ import { Heading, Button, Collapse, SlideFade, useDisclosure, Box, Accordion, Ac
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { Page } from './export'
 import { Framework, Capacity as Intro, Information } from '../../images/export'
-import '../../styles/manual/Before.css'
+import '../../styles/Manual.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 

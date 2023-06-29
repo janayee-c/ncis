@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import '../styles/Ethos.css';
-import { InView } from "react-intersection-observer";
 
 /* Ethos Components */
 import { Ethical, Capacity, Ocean, Transparency, Information } from '../images/export';
