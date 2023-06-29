@@ -53,6 +53,7 @@
 .intro-flex {
     display: flex;
     justify-content: space-between;
+    
 }
 .floating { 
     animation-name: floating;

@@ -1,5 +1,4 @@
 import Cube from './cube.png'
-import Conclusion from './Conclusion.png'
 import Dyhia from './Dyhia.png'
 import Sogol from './Sogol.png'
 import mobileGoals from './goals-diagram_iphone.png'
@@ -15,6 +14,7 @@ import Ocean from './OceanGovernance.svg'
 import Transparency from './Transparency.svg'
 import Information from "./InformationAtHand.svg"
 import Mantra from './NCIS_logo_mantra.png'
+import Logo from './ncis_test.png'
 import Splash from './test.mp4'
 import Framework from './Deloitte AI Framework.png'
 import Before from './Group.svg'
@@ -23,11 +23,14 @@ import After from './02.svg'
 import Grace from './Grace.png'
 import Hava from './hava.png'
 import Edith from './Edith.png'
+import Systems from './systems.png'
 import Sage from './amazon_sagemaker.png'
+import Aggregation from './aggre.svg'
+import Evaluation from './Eval.svg'
 
 export {
     Cube,
-    Conclusion,
+    Logo,
     Dyhia,
     Sogol,
     mobileGoals,
@@ -51,5 +54,9 @@ export {
     Grace,
     Hava,
     Edith,
+    Systems,
     Sage,
+    Evaluation,
+    Aggregation,
+    
 }

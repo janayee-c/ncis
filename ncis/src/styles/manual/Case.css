@@ -15,3 +15,7 @@ ul li {
 .questions > * {
     margin-bottom: 2%;
 }
+
+.intro-flex {
+    align-items: center;
+}

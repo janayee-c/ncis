@@ -11,7 +11,7 @@ const Page = ({title, sub, text, image, float}) => {
     {sub && <H as='h4' size='md' className='head'>{sub}</H>}
     {text && text.map((text, i) => <p key={i}>{text}</p>)}
     </div>
-    {image && <img className={float ? " floating" : ""} src={image} alt="graphic for text"></img>}
+    {image && <img className={float ? "layout-graphic floating" : "layout-graphic"} src={image} alt="graphic for text"></img>}
     </div>
   )
 }

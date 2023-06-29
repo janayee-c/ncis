@@ -4,7 +4,7 @@ import { Button, Box, Accordion, AccordionItem, AccordionButton, AccordionPanel,
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { Page } from './export'
 import '../../styles/manual/Case.css'
-import { Grace, Hava, Edith, Ada } from '../../images/export'
+import { Grace, Hava, Edith, Ada, Systems } from '../../images/export'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
@@ -24,7 +24,7 @@ const Case = () => {
     if (page === 0) {
       return (<>
       <Page title='CASE STUDY' sub='NCIS Systems' text={["At NCIS, we have several AI systems that serve different roles in the field of preventing maritime crime. In this section, we will briefly take a look at what each of the systems have to offer, and then do a case study on how Ada specifically ensures that it adheres to current AI ethics standards. There will be a particular focus on how Ada is transparent, accountable and is trained on reliable data.", "Note that because some of the details around our AI systems are sensitive, NCIS will not be able to disclose certain practices and information."]}></Page>
-        {/* Add content for two biases */}
+      <img src={Systems} className="conclusion-graphic"></img>
         </>)
     } else if (page === 1) {
       return(
