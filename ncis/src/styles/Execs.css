@@ -11,13 +11,13 @@
     content: "";
     display: block;
     position: absolute;
-    height: 50%;
+    height: 30%;
     max-width: 101%;
     overflow-x: hidden;
     top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-20%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-20%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-20%);
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-30%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-30%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-30%);
     -webkit-transform-origin: center top;
     -ms-transform-origin: center top;
     transform-origin: center top;
@@ -38,7 +38,7 @@
 
 .profile-container {
     width: 100vw;
-    height: fit-content;
+    min-height: 80%;
     position: absolute;
     display: flex;
     align-items: center;
