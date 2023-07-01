@@ -1,17 +1,46 @@
-.ps-container {
+.products-section {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 65px;
+    min-height: 60%;
+}
+
+.products-section .diag-container::before {
+    /* Styles for general .diag-container::before in app.css*/
+    background-color: whitesmoke;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 50%;
+    max-width: 101%;
+    overflow-x: hidden;
+    top: 0px;
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-40%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-40%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-40%);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    z-index: 150
+  }
+  
+
+.products-container {
+    z-index: 200;
     background-color: whitesmoke;
     height: 60vh;
     padding-top: 30px;  /* how far heading down */
     padding-bottom: 30px;
     align-items: center;
     flex-direction: row;
-    position: relative;
+    position: absolute;
+    transform: translateY(-90%);
 }
 
 .panelContainer {
     padding: 100px;
     height: 40vh;
-    position: relative;
+    position: absolute;
 }
 
 .inactiveProductPanel {
@@ -23,6 +52,7 @@
     align-items: center; 
     display: inline-flex;
     text-align: center;
+    width: 100%;
 }
 
 .activePanelContent {
@@ -60,10 +90,10 @@
   
   @keyframes slideUp {
     from {
-      transform: translateY(0%);
+      transform: translateY(-10%);
     }
     to {
-      transform: translateY(-20%);
+      transform: translateY(-70%);
     }
   }
 

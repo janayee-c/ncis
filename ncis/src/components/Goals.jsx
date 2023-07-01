@@ -16,8 +16,11 @@ const Goals = () => {
   }
 
   return (
-    <section id="goals-section" width="100%">
-      <Container maxW="100%" className={`goal-container ${isDesktopMode ? 'desktop-mode' : 'mobile-mode'}`}>
+    <section id="goals-section" className="goals-section">
+      <section className="diag-container" width="100%">
+        </section>
+  
+      <Container maxW="100%" className={`goals-container ${isDesktopMode ? 'desktop-mode' : 'mobile-mode'}`}>
         <Heading center={true} title="GOALS"/>
         <div className="img-container">
           <img

@@ -1,37 +1,46 @@
-.diag-container {
-    height: 60vh;
-}
-.slider-container {
-    align-items: center;
-    height: 95%;
-    width: 100%;
-    background-color: white;
-    margin: 3% 0;
-    text-align: center;
+
+#ethos-section {
+    position: relative;
+    margin-top: 0;
+    padding-top: 65px;
+    background: #fff;  
+    min-height: 50%;
 }
 
-.diag-container::before {
+.ethos-section .diag-container::before {
     content: "";
     display: block;
-    position: relative;
+    position: absolute;
     height: 50%;
-    width: 300%;
-    left: 50%;
+    max-width: 101%;
     background-color: white;
     top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-130%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-130%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-130%);
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-55%);
     -webkit-transform-origin: center top;
     -ms-transform-origin: center top;
     transform-origin: center top;
     z-index: 150;
-
+    overflow-x: hidden;
 }
 
 .econtainer {
     z-index: 200;
-    position: relative;
-    transform: translateY(-130%);
-    max-height: 300px;
+    position: absolute;
+    transform: translateY(-120%);
+    height: 75%; 
+    margin-left: 20%;
+    margin-right: 20%;
+    z-index: 200;
+}
+
+.slider-container {
+    align-items: center;
+    position: absolute;
+    max-height: 30vh;
+    width: 100%;
+    background-color: white;
+    margin: 3% 0;
+    text-align: center;
 }

@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.diag-container {
+  height:50vh
+}
+
+.diag-container::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 50%;
+  width: 300%;
+  left: 50%;
+  top: 0px;
+  -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-120%);
+  -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-120%);
+  transform: rotate(-5deg) translateX(-50%) translateY(-120%);
+  -webkit-transform-origin: center top;
+  -ms-transform-origin: center top;
+  transform-origin: center top;
+  z-index: 150;
+  background-color: whitesmoke;
+
+}
+
+.diag-container {
+  height: 50vh;
+}
+
+

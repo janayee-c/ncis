@@ -50,14 +50,15 @@ const PS = () => {
 
 
   return (
-    <section id="products-section">
-    <Container className="ps-container" maxW="100%">
+    <section id="products-section" className="products-section" maxHeight="100vh" maxW="100vw">
+      <section className="diag-container"></section>
+    <Container className="products-container" maxW="100%">
     <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
 
-    <Container maxW="100%" className={`panelContainer ${activePanelVisible ? 'panelSwitch' : ''}`}>
+    <Container maxW="100%" className= {activePanelVisible ? 'panelSwitch' : ''}>
 
     <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
-    <Grid templateColumns="1fr 1fr 1fr" justifyItems="center" gap={1} padding="10px">
+    <Grid templateColumns="1fr 1fr 1fr" justifyItems="center" gap={1} padding="10px"> {/* if adding new items add new frames (fr) */}
     {productPanel.map((product, index) => (
               <OneProduct
               key={index}

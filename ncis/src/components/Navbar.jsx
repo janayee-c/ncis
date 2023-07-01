@@ -48,6 +48,7 @@ const Navbar = () => {
       justifyContent="space-between"
       alignItems="center"
       fontSize="40px"
+      position="relative"
     >
       <Img id="logo" src={require('../images/ncis_test.png')} />
       
@@ -69,6 +70,7 @@ const Navbar = () => {
         <Drawer
           isOpen={isOpen}
           onClose={onClose}
+          position="relative"
           placement={isTopDrawer ? 'top' : 'right'}
           finalFocusRef={btnRef}
           width= "100%"
@@ -87,8 +89,8 @@ const Navbar = () => {
                   textAlign="center"
                   justifyContent="center"
                 >
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('ethos')}
+                  <ScrollLink // WILL REFACTOR TO BE A MAP 
+                    onMouseEnter={() => handleHoverColour('ethos')} 
                     onMouseLeave={handleResetColour}
                     className={`${
                       activeLink === 'ethos' ? 'color-navy pointer' : 'slink'

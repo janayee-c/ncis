@@ -1,26 +1,29 @@
 img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .bg {
+    position: relative; /* parent element */ 
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     background-color: #F5F5F5;
-    height: 80vh;
+    height: 60vh;
 }
 
 
   
 #cube { /* sizing in below code */
+    object-fit: cover;
+    margin-top: 5%;
+    position: absolute; 
     transform: translateY(10%);
     transition: all 0.25s ease;
     scale: 1;
     width: 40em;
     height: 40em;  
     z-index: 1000;
-  }
+}
 
 
   @media (max-width: 1022px) {
@@ -32,6 +35,14 @@ img {
   }
 
   @media (min-width: 1022px) and (max-width: 1400px) {
+    /* Cube size for medium screens */
+    #cube {
+      width: 40em;
+      height: 40em; /* Adjusted height for better proportions */
+    }
+  }
+
+  @media (min-width: 1400px) {
     /* Cube size for medium screens */
     #cube {
       width: 40em;

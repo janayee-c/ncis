@@ -30,15 +30,18 @@ const Ethos = () => {
     swipeToSlide: true,
     draggable: true,
     autoplay: isMedium,
-    autoplaySpeed: 4500
+    autoplaySpeed: 2000
 
   };
+
+  //ethos-section is entire section (including diag-container)
+  //diag-container before:: diagonal element 
+  //e-container includes all content (heading included)
   
   return (
-    <section>
-    <section id="ethos-section" className="diag-container">
-      </section>
-      <Container className="econtainer" maxW="100%">
+    <section id="ethos-section" className="ethos-section">
+    <section  className="diag-container"></section> 
+      <Container className="econtainer" maxW="100%"> 
       <Heading id="ethos-heading" title="ETHOS" center={true} />
         <div className="slider-container" > 
           <Slider  {...settings} ref={sliderRef}>
