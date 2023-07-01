@@ -2,27 +2,27 @@ img {
   object-fit: cover;
 }
 
-.bg {
-    position: relative; /* parent element */ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F5F5F5;
-    height: 60vh;
+#hero-section {
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
 }
-
 
   
 #cube { /* sizing in below code */
-    object-fit: cover;
-    margin-top: 5%;
-    position: absolute; 
-    transform: translateY(10%);
-    transition: all 0.25s ease;
-    scale: 1;
-    width: 40em;
-    height: 40em;  
-    z-index: 1000;
+  object-fit: cover;
+  margin-top: 5%;
+  transform: translateY(15%);
+  transition: all 0.25s ease;
+  scale: 1.15;
+  width: 40em;
+  height: 40em;  
+  z-index: 300;
+  position: relative;
 }
 
 

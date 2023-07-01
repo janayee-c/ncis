@@ -39,7 +39,7 @@ const Navbar = () => {
   }
 
   return (
-    <section id="navbar">
+    <section id="navbar-section">
     <Box
       display="flex"
       w="100%"

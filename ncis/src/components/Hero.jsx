@@ -22,7 +22,7 @@ const Hero = () => {
 
   return (
     <section id="hero-section">
-      <div className="bg">
+      <div className="cubic-container">
         <img id="cube" src={require('../images/cube.png')} alt="Cube" />
       </div>
     </section>

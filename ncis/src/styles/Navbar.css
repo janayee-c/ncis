@@ -1,4 +1,9 @@
+#navbar-section {
+    width: 100vw;
+    position: relative;
+}
 #logo {
+    align-self: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -33,6 +38,14 @@
 
 .centered-icon {
     transform: translateX(-150%);
+    position: absolute;
+}
+
+@media (max-width: 1400px) {
+    .centered-icon{
+       scale: 70%;
+        
+    }
 }
 
 .pointer {

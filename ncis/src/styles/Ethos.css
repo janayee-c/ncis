@@ -5,6 +5,7 @@
     padding-top: 65px;
     background: #fff;  
     min-height: 50%;
+    width: 100vw;
 }
 
 .ethos-section .diag-container::before {
