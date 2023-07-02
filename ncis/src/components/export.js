@@ -12,6 +12,7 @@ import Heading from "./Heading";
 import EthosElement from "./EthosElement";
 import SplashScreen from "./SplashScreen";
 import OneProduct from "./OneProduct"; 
+import Publication from "./Publication";
 
 export {
     About,
@@ -28,4 +29,5 @@ export {
     EthosElement,
     SplashScreen,
     OneProduct,
+    Publication,
 }

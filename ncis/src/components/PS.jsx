@@ -2,11 +2,13 @@ import React, { useState, useRef } from 'react'
 import '../styles/PS.css'
 import { Heading } from './export'
 import { Edith, Grace, Hava } from '../images/export'
-import { Container, Grid } from '@chakra-ui/react'
+import { Container, Grid, useMediaQuery } from '@chakra-ui/react'
 import { DEVICETEXTS } from '../constants/export'
 import OneProduct from "./OneProduct"
 
 const PS = () => {
+
+  const [isMinimizedMode] = useMediaQuery('(max-width: 1000px)');
 
   const [activePanelVisible, setActivePanelVisible] = React.useState(false)
   const [selectedProduct, setSelectedProduct] = React.useState(null) //ref functionality for product 
@@ -58,7 +60,7 @@ const PS = () => {
     <Container maxW="100%" className= {activePanelVisible ? 'panelSwitch' : ''}>
 
     <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
-    <Grid templateColumns="1fr 1fr 1fr" justifyItems="center" gap={1} padding="10px"> {/* if adding new items add new frames (fr) */}
+    <Grid templateColumns={isMinimizedMode ? "1fr" : "1fr 1fr 1fr"} justifyItems="center" gap={1} padding="10px"> {/* if adding new items add new frames (fr) */}
     {productPanel.map((product, index) => (
               <OneProduct
               key={index}

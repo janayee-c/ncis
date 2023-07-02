@@ -1,0 +1,66 @@
+#pubs-section {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 65px;
+    min-height: 60%;
+    width: 100vw;
+  
+  }
+  
+.pubs-section .diag-container::before {
+    /* Styles for general .diag-container::before in app.css*/
+    background-color: whitesmoke;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 50%;
+    max-width: 101%;
+    overflow-x: hidden;
+    top: 0px;
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-40%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-40%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-40%);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    z-index: 150
+  }
+
+  @media (min-width: 500px) and (max-width: 830px) {
+    .pubs-section .diag-container::before {
+      -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-90%);
+      -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-90%);
+      transform: rotate(-5deg) translateX(-50%) translateY(-90%);
+      }
+    }
+  
+  
+  @media (max-width: 300px) {
+    .pubs-section .diag-container::before {
+      -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-140%);
+      -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-140%);
+      transform: rotate(-5deg) translateX(-50%) translateY(-140%);
+    }
+  }
+
+  .pubs-container {
+    z-index: 200;
+    background-color: whitesmoke;
+    height: 60vh;
+    padding-top: 15px;  /* how far heading down */
+    padding-bottom: 30px;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    transform: translateY(-90%);
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    .pubs-container {
+        transform: translateY(-120%);
+        height: 65vh;
+    }
+  }
+
+    
