@@ -2,13 +2,14 @@ import React from 'react'
 import '../styles/Homepage.css'
 import { About, Contact, Ethos, Events, Execs, Goals, Hero, Navbar, PS, Pubs, SplashScreen } from '../components/export'
 import { Splash } from '../images/export'
+import "../styles/Homepage.css"
 function Homepage() {
 
   //ids below are for link for navbar page but need to revise
 
   return (
     <>
-    <div>
+    <div className="homePage-container">
     {/* <SplashScreen></SplashScreen> */}
     <Navbar></Navbar>
     <Hero></Hero>

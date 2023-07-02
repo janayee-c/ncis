@@ -1,15 +1,13 @@
 import React from 'react'
-import '../styles/Pubs.css'
-import { Heading } from '../components/export'
-import { Container } from '@chakra-ui/react'
+import '../styles/Publication.css'
 
 const Publication = (props) => {
 
-    const { pubHead, title, desc } = props;
+    const { pubHead, title, desc, url } = props;
 
     return (
-        <a>
-        <div maxW="30%">
+        <a href={url}>
+        <div className="article-container" maxW="30%">
             <h5 className="article-header">{pubHead}</h5>
             <h4 className="article-title">{title}</h4>
             <p className="article-desc">{desc}</p>
