@@ -1,0 +1,37 @@
+.contact-section {
+    position: relative;
+    margin-top: 0;
+    padding-top: 65px;
+    background: #fff;  
+    min-height: 200vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    align-items: center;
+}
+
+.contact-section .diag-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 30%;
+    max-width: 101%;
+    background-color: white;
+    top: 0px;
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-55%);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    z-index: 150;
+    overflow-x: hidden;
+}
+
+.contact-container {
+    z-index: 200;
+    position: absolute;
+    height: 75%; 
+    margin-left: 20%;
+    margin-right: 20%;
+    z-index: 200;
+}
