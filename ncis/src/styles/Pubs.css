@@ -2,7 +2,7 @@
     position: relative;
     margin-top: 0px;
     padding-top: 65px;
-    min-height: 85vh;
+    min-height: fit-content;
     width: 100vw;
 
   }
@@ -17,9 +17,9 @@
     max-width: 101%;
     overflow-x: hidden;
     top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-60%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-60%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-60%);
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-80%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-80%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-80%);
     -webkit-transform-origin: center top;
     -ms-transform-origin: center top;
     transform-origin: center top;
@@ -28,31 +28,34 @@
   
   
   @media (max-width: 800px) {
-    .pubs-section .diag-container::before {
-      -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-140%);
-      -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-140%);
-      transform: rotate(-5deg) translateX(-50%) translateY(-140%);
+  .pubs-section .diag-container::before {
+      -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-200%);
+      -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-200%);
+      transform: rotate(-5deg) translateX(-50%) translateY(-200%);
     }
   }
 
   .pubs-container {
     z-index: 200;
     background-color: whitesmoke;
-    height: 80vh;
+    min-height: fit-content;
     padding-top: 15px;  /* how far heading down */
     padding-bottom: 30px;
     padding-right: 150px;
     align-items: center;
     flex-direction: row;
     position: absolute;
-    transform: translateY(-80%);
+    transform: translateY(-78%);
     width: 80%;
     margin: 10px;
+    overflow-y:scroll;
+    scrollbar-width: thin;/*fancy width*/
+
   }
 
   @media (max-width: 1050px) {
     .pubs-container {
-        transform: translateY(-70%);
+        transform: translateY(-60%);
         height: 100vh;
     }
 }

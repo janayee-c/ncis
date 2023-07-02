@@ -22,7 +22,7 @@ const Publication = (props) => {
             <h5 className="article-header">{pubHead}</h5>
             <h4 className="article-title">{title}</h4>
             <p className="article-desc">{desc}</p>
-            <h6 className="read-link"> - Read </h6>
+            <h6 className={`read-link ${isHover ? "showRead" : "hideRead" } `}> - Read </h6>
         </div>
         </a>
     );

@@ -21,15 +21,33 @@
 }
 
 .article-desc {
-    font-family: Montserrat; 
+    font-family: "Montserrat"; 
     letter-spacing: normal;
-    line-height: 21.384px;
+    line-height: 1.65em;
     margin-block-end: 12.96px;
     margin-block-start: 12.96px;
-    font-size: 12.96px;
+    font-size: 0.9em;
+    font-style:normal;
+    font-weight: light;
+    word-spacing:2px;
 }
 
 .hoveredArticle {
     transition: transform 0.5s ease;
     transform: translateY(-15px);
+}
+
+.read-link {
+    font-family: Beckman;
+    color: #103A9C
+}
+
+.showRead {
+    opacity: 100%;
+    transition: transform 0.5s ease; 
+    transform: translateY(-5px);
+}
+
+.hideRead {
+    opacity: 0%;
 }

@@ -1,0 +1,63 @@
+.events-section {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 65px;
+    min-height: fit-content;
+    width: 100vw;
+    background-color: white;
+}
+
+.events-section .diag-container::before {
+    /* Styles for general .diag-container::before in app.css*/
+    background-color: white;
+    content: "";
+    display: block;
+    position: absolute;
+    max-height: 30%;
+    max-width: 101%;
+    overflow-x: hidden;
+    top: 0px;
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-2%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-2%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-2%);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    z-index: 200;
+  }
+
+
+@media (max-width: 1000px) {
+    .events-section .diag-container::before  {
+        -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(10%);
+        -ms-transform: rotate(-5deg) translateX(-50%)  translateY(10%);
+        transform: rotate(-5deg) translateX(-50%) translateY(10%);
+    }
+  }
+
+.events-container {
+    z-index: 200;
+    background-color: white;
+    height: 60vh;
+    padding-top: 10px;  /* distance of heading to profile container */
+    padding-bottom: 20px;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    transform: translateY(-70%);
+}
+
+.events-content {
+    text-align: center;
+    font-family: "Montserrat";
+    align-items: center;
+}
+
+.events-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100vw;
+    align-self: center;
+}
+
+
