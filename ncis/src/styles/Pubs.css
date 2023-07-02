@@ -2,9 +2,9 @@
     position: relative;
     margin-top: 0px;
     padding-top: 65px;
-    min-height: 70vh;
+    min-height: 85vh;
     width: 100vw;
-  
+
   }
   
 .pubs-section .diag-container::before {
@@ -17,25 +17,17 @@
     max-width: 101%;
     overflow-x: hidden;
     top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-50%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-50%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-50%);
+    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-60%);
+    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-60%);
+    transform: rotate(-5deg) translateX(-50%) translateY(-60%);
     -webkit-transform-origin: center top;
     -ms-transform-origin: center top;
     transform-origin: center top;
     z-index: 150
   }
-
-  @media (min-width: 500px) and (max-width: 830px) {
-    .pubs-section .diag-container::before {
-      -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-90%);
-      -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-90%);
-      transform: rotate(-5deg) translateX(-50%) translateY(-90%);
-      }
-    }
   
   
-  @media (max-width: 300px) {
+  @media (max-width: 800px) {
     .pubs-section .diag-container::before {
       -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-140%);
       -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-140%);
@@ -53,17 +45,40 @@
     align-items: center;
     flex-direction: row;
     position: absolute;
-    transform: translateY(-75%);
+    transform: translateY(-80%);
     width: 80%;
     margin: 10px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1050px) {
+    .pubs-container {
+        transform: translateY(-70%);
+        height: 100vh;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .pubs-container {
+        transform: translateY(-75%);
+        height: 125vh;
+    }
+}
+
+@media (max-width: 600px) {
     .pubs-container {
         transform: translateY(-90%);
-        height: 90vh;
+        height: 125vh;
     }
-  }
+}
+
+.pubs-grid {
+    padding: 10px;
+}
+
+
+
+
   
 
     

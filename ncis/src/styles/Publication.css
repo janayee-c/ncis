@@ -28,3 +28,8 @@
     margin-block-start: 12.96px;
     font-size: 12.96px;
 }
+
+.hoveredArticle {
+    transition: transform 0.5s ease;
+    transform: translateY(-15px);
+}

@@ -167,7 +167,7 @@ const Navbar = () => {
                     className={`${
                       activeLink === 'pm' ? 'color-navy pointer' : 'slink'
                     }`}
-                    to="publications-section"
+                    to="pubs-section"
                     smooth={true}
                     offset={-50}
                     onClick={onClose}
