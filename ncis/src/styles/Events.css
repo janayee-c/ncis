@@ -35,6 +35,16 @@
     }
   }
 
+  .events-section .diag-container {
+    /* Styles for general .diag-container::before in app.css*/
+    background-color: white;
+    content: "";
+    display: block;
+    position: absolute;
+    max-height: 10vh;
+    max-width: 101%;
+  }
+
 .events-container {
     z-index: 200;
     background-color: white;
@@ -61,3 +71,14 @@
 }
 
 
+.events-desc{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 0.9em;
+}

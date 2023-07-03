@@ -20,7 +20,7 @@
     content: "";
     display: block;
     position: absolute;
-    height: 30%;
+    max-height: 25%;
     max-width: 101%;
     overflow-x: hidden;
     top: 0px;
@@ -56,7 +56,14 @@
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
+    transform: translateY(-20%);
   }
+
+@media (max-width: 1000px) {
+  .goals-container {
+    transform: translateY(-50%)
+  }
+}
 
 .desktop-mode {
     width: 100%;
@@ -82,16 +89,16 @@
 
 .desktop-image {
   /* Goal Image size for enlarged desktop screen */
-    width: 80%;
-    height: 90%;
+    max-width: 80%;
+    max-height: 90%;
   }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     /* Goal Image size for smaller desktop screen */
     .desktop-image {
-      width: 80%;
-      height: 80%; /* Adjusted height for better proportions */
+      min-width: 40wv;
+      min-height: 30vh; /* Adjusted height for better proportions */
     }
   }
 

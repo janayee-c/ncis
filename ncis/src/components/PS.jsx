@@ -53,7 +53,7 @@ const PS = () => {
 
   return (
     <section id="products-section" className="products-section" maxHeight="100vh" maxW="100vw">
-      <section className="diag-container"></section>
+      <section className="diag-container" maxW="100%"></section>
     <Container className="products-container" maxW="100%">
     <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
 

@@ -8,11 +8,12 @@ const Events = () => {
 
   return (
     <section id="events-section" className="events-section">
-      <section className="diag-container"></section>
+      <section className="diag-container" maxW="100%"></section>
       <Container className="events-container" maxW="100%"> 
       <Heading center={true} title="EVENTS"></Heading>
       <div className="events-content">Annual Event: <a href="https://tlmdsummit.com/">Tech, Law, and Maritime Defense Summit</a>
       <img className="events-image" src={TLMDS}></img>
+      <p className="events-desc">The Tech, Law, and Maritime Defense Summit is a three day symposium that brings together researchers, government leaders, and industry practitioners concerned with the application of emerging technologies such as Artificial Intelligence in addressing challenges in the maritime domain.</p>
       </div>
       </Container>
     </section>

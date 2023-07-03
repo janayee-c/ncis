@@ -7,7 +7,7 @@ import { Container } from '@chakra-ui/react'
 const Contact = () => {
   return (
     <section id="contact-section" className="contact-section"> 
-    <div className="diag-container"></div>
+    <div className="diag-container" maxW="100%"></div>
     <Container className="contact-container" maxW="100%">
       <Heading center={true} title="CONTACT"></Heading>
     </Container>
