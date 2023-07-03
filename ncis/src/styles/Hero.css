@@ -29,16 +29,16 @@ img {
   @media (max-width: 1022px) {
     /* Cube size for small screens */
     #cube {
-      width: 30em;
-      height: 30em; /* Adjusted height for better proportions */
+      width: 20em;
+      height: 20em; /* Adjusted height for better proportions */
     }
   }
 
   @media (min-width: 1022px) and (max-width: 1400px) {
     /* Cube size for medium screens */
     #cube {
-      width: 40em;
-      height: 40em; /* Adjusted height for better proportions */
+      width: 25em;
+      height: 25em; /* Adjusted height for better proportions */
     }
   }
 
