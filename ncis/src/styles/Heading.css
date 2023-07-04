@@ -1,16 +1,15 @@
 .web-heading {
   font-family: "Beckman";
   font-size: 30px;
-  padding: 20px;
+  padding-bottom: 40px; 
   font-weight: 600;
-  text-indent: 5px;
   letter-spacing: 4px;
   z-index: 150; 
+  width: 100%; 
 }
 
 .triangle {
   display: inline-block;
-  float: center;
   width: 17px;
 }
 

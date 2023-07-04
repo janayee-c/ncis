@@ -5,7 +5,7 @@ import { Container, useMediaQuery } from '@chakra-ui/react';
 import { mobileGoals, desktopGoals } from '../images/export';
 
 const Goals = () => {
-  const [isDesktopMode] = useMediaQuery('(min-width: 850px)');
+  const [isDesktopMode] = useMediaQuery('(min-width: 900px)');
 
   function chooseImage() {
     if (isDesktopMode) {
@@ -17,8 +17,6 @@ const Goals = () => {
 
   return (
     <section id="goals-section" className="goals-section">
-      <section className="diag-container" width="100%">
-        </section>
   
       <Container maxW="100%" className={`goals-container ${isDesktopMode ? 'desktop-mode' : 'mobile-mode'}`}>
         <Heading center={true} title="GOALS"/>
@@ -30,6 +28,8 @@ const Goals = () => {
           />
         </div>
       </Container>
+      <div className="goals-diag"></div>
+
     </section>
   );
 };

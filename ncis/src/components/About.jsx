@@ -11,14 +11,13 @@ import { Heading } from '../components/export'
 const About = () => {
   return (
   <section id="about-section" className="about-section" maxHeight="100vh" maxW="100vw">
-    <section  className="diag-container" maxW="100%">
-    </section>
       <Container className="about-container" maxWidth="100%">
       <Heading title="ABOUT" center={true} ></Heading>
         <div className="about-content" textAlign="center">
          <p className="about-txt">{ABOUT}</p>
         </div>
       </Container>
+      <div className="about-diag"></div>
     </section>
   )
 }

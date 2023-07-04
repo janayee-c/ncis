@@ -13,14 +13,9 @@ function Homepage() {
     {/* <SplashScreen></SplashScreen> */}
     <Navbar></Navbar>
     <Hero></Hero>
-    <Ethos></Ethos> 
+    <Ethos></Ethos>
     <About></About>
     <Goals></Goals>
-    <PS></PS>
-    <Execs></Execs>
-    <Pubs></Pubs>
-    <Events></Events>
-    <Contact></Contact>
     </div>
     </>
   )

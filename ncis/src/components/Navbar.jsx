@@ -50,7 +50,7 @@ const Navbar = () => {
       fontSize="40px"
       position="relative"
     >
-      <Img id="logo" src={require('../images/ncis_test.png')} />
+      <Img id="logo" src={require('../images/ncis_test.png')} /> 
       
 
       <Menu>

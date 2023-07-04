@@ -2,46 +2,58 @@
 #ethos-section {
     position: relative;
     margin-top: 0;
-    padding-top: 65px;
+    padding-top: 15px;
     background: #fff;  
-    min-height: 50%;
+    height: 60vh;
     width: 100vw;
-}
-
-.ethos-section .diag-container::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 50%;
-    max-width: 101%;
-    background-color: white;
-    top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-55%);
-    -webkit-transform-origin: center top;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    z-index: 150;
-    overflow-x: hidden;
+    z-index: 1;
+    align-items: center;
+    align-self: center;
+    display: flex; 
 }
 
 .econtainer {
-    z-index: 200;
     position: absolute;
-    transform: translateY(-120%);
-    height: 75%; 
-    margin-left: 20%;
-    margin-right: 20%;
-    z-index: 200;
+    height: 95%; 
+    margin: 0 0; 
+    z-index: 1;
+    min-width: 40vw;
+    flex-shrink: 0; 
 }
 
 .slider-container {
     align-items: center;
     position: absolute;
-    max-height: 30vh;
+    max-height: 30%;
     width: 100%;
+    right: 0.15%; 
     background-color: white;
-    margin: 3% 0;
     text-align: center;
+    flex-shrink: 0;
 }
+
+.ethos-diag {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    width: 110%;
+    height: 60%;
+    z-index: 1;
+  }
+  
+  .ethos-diag::after {
+    content: '';
+    position: absolute;
+    display: block;
+    flex-shrink: 0; 
+    top: 10%;
+    left: 40%;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    transform-origin: 100% 0%;
+    -webkit-transform: rotate(-5deg) translateX(-50%);
+    -ms-transform: rotate(-5deg) translateX(-50%);
+    transform: rotate(-5deg) translateX(-50%);
+  }
+  

@@ -1,18 +1,48 @@
 img {
   object-fit: cover;
 }
+/* important */
 
-#hero-section {
+.hero-section {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #F5F5F5;
+  z-index: 1;
 }
 
-  
+.cubic-container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-diag {
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  width: 110%;
+  height: 35%;
+  z-index: 1;
+}
+
+.hero-diag::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  flex-shrink: 0; 
+  transform-origin: 100% 0%;
+  -webkit-transform: rotate(-5deg) translateX(-50%);
+  -ms-transform: rotate(-5deg) translateX(-50%);
+  transform: rotate(-5deg) translateX(-50%);
+}
+
 #cube { /* sizing in below code */
   object-fit: cover;
   margin-top: 5%;

@@ -2,13 +2,11 @@ import React, { useState, useRef } from 'react'
 import '../styles/PS.css'
 import { Heading } from './export'
 import { Edith, Grace, Hava } from '../images/export'
-import { Container, Grid, useMediaQuery } from '@chakra-ui/react'
+import { Container, Grid } from '@chakra-ui/react'
 import { DEVICETEXTS } from '../constants/export'
 import OneProduct from "./OneProduct"
 
 const PS = () => {
-
-  const [isMinimizedMode] = useMediaQuery('(max-width: 1000px)');
 
   const [activePanelVisible, setActivePanelVisible] = React.useState(false)
   const [selectedProduct, setSelectedProduct] = React.useState(null) //ref functionality for product 
@@ -53,41 +51,6 @@ const PS = () => {
 
   return (
     <section id="products-section" className="products-section" maxHeight="100vh" maxW="100vw">
-      <section className="diag-container" maxW="100%"></section>
-    <Container className="products-container" maxW="100%">
-    <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
-
-    <Container maxW="100%" className= {activePanelVisible ? 'panelSwitch' : ''}>
-
-    <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
-    <Grid templateColumns={isMinimizedMode ? "1fr" : "1fr 1fr 1fr"} justifyItems="center" gap={1} padding="10px"> {/* if adding new items add new frames (fr) */}
-    {productPanel.map((product, index) => (
-              <OneProduct
-              key={index}
-              name={product.name}
-              imgSource={product.source}
-              row={product.row}
-              col={product.col}
-              onClick = { () => handleProductClick(product)}
-              isSelected={selectedProduct === product} 
-              className={handlePanelVision(product)}
-              ></OneProduct>
-            ))}
-    
-        </Grid>
-        </div>
-
-
-      {activePanelVisible && ( /* use && to make rest of rendering true */
-        <div className="activeProductPanel" maxW="100%">
-          <div className="activePanelContent">
-            <p>{selectedProduct.desc}</p>
-              <button onClick={closePanel}> X </button>
-            </div>
-          </div>
-        )}
-    </Container>
-    </Container>
     </section>
     )
   };
