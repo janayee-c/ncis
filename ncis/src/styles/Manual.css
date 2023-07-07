@@ -141,9 +141,15 @@ ul li {
 
 .during-graphic {
     width: 50%;
-    margin: 0 auto;
+    margin: 1% auto;
     
+}
 
+.after-graphic {
+    width: 50%;
+    margin: 3% auto;
+    padding-right: 2%;
+    
 }
 
 .intro-graphic {
@@ -200,8 +206,6 @@ ul li {
     transform: translate(0, 150%);
 }
 
-.display {
-}
 
 .splash-flex {
     display: flex;
@@ -210,4 +214,8 @@ ul li {
  flex-direction: column;
  padding: 0 10%;
  margin-top: 20%;
+}
+
+.s-scale {
+    transform: scale(0.8)
 }

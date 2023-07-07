@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@chakra-ui/react'
 import { ArrowForwardIcon, ArrowBackIcon, ViewIcon, WarningTwoIcon } from '@chakra-ui/icons'
 import { Page } from './export'
-import { Information, Laws } from '../../images/export'
+import { Information, Laws, Deploy, Misusing } from '../../images/export'
 import '../../styles/Manual.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
@@ -28,14 +28,14 @@ const After = () => {
       return(<>
       <Page title="SECTION 1: DEPLOYMENT BIAS"></Page>
       <p>Deployment bias refers to when a system is used in unexpected of different ways than originally intended. In other words, your AI is not being used in ways it was not meant to be used in. It emphasizes for all stakeholders and users to understand the system's limitations and ensure appropriate use in line with its intended purpose.</p>
-      <img src={Information} className="during-graphic"></img>
+      <img src={Deploy} alt="deployment bias: clarifying interpretation" className="after-graphic s-scale"></img>
       <p>For example, consider an AI system is developed to aid doctors in diagnosing and treating a specific medical condition. However, due to its accessibility, non-experts and pediatricians start using the system to diagnose and treat children, even though it was primarily trained on adult data. This unintended use of the system in pediatric care highlights the risk of deployment bias. The system may provide inaccurate recommendations or misdiagnose younger patients due to the lack of adequate training on pediatric data. </p>
       </>)
     } else if (page === 2) {
       return(<>
       <Page title="SECTION 1: AUTOMATION BIAS" sub="Section 1: Bias and Looking Ahead"></Page>
       <p>Another type of bias that occurs after model deployment is automation bias, which is the tendency to favor computer generated results over human ones. In the maritime context, this is a serious concern as people can often “overtrust” the operation of systems when personal judgment needs to be used. By becoming overly reliant on AI, people may struggle to respond effectively to unexpected events that fall outside a system’s programmed capabilities. </p>
-      <img src={Information} className="during-graphic"></img>
+      <img src={Misusing} alt="automation bias: misusing tools" className="after-graphic"></img>
       <p>For example, consider a scenario where an advanced AI system is deployed on a naval vessel to assist with target identification and threat assessment. In this case, automation bias may occur if the human operators unquestioningly trust the AI system's recommendations and fail to critically evaluate or validate the information provided. To prevent this, it is essential to promote human-AI collaboration rather than complete reliance on automation and encourage operators to maintain situational awareness.</p>
       </>)
     } else if (page === 3) {

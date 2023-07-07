@@ -28,6 +28,9 @@ import Sage from './amazon_sagemaker.png'
 import Aggregation from './aggre.svg'
 import Evaluation from './Eval.svg'
 import Laws from './laws.svg'
+import Decisions from './decisions.svg'
+import Misusing from './misusing.svg'
+import Deploy from './deploy.svg'
 
 export {
     Cube,
@@ -60,4 +63,7 @@ export {
     Evaluation,
     Aggregation,
     Laws, 
+    Decisions,
+    Misusing,
+    Deploy,
 }

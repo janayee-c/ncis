@@ -45,7 +45,7 @@ const During = () => {
         )
   } else if (page === 3) {
     return (
-      <Page title="SECTION 2: TOOLS TO PREVENT AI BIAS" image={Sage}  text={["A useful tool that is commonly used to help with building your model (particularly in regards to data management and determining whether bias exists) is Amazon Sagemaker Clarify. Clarify helps ML developers address potential bias and maintain transparency, which can be otherwise difficult to achieve.", "For example, one feature of Clarify includes determining if a negative result is produced for one group more than others. This information makes otherwise unseen bias very clear, and developers can take relevant action to fix this issue. AI development tools like Clarify are crucial to reducing bias throughout the entire ML lifecycle, and if applicable developers should aim to use tools to help make the goal of AI ethics more accurate and reliable."]}>
+      <Page title="SECTION 2: TOOLS TO PREVENT AI BIAS" text={["A useful tool that is commonly used to help with building your model (particularly in regards to data management and determining whether bias exists) is Amazon Sagemaker Clarify. Clarify helps ML developers address potential bias and maintain transparency, which can be otherwise difficult to achieve.", "For example, one feature of Clarify includes determining if a negative result is produced for one group more than others. This information makes otherwise unseen bias very clear, and developers can take relevant action to fix this issue. AI development tools like Clarify are crucial to reducing bias throughout the entire ML lifecycle, and if applicable developers should aim to use tools to help make the goal of AI ethics more accurate and reliable."]}>
       </Page>
 )
   }
