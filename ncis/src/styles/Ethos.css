@@ -12,6 +12,13 @@
     display: flex; 
 }
 
+
+@media (orientation:landscape) and (max-height:600px) {
+    .ethos-section {
+      min-height: 800px; 
+    }
+  }
+
 .econtainer {
     position: absolute;
     height: 95%; 

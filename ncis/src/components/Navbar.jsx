@@ -49,6 +49,7 @@ const Navbar = () => {
       alignItems="center"
       fontSize="40px"
       position="relative"
+      className="navbar-box"
     >
       <Img id="logo" src={require('../images/ncis_test.png')} /> 
       

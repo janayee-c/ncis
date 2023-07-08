@@ -2,31 +2,20 @@
     position: relative;
     margin-top: 0px;
     padding-top: 65px;
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100vw;
+    margin-bottom: 40vh;
 }
 
-.execs-section .diag-container::before {
-    /* Styles for general .diag-container::before in app.css*/
-    background-color: white;
-    content: "";
-    display: block;
-    position: absolute;
-    height: 30%;
-    max-width: 101%;
-    overflow-x: hidden;
-    top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-30%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-30%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-30%);
-    -webkit-transform-origin: center top;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    z-index: 200
-  }
+@media (orientation:landscape) {
+.execs-section{
+    min-height: 800px;
+    }
+}
+
 
 .execs-container {
-    z-index: 200;
+    z-index: 1;
     background-color: white;
     height: 60vh;
     padding-top: 10px;  /* distance of heading to profile container */
@@ -34,8 +23,15 @@
     align-items: center;
     flex-direction: row;
     position: absolute;
-    transform: translateY(-85%);
 }
+
+
+
+@media (orientation:landscape) and (max-width: 500px) {
+    .execs-container{
+        min-height: 500px;
+        }
+    }
 
 .profile-container {
     width: 100vw;
@@ -47,15 +43,12 @@
     margin-bottom: 0em;
     padding-top: 10%;
     border: 0em;
-    transform: translateY(-15%);
 }
 
 @media (max-width: 1022px) {
     .profile-container {
         height: 80vh;
-        width: 100vw;
-        transform: translateY(-5%);
-        
+        width: 100vw; 
     }
 }
 
@@ -156,3 +149,28 @@
     padding-right: 0em;
     width: 100%; 
 }
+
+.execs-diag {
+    position: absolute;
+    top: 120%;
+    left: 0%;
+    width: 110%;
+    height: 35%;
+    z-index: 1;
+  }
+    
+  
+  .execs-diag::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    width: 100%;
+    height: 80%;
+    background: whitesmoke;
+    flex-shrink: 0;
+    transform-origin: 100% 0%;
+    -webkit-transform: rotate(-5deg) translateX(-50%);
+    -ms-transform: rotate(-5deg) translateX(-50%);
+    transform: rotate(-5deg) translateX(-50%);
+  }
+  

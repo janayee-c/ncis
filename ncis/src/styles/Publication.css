@@ -21,14 +21,13 @@
 }
 
 .article-desc {
-    font-family: "Montserrat"; 
+    font-family: Montserrat; 
     letter-spacing: normal;
     line-height: 1.65em;
     margin-block-end: 12.96px;
     margin-block-start: 12.96px;
     font-size: 0.9em;
-    font-style:normal;
-    font-weight: light;
+    font-weight: bold;
     word-spacing:2px;
 }
 

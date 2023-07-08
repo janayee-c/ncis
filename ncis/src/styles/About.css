@@ -2,21 +2,34 @@
   position: relative;
   margin-top: 0px;
   padding-top: 65px;
-  height: 80vh; 
+  height: 70vh; 
   width: 100vw;
-
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 400px) {
-  .about-container {
-    height: auto; 
-    padding-bottom: 80px; 
+/* @media (orientation:landscape) and (max-height:600px) {
+  .about-section {
+    min-height: 500px; 
+  }
+} */
+
+@media (orientation:landscape) {
+  .about-section {
+    min-height: 650px; 
   }
 }
 
+@media (orientation:portrait) {
+  .about-section {
+    min-height: 700px; 
+  }
+}
+
+
+
 .about-container {
   z-index: 1;
-  position: absolute;
   height: 47vh; 
   margin-left: 20%;
   margin-right: 20%;
@@ -25,7 +38,7 @@
 
 @media (min-width: 500px) and (max-width: 800px) {
   .about-container {
-    top:20%
+    top: 20%
   }
 }
 
@@ -33,6 +46,20 @@
   @media (max-width: 400px) {
     .about-container {
       height: auto; 
+    }
+  }
+
+  @media (max-width: 400px) {
+    .about-container {
+      height: auto; 
+      padding-bottom: 80px; 
+    }
+  }
+  
+  @media (orientation:landscape) and (max-height:600px) {
+    .about-container {
+      min-height: 400px; 
+      transform:translateY(-10%);
     }
   }
   
@@ -66,7 +93,7 @@
   }
 
 
-  @media (max-width: 1500px) {
+  @media (max-width: 2000px) {
     .about-txt {
         font-size: 1em; 
         line-height: 25px;
@@ -83,69 +110,32 @@
 
   .about-diag {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 0%;
     width: 110%;
     height: 35%;
     z-index: 1;
   }
-
   
-  @media (max-width: 1500px) {
+  @media (orientation:landscape) and (max-width: 2000px) {
     .about-diag {
-      top: 40%; /* Adjust the top value to push the div down further when the page is minimized */
+      top:40%;
     }
   }
 
-  @media (max-width: 900px) {
+  @media (orientation:landscape) and (max-width: 900px) {
     .about-diag {
-      top: 50%; /* Adjust the top value to push the div down further when the page is minimized */
+      top:50%;
     }
   }
 
-  @media (max-width: 800px) {
+  @media (orientation:landscape) and (max-width: 700px) {
     .about-diag {
-      top: 60%; /* Adjust the top value to push the div down further when the page is minimized */
+      top:80%;
     }
   }
-
-  @media (max-width: 650px) {
-    .about-diag {
-      top: 62%; /* Adjust the top value to push the div down further when the page is minimized */
-    }
-  }
-
-  @media (max-width: 600px) {
-    .about-diag {
-      top: 65%; /* Adjust the top value to push the div down further when the page is minimized */
-    }
-  }
-
-  @media (max-width: 500px) {
-    .about-diag {
-      top: 60%; /* Adjust the top value to push the div down further when the page is minimized */
-    }
-  }
-
-
-  @media (max-width: 400px) {
-    .about-diag {
-      top: 70%; /* Adjust the top value to push the div down further when the page is minimized */
-    }
-  }
-
-  @media (max-width: 375px) {
-    .about-diag {
-      top: 108%; /* Adjust the top value to push the div down further when the page is minimized */
-    }
-  }
-
-
-  @media (max-width: 300px) {
-    .about-diag {
-      top: 150%; /* Adjust the top value to push the div down further when the page is minimized */
-    }
-  }
+  
+  
   
   
   .about-diag::after {
@@ -161,4 +151,5 @@
     -ms-transform: rotate(-5deg) translateX(-50%);
     transform: rotate(-5deg) translateX(-50%);
   }
+
 

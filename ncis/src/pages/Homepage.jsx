@@ -16,6 +16,11 @@ function Homepage() {
     <Ethos></Ethos>
     <About></About>
     <Goals></Goals>
+    <PS></PS>
+    <Execs></Execs>
+    <Pubs></Pubs>
+    <Events></Events>
+    <Contact></Contact>
     </div>
     </>
   )

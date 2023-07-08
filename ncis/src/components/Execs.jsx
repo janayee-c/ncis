@@ -8,7 +8,6 @@ import { Sogol , Dyhia } from "../images/export";
 const Execs = () => {
   return (
     <section id="execs-section" className="execs-section">
-      {/* <section className="diag-container" maxW="100%"></section>
     <Container className="execs-container" maxW="100%">
 
       <Heading center={true} title="EXECUTIVE TEAM"></Heading>
@@ -37,7 +36,8 @@ const Execs = () => {
         </div>
       </div>
       </div>
-    </Container> */}
+    </Container>
+    <div className="execs-diag"></div>
     </section>
   )
 }

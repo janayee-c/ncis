@@ -9,24 +9,6 @@
     align-items: center;
 }
 
-.contact-section .diag-container::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 30%;
-    max-width: 101%;
-    background-color: white;
-    top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-55%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-55%);
-    -webkit-transform-origin: center top;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    z-index: 150;
-    overflow-x: hidden;
-}
-
 .contact-container {
     z-index: 200;
     position: absolute;

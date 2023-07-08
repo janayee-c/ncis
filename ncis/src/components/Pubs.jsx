@@ -58,6 +58,25 @@ const Pubs = () => {
 
   return (
     <section id="pubs-section" className="pubs-section" maxH="100%">
+
+<Container className="pubs-container" maxW="100%">
+      <div className="pubs-grid">
+    <Heading center={true} title="PUBLICATIONS & MEDIA"></Heading>
+    <Grid templateColumns= {chooseGridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="30px" paddingTop="0px"> {/* if adding new items add new frames (fr) */}
+    {publications.map((publication, index) => (
+      <GridItem key={index} colSpan={1} rowSpan={1}> {/* Set the colSpan and rowSpan to 1 */}
+              <Publication
+              url = {publication.url}
+              pubHead = {publication.pubHead}
+              title ={publication.pubTitle}
+              desc = {publication.pubDesc}
+              ></Publication>
+      </GridItem>
+            ))}
+        </Grid>
+        </div>
+    </Container>
+    <div className="pubs-diag"></div>
     </section>
   )
 }

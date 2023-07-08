@@ -2,47 +2,23 @@
     position: relative;
     margin-top: 0px;
     padding-top: 65px;
-    min-height: fit-content;
+    min-height: 60vh;
     width: 100vw;
     background-color: white;
+    display: flex; 
+    flex-direction: column;
 }
 
-.events-section .diag-container::before {
-    /* Styles for general .diag-container::before in app.css*/
-    background-color: white;
-    content: "";
-    display: block;
-    position: absolute;
-    max-height: 30%;
-    max-width: 101%;
-    overflow-x: hidden;
-    top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-2%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-2%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-2%);
-    -webkit-transform-origin: center top;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    z-index: 200;
-  }
-
-
-@media (max-width: 1000px) {
-    .events-section .diag-container::before  {
-        -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(10%);
-        -ms-transform: rotate(-5deg) translateX(-50%)  translateY(10%);
-        transform: rotate(-5deg) translateX(-50%) translateY(10%);
+@media (orientation:landscape) {
+    .events-section {
+      min-height: 650px; 
     }
   }
-
-  .events-section .diag-container {
-    /* Styles for general .diag-container::before in app.css*/
-    background-color: white;
-    content: "";
-    display: block;
-    position: absolute;
-    max-height: 10vh;
-    max-width: 101%;
+  
+  @media (orientation:portrait) {
+    .events-section {
+      min-height: 500px; 
+    }
   }
 
 .events-container {
@@ -53,8 +29,6 @@
     padding-bottom: 20px;
     align-items: center;
     flex-direction: row;
-    position: absolute;
-    transform: translateY(-70%);
 }
 
 .events-content {
@@ -70,7 +44,6 @@
     align-self: center;
 }
 
-
 .events-desc{
     display: block;
     margin-block-start: 1em;
@@ -82,3 +55,29 @@
     padding-right: 60px;
     font-size: 0.9em;
 }
+
+.events-diag {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    width: 110%;
+    height: 60%;
+    z-index: 1;
+  }
+  
+  .events-diag::after {
+    content: '';
+    position: absolute;
+    display: block;
+    flex-shrink: 0; 
+    top: 10%;
+    left: 40%;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    transform-origin: 100% 0%;
+    -webkit-transform: rotate(-5deg) translateX(-50%);
+    -ms-transform: rotate(-5deg) translateX(-50%);
+    transform: rotate(-5deg) translateX(-50%);
+  }
+  

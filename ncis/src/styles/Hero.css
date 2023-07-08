@@ -14,6 +14,12 @@ img {
   z-index: 1;
 }
 
+@media (orientation:landscape) and (max-height:600px) {
+  .hero-section {
+    min-height: 800px; 
+  }
+}
+
 .cubic-container {
   position: relative;
   z-index: 3;
