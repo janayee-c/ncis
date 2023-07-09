@@ -9,22 +9,10 @@
   flex-direction: column; /* Add this line */
 }
 
-@media (orientation: landscape) {
-  .pubs-section {
-    min-height: 1500px;
-  }
-}
-
-@media (orientation: portrait) {
-  .pubs-section {
-    min-height: 1000px;
-  }
-}
-
 .pubs-container {
   z-index: 1;
   background-color: whitesmoke;
-  min-height: fit-content;
+  min-height: auto; 
   padding-top: 15px;
   padding-bottom: 30px;
   padding-right: 150px;

@@ -12,6 +12,7 @@ img {
   align-items: center;
   background-color: #F5F5F5;
   z-index: 1;
+  margin-bottom: 20px; 
 }
 
 @media (orientation:landscape) and (max-height:600px) {

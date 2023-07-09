@@ -2,32 +2,22 @@
     position: relative;
     margin-top: 0px;
     padding-top: 65px;
-    min-height: 60vh;
     z-index:1;
     margin-bottom: 20px;
-}
-
-@media (orientation:landscape) and (max-height:500px) {
-  .products-section {
-    min-height: 500px; 
-  }
+    min-height: 750px; 
+    height: 50vh;
 }
 
 
 .products-container {
     background-color: whitesmoke;
-    height: 60vh;
+    height: auto;
     padding-top: 30px;  /* how far heading down */
     padding-bottom: 30px;
     align-items: center;
     flex-direction: row;
     position: absolute;
-}
-
-@media (orientation:landscape) and (max-height:500px) {
-  .products-container {
-    min-height: 400px; 
-  }
+    min-height: 400px;
 }
 
 .panelContainer {
@@ -92,26 +82,12 @@
   
   .ps-diag {
     position: absolute;
-    top: 65%;
+    top: 35%;
     left: 0%;
     width: 110%;
-    height: 60%;
+    height: 200px;
     z-index: 1;
   }
-
-  @media (max-width: 500px) {
-    .ps-diag {
-      top: 70%;
-    }
-  }
-
-  @media (orientation:landscape) {
-    .ps-diag {
-      top: 65%;
-    }
-  }
-  
-
 
   .ps-diag::after {
     content: '';

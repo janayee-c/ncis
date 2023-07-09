@@ -2,17 +2,10 @@
     position: relative;
     margin-top: 0px;
     padding-top: 65px;
-    min-height: 100vh;
     width: 100vw;
     margin-bottom: 40vh;
-}
-
-@media (orientation:landscape) {
-.execs-section{
     min-height: 800px;
-    }
 }
-
 
 .execs-container {
     z-index: 1;

@@ -1,66 +1,51 @@
-
-#ethos-section {
-    position: relative;
-    margin-top: 0;
-    padding-top: 15px;
-    background: #fff;  
-    height: 60vh;
-    width: 100vw;
-    z-index: 1;
-    align-items: center;
-    align-self: center;
-    display: flex; 
+.ethos-section {
+  position: relative;
+  margin-top: 0;
+  padding-top: 5px;
+  background: #fff;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+  margin-bottom: 40px;
+  height: auto; 
+  min-height: 50vh; 
+  margin-bottom: 10vh; 
 }
 
-
-@media (orientation:landscape) and (max-height:600px) {
-    .ethos-section {
-      min-height: 800px; 
-    }
-  }
-
 .econtainer {
-    position: absolute;
-    height: 95%; 
-    margin: 0 0; 
-    z-index: 1;
-    min-width: 40vw;
-    flex-shrink: 0; 
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  z-index: 1;
 }
 
 .slider-container {
-    align-items: center;
-    position: absolute;
-    max-height: 30%;
-    width: 100%;
-    right: 0.15%; 
-    background-color: white;
-    text-align: center;
-    flex-shrink: 0;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 0;
 }
 
 .ethos-diag {
-    position: absolute;
-    top: 60%;
-    left: 0%;
-    width: 110%;
-    height: 60%;
-    z-index: 1;
-  }
-  
-  .ethos-diag::after {
-    content: '';
-    position: absolute;
-    display: block;
-    flex-shrink: 0; 
-    top: 10%;
-    left: 40%;
-    width: 100%;
-    height: 100%;
-    background: whitesmoke;
-    transform-origin: 100% 0%;
-    -webkit-transform: rotate(-5deg) translateX(-50%);
-    -ms-transform: rotate(-5deg) translateX(-50%);
-    transform: rotate(-5deg) translateX(-50%);
-  }
-  
+  position: absolute;
+  left: 0%;
+  top: 100%; 
+  width: 110%;
+  height: 60%;
+  z-index: 1;
+}
+
+.ethos-diag::after {
+  top: -50%; 
+  content: "";
+  position: absolute;
+  display: block;
+  flex-shrink: 0;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  transform-origin: 100% 0%;
+  transform: rotate(-5deg) translateX(-50%);
+}

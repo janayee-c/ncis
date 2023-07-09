@@ -51,8 +51,8 @@ const Ethos = () => {
             ))}
           </Slider>
         </div>
+        <div className="ethos-diag"></div>
       </Container>
-      <div className="ethos-diag"></div>
     </section>
   );
 };
