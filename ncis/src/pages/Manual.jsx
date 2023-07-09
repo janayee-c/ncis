@@ -1,52 +1,34 @@
 import React from 'react'
-import { useEffect } from 'react'
-import { Intro, Before, During, After, Case, Conclusion } from '../components/manual/export'
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react' 
+import { useState, useEffect } from 'react'
+import { Spinner } from '@chakra-ui/react' 
 import '../styles/Manual.css'
-import {
-    Link
-    } from 'react-router-dom';
-import SplashScreen from '../components/SplashScreen'
+import { Home } from '../components/manual/export'
+import { Heading } from '../components/export'
 
 const Manual = () => {
-    return (
-      <>
-      <Tabs size='md' variant='enclosed' colorScheme='ncis.100' className='tabs'>
-        <Box>
-        <Link to="/"><img id="logo" src={require('../images/NCIS_logo_mantra.png')}/></Link>
-        </Box>
-      <TabList className='headers'>
-        <Tab>Introduction</Tab>
-        <Tab>Before Building</Tab>
-        <Tab>During Building</Tab>
-        <Tab>After Building</Tab>
-        <Tab>Case Study: NCIS</Tab>
-        <Tab>Conclusion</Tab>
-      </TabList>
-      <TabPanels className="content">
-        {/*Each TabPanel contains a component which has manual content */}
-        <TabPanel>
-          <Intro></Intro>
-        </TabPanel>
-        <TabPanel>
-         <Before></Before>
-        </TabPanel>
-        <TabPanel>
-          <During></During>
-        </TabPanel>
-        <TabPanel>
-          <After></After>
-        </TabPanel>
-        <TabPanel>
-          <Case></Case>
-        </TabPanel>
-        <TabPanel>
-          
-          <Conclusion></Conclusion>
-        </TabPanel> 
-      </TabPanels>
-    </Tabs>
-    </>
+  const [showElement, setShowElement] = useState(false)
+  const [disElement, setdisElement] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowElement(true)
+  }, 1200);
+    const show = setTimeout(() => {
+      setdisElement(true)
+  }, 800);
+
+  return () => clearTimeout(timer);
+  }, [])
+
+    return (<div>
+         {showElement ? <div></div> : <div className={showElement ? 'hide splash-flex' : 'splash-flex'}>
+        <Heading title="LOADING AI ETHICS MANUAL"></Heading>
+        <Spinner  emptyColor='gray.100' size='xl'/>
+              </div>}
+              <div className={disElement ? 'show' : 'static_hide'}>
+       <Home ></Home> 
+       </div>
+      </div>
     )
   }
   
