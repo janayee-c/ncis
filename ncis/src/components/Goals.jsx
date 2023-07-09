@@ -28,8 +28,8 @@ const Goals = () => {
         <div className="img-container">
           <img src={image} alt="goals" className={isDesktopMode ? 'desktop-image' : 'mobile-image'} />
         </div>
+        <div className="goals-diag"></div>
       </Container>
-      <div className="goals-diag"></div>
     </section>
   );
 };

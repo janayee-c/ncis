@@ -36,8 +36,8 @@ const Execs = () => {
         </div>
       </div>
       </div>
+      <div className="execs-diag"></div>
     </Container>
-    <div className="execs-diag"></div>
     </section>
   )
 }

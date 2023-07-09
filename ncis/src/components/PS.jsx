@@ -87,8 +87,8 @@ const PS = () => {
           </div>
         )}
     </Container>
-    </Container>
     <div className="ps-diag"></div>
+    </Container>
     </section>
     )
   };

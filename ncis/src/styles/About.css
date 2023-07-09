@@ -91,60 +91,6 @@
     z-index: 1;
   }
 
-/* 
-  @media (max-width: 1500px) {
-    .about-diag {
-      top: 40%; 
-    }
-  }
-
-  @media (max-width: 1350px) {
-    .about-diag {
-      top: 45%; 
-    }
-  }
-
-
-  @media (max-width: 940px) {
-    .about-diag {
-      top: 47%; 
-    }
-  }
-
-  @media (max-width: 860px) {
-    .about-diag {
-      top: 50%; 
-    }
-  }
-
-  @media (max-width: 750px) {
-    .about-diag {
-      top: 60%; 
-    }
-  }
-
-  @media (max-width: 600px) {
-    .about-diag {
-      top: 65%; 
-    }
-  }
-  
-
-  @media (max-width: 450px) {
-    .about-diag {
-      top: 70%; 
-    }
-  }
-
-
-
-  @media (max-width: 480px) {
-    .about-diag {
-      top: 65%; 
-    }
-  } */
-
-
   
   
   .about-diag::after {
