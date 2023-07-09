@@ -1,61 +1,45 @@
 .execs-section {
     position: relative;
     margin-top: 0px;
-    padding-top: 65px;
-    min-height: 120vh;
     width: 100vw;
+    min-height: 800px;
+    z-index: 1;
 }
-
-.execs-section .diag-container::before {
-    /* Styles for general .diag-container::before in app.css*/
-    background-color: white;
-    content: "";
-    display: block;
-    position: absolute;
-    height: 30%;
-    max-width: 101%;
-    overflow-x: hidden;
-    top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-30%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-30%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-30%);
-    -webkit-transform-origin: center top;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    z-index: 200
-  }
 
 .execs-container {
-    z-index: 200;
-    background-color: white;
-    height: 60vh;
-    padding-top: 10px;  /* distance of heading to profile container */
-    padding-bottom: 20px;
+    position: relative; 
+    z-index: 1;
+    width: 100%;
+    min-height: 80vh; 
+    flex-shrink: 0;
+    height: max-content;
+    margin-bottom: 20px;  /* distance of heading to profile container */
     align-items: center;
-    flex-direction: row;
-    position: absolute;
-    transform: translateY(-85%);
+    flex-direction: column;
+    
 }
+
+@media (orientation:landscape) and (max-width: 500px) {
+    .execs-container{
+        min-height: 500px;
+        }
+    }
 
 .profile-container {
     width: 100vw;
-    height: 90vh;
+    min-height: 40vh; 
+    height: max-content;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0em;
-    padding-top: 10%;
-    border: 0em;
-    transform: translateY(-15%);
+    padding-bottom: 500px;
 }
 
 @media (max-width: 1022px) {
     .profile-container {
         height: 80vh;
-        width: 100vw;
-        transform: translateY(-5%);
-        
+        width: 100vw; 
     }
 }
 
@@ -156,3 +140,30 @@
     padding-right: 0em;
     width: 100%; 
 }
+
+.execs-diag {
+    position: absolute;
+    left: 0%;
+    top: 100%; 
+    width: 110%;
+    height: 60%;
+    z-index: 1;
+  }
+    
+  
+  .execs-diag::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 100%;
+    z-index: 1;
+    height: 0%;
+    background: whitesmoke;
+    flex-shrink: 0;
+    transform-origin: 100% 0%;
+    -webkit-transform: rotate(-5deg) translateX(-50%);
+    -ms-transform: rotate(-5deg) translateX(-50%);
+    transform: rotate(-5deg) translateX(-50%);
+  }
+  

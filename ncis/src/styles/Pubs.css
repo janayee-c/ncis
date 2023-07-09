@@ -1,83 +1,60 @@
 #pubs-section {
-    position: relative;
-    margin-top: 0px;
-    padding-top: 65px;
-    min-height: fit-content;
-    width: 100vw;
-
-  }
-  
-.pubs-section .diag-container::before {
-    /* Styles for general .diag-container::before in app.css*/
-    background-color: whitesmoke;
-    content: "";
-    display: block;
-    position: absolute;
-    height: 50%;
-    max-width: 101%;
-    overflow-x: hidden;
-    top: 0px;
-    -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-80%);
-    -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-80%);
-    transform: rotate(-5deg) translateX(-50%) translateY(-80%);
-    -webkit-transform-origin: center top;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    z-index: 150
-  }
-  
-  
-  @media (max-width: 800px) {
-  .pubs-section .diag-container::before {
-      -webkit-transform: rotate(-5deg) translateX(-50%)  translateY(-200%);
-      -ms-transform: rotate(-5deg) translateX(-50%)  translateY(-200%);
-      transform: rotate(-5deg) translateX(-50%) translateY(-200%);
-    }
-  }
-
-  .pubs-container {
-    z-index: 200;
-    background-color: whitesmoke;
-    min-height: fit-content;
-    padding-top: 15px;  /* how far heading down */
-    padding-bottom: 30px;
-    padding-right: 150px;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    transform: translateY(-78%);
-    width: 80%;
-    margin: 10px;
-    overflow-y:scroll;
-    scrollbar-width: thin;/*fancy width*/
-
-  }
-
-  @media (max-width: 1050px) {
-    .pubs-container {
-        transform: translateY(-60%);
-        height: 100vh;
-    }
+  position: relative;
+  margin-top: 0px;
+  padding-top: 65px;
+  min-height: 80vh;
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Add this line */
 }
 
-
-@media (max-width: 800px) {
-    .pubs-container {
-        transform: translateY(-75%);
-        height: 125vh;
-    }
-}
-
-@media (max-width: 600px) {
-    .pubs-container {
-        transform: translateY(-90%);
-        height: 125vh;
-    }
+.pubs-container {
+  z-index: 1;
+  background-color: whitesmoke;
+  min-height: auto; 
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-right: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%; 
+  margin: 10px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
 .pubs-grid {
     padding: 10px;
 }
+
+.pubs-diag {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 110%;
+  height: 25%;
+  z-index: 1;
+}
+
+
+.pubs-diag::after {
+  content: '';
+  position: absolute;
+  display: block;
+  flex-shrink: 0; 
+  top: 15%;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform-origin: 100% 0%;
+  -webkit-transform: rotate(-5deg) translateX(-50%);
+  -ms-transform: rotate(-5deg) translateX(-50%);
+  transform: rotate(-5deg) translateX(-50%);
+}
+
 
 
 

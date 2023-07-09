@@ -58,8 +58,8 @@ const Pubs = () => {
 
   return (
     <section id="pubs-section" className="pubs-section" maxH="100%">
-      <section className="diag-container" maxW="100%"></section>
-    <Container className="pubs-container" maxW="100%">
+
+<Container className="pubs-container" maxW="100%">
       <div className="pubs-grid">
     <Heading center={true} title="PUBLICATIONS & MEDIA"></Heading>
     <Grid templateColumns= {chooseGridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="30px" paddingTop="0px"> {/* if adding new items add new frames (fr) */}
@@ -76,6 +76,7 @@ const Pubs = () => {
         </Grid>
         </div>
     </Container>
+    <div className="pubs-diag"></div>
     </section>
   )
 }
