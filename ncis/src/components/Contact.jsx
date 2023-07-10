@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Contact.css'
 import { Heading } from '../components/export'
 import { Container, Grid, useMediaQuery } from '@chakra-ui/react'
+import {Mail} from '../images/export'
 
 
 const Contact = () => {
@@ -12,7 +13,8 @@ const Contact = () => {
     <Container className="contact-container" maxW="100%">
       <Heading center={true} title="CONTACT"></Heading>
       <div className="contact-content">
-        <Grid templateColumns={isMinimized ? "1fr " : "1fr 1fr 1fr"} justifyItems="center" gap={1} padding="10px"> </Grid>
+        <Grid templateColumns={isMinimized ? "1fr " : "1fr 1fr"} justifyItems="center" gap={1} padding="10px"> 
+        </Grid>
       </div>
     </Container>
     </section>
