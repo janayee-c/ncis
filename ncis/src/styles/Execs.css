@@ -79,9 +79,9 @@
     text-align: center;
     height: 100%;
     width: 100%;
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: Beckman; 
-    font-weight: bold; 
+    font-weight: medium; 
    
 }
 
@@ -95,6 +95,7 @@
 
 .d-heading {
     text-align: center;
+    font-weight: bold; 
 }
 
 .d-desc {
@@ -102,10 +103,11 @@
     margin-block-end: 0; 
     font-family: Montserrat; 
     font-size: 0.9em;
-    font-weight: light;
+    font-weight: medium;
     display: inline-block;
     padding-right: 0em;
     width: 100%; 
+    line-height: 1.65em; 
 }
 
 .s-team {
@@ -113,9 +115,9 @@
     text-align: center;
     height: 100%;
     width: 100%;
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: Beckman; 
-    font-weight: bold; 
+    font-weight: medium; 
 }
 
 @media (max-width: 1022px) {
@@ -128,6 +130,7 @@
 
 .s-heading {
     text-align: center;
+    font-weight: bold; 
 }
 
 .s-desc {
@@ -139,6 +142,7 @@
     display: inline-block;
     padding-right: 0em;
     width: 100%; 
+    line-height: 1.65em; 
 }
 
 .execs-diag {

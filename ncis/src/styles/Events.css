@@ -54,7 +54,8 @@
     text-align: left;
     padding-left: 60px;
     padding-right: 60px;
-    font-size: 0.9em;
+    font-weight: medium;
+    font-size: 0.9rem;
 }
 
 .events-diag {
@@ -64,6 +65,14 @@
     width: 110%;
     height: 60%;
     z-index: 1;
+  }
+
+  .events-image {
+    width: 120%;
+    scale: 1.1; 
+    max-width: 100%;
+    overflow: clip; 
+    height: auto;
   }
   
   .events-diag::after {

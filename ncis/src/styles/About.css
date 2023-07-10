@@ -49,7 +49,7 @@
  .about-txt{
     font-family: "Montserrat";
     line-height: 60px;
-    font-weight: 590;
+    font-weight: medium;
     font-size: 1.5em; 
     text-align: justify;
     text-indent: 0px;
@@ -71,7 +71,7 @@
     .about-txt {
         font-size: 1em; 
         line-height: 25px;
-        font-weight: 590;
+        font-weight: medium;
       }
     }
   

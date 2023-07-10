@@ -10,13 +10,13 @@
 
 .article-header {
     display: block;
-    font: 12.6px;
+    font-size: 12.6px;
     color: #103A9C;
     font-family: Beckman;
 }
 
 .article-title {
-    font: 12.96px;
+    font-size: 12.96px;
     font-family: Beckman; 
 }
 
@@ -27,7 +27,7 @@
     margin-block-end: 12.96px;
     margin-block-start: 12.96px;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 300;
     word-spacing:2px;
 }
 
