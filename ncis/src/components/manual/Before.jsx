@@ -96,7 +96,7 @@ const Before = () => {
       )
     } else if (page === 3) {
       return (
-        <Page title="SECTION 3: DATA AND UNDERSTANDING BIAS" image={Information} text={["Because data is a fundamental part of training and using AI systems, it remains as one of the most important considerations in creating ethical AI. The most common threat to responsible AI is data inadvertently creating bias in the model. Why is AI bias negative? The existence of AI bias potentially leads to a plethora of unintended and negative effects, such as producing negative results for one group more than another, or reinforcing harmful human bias. Not only does bias prevent AI systems from properly completing the tasks it was created to do, but it is also unethical and dangerous to stakeholders."]}></Page>
+        <Page title="SECTION 3: DATA AND UNDERSTANDING BIAS" image={Information} text={["Because data is a fundamental part of training and using AI systems, it remains as one of the most important considerations in creating ethical AI.", "The most common threat to responsible AI is data inadvertently creating bias in the model. Why is AI bias negative? The existence of AI bias potentially leads to a plethora of unintended and negative effects, such as producing negative results for one group more than another, or reinforcing harmful human bias. Not only does bias prevent AI systems from properly completing the tasks it was created to do, but it is also unethical and dangerous to stakeholders."]}></Page>
       )
     } else if (page === 4) {
       return (

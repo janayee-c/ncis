@@ -24,7 +24,6 @@ import Grace from './Grace.png'
 import Hava from './hava.png'
 import Edith from './Edith.png'
 import Systems from './systems.png'
-import Sage from './amazon_sagemaker.png'
 import Aggregation from './aggre.svg'
 import Evaluation from './Eval.svg'
 import Laws from './laws.svg'
@@ -59,7 +58,6 @@ export {
     Hava,
     Edith,
     Systems,
-    Sage,
     Evaluation,
     Aggregation,
     Laws, 
