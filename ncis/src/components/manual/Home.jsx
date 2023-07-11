@@ -17,9 +17,9 @@ const Home = () => {
         </Box>
       <TabList className='headers'>
         <Tab>Introduction</Tab>
-        <Tab>Before Development</Tab>
-        <Tab>During Development</Tab>
-        <Tab>After Development</Tab>
+        <Tab>Pre Development</Tab>
+        <Tab>Development</Tab>
+        <Tab>Post Development</Tab>
         <Tab>Case Study: Ada</Tab>
         <Tab>Conclusion</Tab>
       </TabList>

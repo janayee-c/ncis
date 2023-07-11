@@ -14,7 +14,7 @@
 .content {
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-indent: 1.25rem;
 }
 
@@ -207,15 +207,21 @@ ul li {
 }
 
 
-.splash-flex {
-    display: flex;
+.splash_flex {
+ display: flex;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
- flex-direction: column;
- padding: 0 10%;
- margin-top: 20%;
+ gap: 5%;
+ padding: 20% 0;
 }
 
 .s-scale {
     transform: scale(0.8)
+}
+
+.splash_text {
+    font-family: "Beckman";
+    font-size: 2.5rem;
+
 }

@@ -21,8 +21,8 @@ const Manual = () => {
   }, [])
 
     return (<div>
-         {showElement ? <div></div> : <div className={showElement ? 'hide splash-flex' : 'splash-flex'}>
-        <Heading title="LOADING AI ETHICS MANUAL"></Heading>
+         {showElement ? <div></div> : <div className={showElement ? 'hide splash_flex' : 'splash_flex'}>
+        <Heading id="center" title="LOADING AI ETHICS MANUAL"></Heading>
         <Spinner  emptyColor='gray.100' size='xl'/>
               </div>}
               <div className={disElement ? 'show' : 'static_hide'}>
