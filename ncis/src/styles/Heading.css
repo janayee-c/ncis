@@ -2,8 +2,9 @@
   font-family: "Beckman";
   font-size: 1.9rem;
   padding: 20px;
+  padding-top:0px;
   font-weight: 600;
-  text-indent: 5px;
+  /* text-indent: 5px; */
   letter-spacing: 4px;
   z-index: 150; 
 }

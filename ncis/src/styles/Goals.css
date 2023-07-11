@@ -18,6 +18,12 @@
   margin-bottom: 0; 
 }
 
+@media (min-width: 1200px) {
+  .goals-container {
+    transform:translateY(-40px);
+  }
+}
+
 .img-container {
   width: 100%;
   min-height: max-content;

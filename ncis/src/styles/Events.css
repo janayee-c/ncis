@@ -1,40 +1,38 @@
 .events-section {
     position: relative;
-    margin-top: 0px;
-    padding-top: 65px;
-    min-height: 60vh;
+    margin-top: 0;
+    padding-top: 10px;
     width: 100vw;
-    background-color: white;
-    display: flex; 
+    display: flex;
     flex-direction: column;
+    height: max-content; 
+    min-height: 40vh; 
+    z-index: 1;
 }
 
-@media (orientation:landscape) {
-    .events-section {
-      min-height: 650px; 
-    }
-  }
-  
-  @media (orientation:portrait) {
-    .events-section {
-      min-height: 500px; 
-    }
-  }
-
 .events-container {
-    z-index: 200;
-    background-color: white;
-    height: 60vh;
-    padding-top: 10px;  /* distance of heading to profile container */
-    padding-bottom: 20px;
+    z-index: 1;
+    position: relative; 
+    min-height: 30vh; 
+    height: max-content;
+    padding-top: 15px;
+    padding-bottom: 180px; 
+    margin-bottom: 0px;
+    display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
-    height: auto; 
+    width: 100vw;
+    margin: 10px;
+    align-self: center; 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white; 
 }
 
 .events-content {
     text-align: center;
-    font-family: "Montserrat";
     align-items: center;
 }
 
@@ -43,6 +41,10 @@
     padding-bottom: 50px;
     width: 100vw;
     align-self: center;
+    scale: 1.15; 
+    max-width: 100%;
+    overflow: clip; 
+    height: auto;
 }
 
 .events-desc{
@@ -52,37 +54,34 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     text-align: left;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    line-height: 1.65em; 
+
+    font-family: "Montserrat";
     font-weight: medium;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 .events-diag {
     position: absolute;
-    top: 60%;
+    top: 100%;
     left: 0%;
     width: 110%;
     height: 60%;
     z-index: 1;
   }
 
-  .events-image {
-    width: 120%;
-    scale: 1.1; 
-    max-width: 100%;
-    overflow: clip; 
-    height: auto;
-  }
+
   
   .events-diag::after {
     content: '';
     position: absolute;
     display: block;
     flex-shrink: 0; 
-    top: 10%;
+    top: -30%;
     left: 40%;
-    width: 100%;
+    width: 110%;
     height: 100%;
     background: whitesmoke;
     transform-origin: 100% 0%;
@@ -90,4 +89,17 @@
     -ms-transform: rotate(-5deg) translateX(-50%);
     transform: rotate(-5deg) translateX(-50%);
   }
+  
+  @media (min-width: 900px) {
+    .events-diag::after {
+      top: -40%;
+    }
+  }
+
+  @media (min-aspect-ratio: 1.75/1) {
+    .events-diag::after {
+        top: -50%; 
+    }
+
+}
   

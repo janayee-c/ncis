@@ -14,8 +14,8 @@ const Events = () => {
       <img className="events-image" src={TLMDS}></img>
       <p className="events-desc">The Tech, Law, and Maritime Defense Summit is a three day symposium that brings together researchers, government leaders, and industry practitioners concerned with the application of emerging technologies such as Artificial Intelligence in addressing challenges in the maritime domain.</p>
       </div>
-      </Container>
       <div className="events-diag"></div>
+      </Container>
     </section>
   )
 }

@@ -4,23 +4,13 @@
   padding-top: 10px;
   width: 100vw;
   display: flex;
+  min-height: 400px;
   flex-direction: column;
   height: max-content; 
-  min-height: 70vh; 
+  min-height: 60vh; 
   z-index: 1;
 }
 
-@media (orientation:landscape) {
-  .about-section {
-    min-height: 400px; 
-  }
-}
-
-@media (orientation:portrait) {
-  .about-section {
-    min-height: 400px; 
-  }
-}
 
 .about-container {
   position: relative; 
@@ -91,7 +81,6 @@
     z-index: 1;
   }
 
-  
   
   .about-diag::after {
     content: '';
