@@ -1,9 +1,10 @@
 .contact-section {
     position: relative;
     margin-top: 0;
-    padding-top: 65px;
+    padding-top: 40x;
     background: #fff;  
-    min-height: 200vh;
+    height: max-content; 
+    min-height: 80em;
     width: 100vw;
     background-color: whitesmoke;
     align-items: center;
@@ -16,9 +17,9 @@
     position: relative; 
     z-index: 1;
     width: 100vw;
-    min-height: 40vh; 
-    flex-shrink: 0;
+    min-height: 50em; 
     height: max-content;
+    flex-shrink: 0;
     margin-bottom: 0; 
     margin-inline-start: 0; 
     margin-inline-end: 0; 

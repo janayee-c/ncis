@@ -77,9 +77,16 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .pubs-diag::after {
+    top: -55%;
+  }
+}
+
+
 @media (max-width: 800px) {
   .pubs-diag::after {
-    top: -25%;
+    top: -30%;
   }
 }
 
