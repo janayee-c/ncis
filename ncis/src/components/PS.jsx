@@ -50,6 +50,24 @@ const PS = () => {
    return ""; 
   }
 
+  const transformProduct = (product) => {
+    if (activePanelVisible) {
+
+    switch(product) {
+      case (product.name === "HAVA" && selectedProduct === product) :
+        return "hava-transformation"
+      case (product.name === "EDITH" && selectedProduct === product) :
+        return "edith-transformation"
+      case (product.name === "GRACE" && selectedProduct === product) :
+        return "grace-transformation"
+
+      default: 
+        return "fade-out"; 
+    }
+  }
+  return ""; 
+}
+
 
   return (
     <section id="products-section" className="products-section" maxW="100vw">
@@ -71,7 +89,7 @@ const PS = () => {
               col={product.col}
               onClick = { () => handleProductClick(product)}
               isSelected={selectedProduct === product} 
-              className={handlePanelVision(product)}
+              className={transformProduct(product)}
               ></OneProduct>
             ))}
     

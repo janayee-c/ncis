@@ -53,12 +53,12 @@
 }
 
 
-.panelSwitch .inactiveProductPanel { /* makes inActiveProductPanel fade out*/
+.panelSwitch .inactiveProductPanel { /* makes inactiveProductPanel fade out*/
     opacity: 0;
 }
 
 
-.panelSwitch .activeProductPanel {
+.panelSwitch .activeProductPanel { /* makes ActiveProductPanel pop up*/
     bottom: 0;
     padding: 60px;
     background-color: whitesmoke;
@@ -77,6 +77,10 @@
     to {
       transform: translateY(-70%);
     }
+  }
+
+  .hava-transformation {
+    transform: translateX(-10%); 
   }
   
   .ps-diag {
