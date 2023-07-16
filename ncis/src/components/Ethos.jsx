@@ -21,22 +21,19 @@ const Ethos = () => {
     {title: "CAPACITY", source: Capacity},
     {title: "INFORMATION AT HAND", source: Information}
   ]
+  
   const settings = { //for slider
     dots: false,
-    infinite: isMedium, // infinite carousel only when in mobile mode
+    infinite: isMedium, 
     speed: 3000,
-    slidesToShow: isMedium ? ( isSmall ? 1 : 3 ) : 5, // Show 3 elements on mobile, 5 elements on larger screens
+    slidesToShow: isMedium ? ( isSmall ? 1 : 3 ) : 5, 
     slidesToScroll: isMedium ? ( isSmall ? 1 :3) : 5,
     swipeToSlide: true,
     draggable: true,
     autoplay: isMedium,
     autoplaySpeed: 2000
 
-  };
-
-  //ethos-section is entire section (including diag-container)
-  //diag-container before:: diagonal element 
-  //e-container includes all content (heading included)
+  }
   
   return (
     <section id="ethos-section" className="ethos-section">

@@ -1,24 +1,19 @@
 .pubs-section {
   position: relative;
   margin-top: 0px;
-  min-height: 100vh;
+  height: auto; 
+  min-height: 30em;
   width: 100vw;
   z-index: 1;
 }
-
-@media (min-aspect-ratio: 1.75/3) {
-  .pubs-section {
-      min-height: 600px; 
-  }
-  }
 
 
 .pubs-container {
   position: relative; 
   z-index: 1;
   background-color: whitesmoke;
-  min-height: auto; 
-  padding-top: 15px;
+  height: auto; 
+  padding-top: 30px;
   padding-bottom: 1px;
   display: flex;
   align-items: center;
@@ -37,6 +32,7 @@
     z-index: 2;
     padding: 10px;
     padding-top: 20px; 
+    padding-bottom: 80px; 
 }
 
 .pubs-diag {
@@ -93,7 +89,7 @@
 
 @media (max-width: 600px) {
   .pubs-diag::after {
-    top: -15%;
+    top: -20%;
   }
 }
 

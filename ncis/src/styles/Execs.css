@@ -1,20 +1,28 @@
 .execs-section {
     position: relative;
     width: 100vw;
-    min-height: 90vh;
+    min-height: 70em;
     z-index: 1;
 }
 
 @media (max-aspect-ratio: 2.5/4) {
 .execs-section {
-    min-height: 30vh; 
+    min-height: 10em; 
 }
 
 }
 
 @media (min-aspect-ratio: 1.75/3) {
     .execs-section {
-        min-height: 60vh; 
+        min-height: 45em; 
+    }
+}
+
+
+@media (max-width: 500px) {
+    .execs-section {
+        min-height: 25em; 
+        max-height: 50em; 
     }
 
 }
@@ -26,19 +34,28 @@
     flex-shrink: 0;
     margin-bottom: 0; 
     background-color: white;
-    padding-top: 0.25vh; 
-    padding-bottom: 8em; 
-    min-height: fit-content; 
+    padding-top: 0; 
+    padding-bottom: 4em; 
+    min-height: 40em; 
+    height: fit-content; 
     align-items: center;
     display: flex;
     flex-direction: column;
     z-index: 1;
 }
 
+@media (max-width: 500px) {
+    .execs-container{
+        min-height: 20em; 
+        max-height: 40em; 
+    }
+}    
+
 .profiles-container {
     padding-top: 40px; 
     display: flex; 
     height: max-content; 
+    min-height: 50em; 
 }
 
 .profile {
@@ -148,7 +165,7 @@
   .execs-diag::after {
     content: "";
     position: absolute;
-    top: -50%;
+    top: -85%;
     left: 40%;
     width: 110%;
     height: 160%;
@@ -160,12 +177,18 @@
     transform: rotate(-5deg) translateX(-50%);
   }
 
-  @media (min-width: 1500px) { /*large screens */
+
+  @media (min-width: 1999px) { /*large screens */
     .execs-diag::after {
-    top: 10%; 
+    top: -100%; 
     }
 }
 
+  @media (min-width: 1500px) { /*large screens */
+    .execs-diag::after {
+    top: -80%; 
+    }
+}
 
   @media (max-width: 900px) { /*large screens */
     .execs-diag::after {
@@ -173,9 +196,9 @@
     }
 }
 
-@media (min-aspect-ratio: 1.75/3) {
+@media (max-width: 500px) {
     .execs-diag::after {
-        top: -70%;
+        top: -30%; 
     }
 
 }

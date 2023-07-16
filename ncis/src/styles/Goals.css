@@ -4,7 +4,7 @@
   padding-top: 5px;
   width: 100vw;
   height: max-content; 
-  min-height: 80vh; 
+  min-height: 45em; 
   z-index: 1;
 }
 
@@ -12,7 +12,7 @@
   position: relative; 
   z-index: 1;
   width: 100%;
-  min-height: 80vh; 
+  min-height: 40em; 
   flex-shrink: 0;
   height: max-content;
   margin-bottom: 0; 
@@ -50,25 +50,10 @@
   }
 }
 
-@media (max-width: 800px) {
-  /* Goal Image size for smaller desktop screen */
-  .desktop-image {
-    max-width: 20vw;
-    max-height: 20vh; 
-  }
-}
-
-@media (orientation:landscape) and (max-height:600px) {
-  .desktop-image {
-    min-height: 200px;
-    scale: 0.9;
-  }
-}
-
 .mobile-image {
   scale: 1;
-  max-width: 50%;
-  max-height: 30%;
+  max-width: 20em;
+  max-height: 40em;
   width: auto;
   height: auto;
   margin: 0; 
@@ -117,7 +102,7 @@
 
 @media (max-width: 800px) {
   .goals-diag::after {
-    top: -30%;
+    top: -40%;
   }
 }
 

@@ -1,9 +1,6 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import '../styles/OneProduct.css'
-
-import DEVICETEXTS from "../constants/texts"
-import HAVA from "../images/export"
 
 
 const OneProduct = (props) => {
@@ -15,12 +12,12 @@ const OneProduct = (props) => {
     }
 
     return (
-        <Box width="140 px" className={`product-container" ${isSelected ? 'selected' : ''}`}
+        <Container width="155px" height="300px" className={`product-container" ${isSelected ? 'selected' : ''}`}
             style={productStyle}
             onClick={onClick}>
-            <img className="product-icon" src={imgSource} objectFit={"cover"}></img>
+            <img className="product-icon" src={imgSource}></img>
             <h2 onMouseEnter={onHover} className="product-name">{name}</h2>
-        </Box>
+        </Container>
     );
 }
 

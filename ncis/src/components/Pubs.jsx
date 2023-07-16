@@ -65,7 +65,7 @@ const Pubs = () => {
 
     <Grid templateColumns= {chooseGridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="30px" paddingTop="0px"> {/* if adding new items add new frames (fr) */}
     {publications.map((publication, index) => (
-      <GridItem key={index} colSpan={1} rowSpan={1}> {/* Set the colSpan and rowSpan to 1 */}
+      <GridItem key={index} colSpan={1} rowSpan={1}>
               <Publication
               url = {publication.url}
               pubHead = {publication.pubHead}

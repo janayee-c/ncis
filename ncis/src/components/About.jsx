@@ -4,10 +4,6 @@ import { ABOUT } from "../constants/export"
 import { Container } from '@chakra-ui/react'
 import { Heading } from '../components/export'
 
-  //ethos-section is entire section 
-  //diag-container before:: diagonal element above section 
-  //e-container includes all content (heading included)
-
 const About = () => {
   return (
   <section id="about-section" className="about-section"  maxW="100vw">
@@ -18,9 +14,8 @@ const About = () => {
         </div>
       <div className="about-diag"></div>
       </Container>
-      
     </section>
   )
 }
 
-export default About
+export default About;

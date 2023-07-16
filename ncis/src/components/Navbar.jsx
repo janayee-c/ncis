@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import '../styles/Navbar.css';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink  } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import {
   IconButton,
@@ -10,7 +10,6 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
-  DrawerCloseButton,
   Stack,} 
   from '@chakra-ui/react';
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react';
@@ -21,7 +20,7 @@ const Navbar = () => {
   const btnRef = useRef(); //uses current / mutable value
   const drawerRef= useRef();
   const [isTopDrawer] = useMediaQuery('(min-width: 990px)');
-  const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full'];
+
 
   const [activeLink, setActiveLink] = useState(null);
 
@@ -34,10 +33,12 @@ const Navbar = () => {
     setActiveLink(null);
   }
 
-  function closeDrawer() {
-    onClose()
+  function handleClose() {
+    setTimeout(() => {
+      onClose();
+    }, 200); // Adjust the delay value (in milliseconds) to control the ease-out transition
   }
-
+  
   return (
     <section id="navbar-section">
     <Box
@@ -80,7 +81,7 @@ const Navbar = () => {
           ref={drawerRef}
           className="drawer-transition"  
         >
-          <DrawerContent onMouseLeave={onClose}>
+          <DrawerContent onMouseLeave={handleClose}>
             <DrawerBody>
               <Box height="100px"
               >
@@ -213,4 +214,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

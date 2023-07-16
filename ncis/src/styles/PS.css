@@ -3,7 +3,7 @@
     margin-top: 0;
     width: 100vw;
     height: max-content; 
-    min-height: 70vh; 
+    min-height: 35em; 
     z-index: 1;
     padding-top: 10px;
 }
@@ -13,10 +13,10 @@
     position: relative;
     background-color: whitesmoke;
     height: max-content;
-    padding-top: 30px;  /* how far heading down */
+    padding-top: 15px;  /* how far heading down */
     align-items: center;
     flex-direction: row;
-    min-height: 70vh;
+    min-height: 35em;
 }
 
 .panelContainer {

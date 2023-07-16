@@ -57,10 +57,11 @@ const PS = () => {
     <Container className="products-container" maxW="100%">
     <Heading center={true} title="PRODUCTS & SERVICES"></Heading>
 
-    <Container maxW="100%" className= {activePanelVisible ? 'panelSwitch' : ''}>
+    <Container maxW="100%" className= {activePanelVisible ? 'panelSwitch' : ''}> {/*makes the switch between active and inactive panels!*/}
 
     <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
-    <Grid templateColumns={isMinimizedMode ? "1fr" : "1fr 1fr 1fr"} justifyItems="center" gap={1} padding="10px"> {/* if adding new items add new frames (fr) */}
+    <Grid templateColumns='repeat(3, 1fr)' gap={1}> {/* if adding new items add new frames (fr) */}
+    
     {productPanel.map((product, index) => (
               <OneProduct
               key={index}
@@ -86,6 +87,7 @@ const PS = () => {
             </div>
           </div>
         )}
+
     </Container>
     <div className="ps-diag"></div>
     </Container>

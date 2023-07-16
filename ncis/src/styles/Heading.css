@@ -1,20 +1,22 @@
 .web-heading {
   font-family: "Beckman";
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   padding: 20px;
   padding-top:0px;
   font-weight: 600;
   /* text-indent: 5px; */
   letter-spacing: 4px;
   z-index: 150; 
+  float: center;
 }
 
 .triangle {
   display: inline-block;
-  float: center;
-  width: 17px;
+  width: 15px;
 }
 
 .centered {
   text-align: center;
 }
+
+/*removed float center from triangle and applied to entire web-heading; commented out text-indent*/

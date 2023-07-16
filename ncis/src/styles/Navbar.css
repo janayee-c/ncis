@@ -5,13 +5,13 @@
 
 @media (orientation:landscape) and (max-height:600px) {
     #navbar-section {
-      min-height: 100px; 
+      min-height: 20em; 
     }
   }
 
   @media (orientation:landscape) and (max-height:600px) {
     .navbar-box {
-      min-height: 200px; 
+      min-height: 10em; 
     }
   }
 

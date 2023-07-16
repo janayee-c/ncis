@@ -60,7 +60,7 @@
 
     font-family: "Montserrat";
     font-weight: medium;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 }
 
 .events-diag {
@@ -71,7 +71,6 @@
     height: 60%;
     z-index: 1;
   }
-
 
   
   .events-diag::after {
@@ -92,13 +91,13 @@
   
   @media (min-width: 900px) {
     .events-diag::after {
-      top: -40%;
+      top: -50%;
     }
   }
 
   @media (min-aspect-ratio: 1.75/1) {
     .events-diag::after {
-        top: -50%; 
+        top: -60%; 
     }
 
 }

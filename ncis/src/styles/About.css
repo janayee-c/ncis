@@ -1,13 +1,12 @@
 #about-section {
   position: relative;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 50px;
   width: 100vw;
   display: flex;
-  min-height: 400px;
+  min-height: 35em;
   flex-direction: column;
   height: max-content; 
-  min-height: 60vh; 
   z-index: 1;
 }
 
@@ -18,13 +17,13 @@
   width: 100%;
   margin-left: 20%;
   margin-right: 20%;
-  min-height: 60vh; 
+  min-height: 35em; 
   flex-shrink: 0;
   background-color: whitesmoke;
   height: max-content;
   margin-bottom: 0; 
 }
-  
+
   .about-content {
     padding: 10px;
     word-break: break-word;
@@ -35,6 +34,9 @@
     z-index: 3; 
     padding-bottom: 40px; 
   }
+
+
+  
   
  .about-txt{
     font-family: "Montserrat";
@@ -46,7 +48,7 @@
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 3%;
-    margin: 1vh;
+    margin: 4rem;
     width: 100%;
     display: block;
     margin-block-start: 1em;
@@ -138,7 +140,7 @@
 
   @media (max-width: 400px) {
     .about-diag::after {
-      top: -20%;
+      top: -15%;
     }
   }
 
