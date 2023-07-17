@@ -1,73 +1,69 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/PS.css'
-import { Heading } from './export'
+import { Heading, ProductPanel, OneProduct } from './export'
 import { Edith, Grace, Hava } from '../images/export'
-import { Container, Grid, useMediaQuery } from '@chakra-ui/react'
+import { Container, Grid, useMediaQuery, Spinner } from '@chakra-ui/react'
 import { DEVICETEXTS } from '../constants/export'
-import OneProduct from "./OneProduct"
+import { animate } from 'framer-motion'
 
 const PS = () => {
 
   const [isMinimizedMode] = useMediaQuery('(max-width: 1000px)');
 
-  const [activePanelVisible, setActivePanelVisible] = React.useState(false)
-  const [selectedProduct, setSelectedProduct] = React.useState(null) //ref functionality for product 
+  const defaultProduct = {name: "Default Product",  desc: DEVICETEXTS.hava}; //product when nothing is selected// 
 
+  const [activePanelVisible, setActivePanelVisible] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState(defaultProduct) //ref functionality for product 
+  const [hideSpinner, setHideSpinner] = useState(true)
 
+  
 
   const productPanel = [
-
-    {name: "HAVA",  source: Hava, row: "1", col: "1", desc: DEVICETEXTS.hava},
-    {name: "EDITH", source: Edith, row: "1", col: "2", desc: DEVICETEXTS.edith},
-    {name: "GRACE", source: Grace, row: "1", col: "3", desc: DEVICETEXTS.grace}
+    {name: "HAVA",  source: Hava, desc: DEVICETEXTS.hava},
+    {name: "EDITH", source: Edith, desc: DEVICETEXTS.edith},
+    {name: "GRACE", source: Grace, desc: DEVICETEXTS.grace}
 
   ]
-
 
   const handleProductClick = (product) => {
     setSelectedProduct(product); 
     setActivePanelVisible(true); 
+    animateProduct(product); 
   }
 
-
   const closePanel = () => {
-    setSelectedProduct(null); 
+    setSelectedProduct(defaultProduct); 
     setActivePanelVisible(false); 
   }
 
-  const handlePanelVision = (product) => {
+  const animateProduct = (product) => {
     if (activePanelVisible) {
-       if (selectedProduct === product) {
-        if (selectedProduct.index === 0 ) {
-          return "translateRight"; //translate Hava right
-        } else {
-          return "translateLeft"; //translate Grace and Edith left 
-       }
-      } else {
-        return "fade-out";
+    switch (product.name) {
+      case 'HAVA':
+        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(80%)',
+        transition: 'transform 2s', } : {opacity: 0};
+      case 'EDITH':
+        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-50%)' } : {opacity: 0};
+      case 'GRACE':
+        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(-50%)' } : {opacity: 0};
+      default:
+        return {opacity: 0};
       }
-    }
-   return ""; 
-  }
+    } else {
+      return { transform: 'initial', opacity: 1 }
+    };
+  };
 
-  const transformProduct = (product) => {
-    if (activePanelVisible) {
+  useEffect(() => {
+    animateProduct(selectedProduct);
+    setHideSpinner(false)
 
-    switch(product) {
-      case (product.name === "HAVA" && selectedProduct === product) :
-        return "hava-transformation"
-      case (product.name === "EDITH" && selectedProduct === product) :
-        return "edith-transformation"
-      case (product.name === "GRACE" && selectedProduct === product) :
-        return "grace-transformation"
-
-      default: 
-        return "fade-out"; 
-    }
-  }
-  return ""; 
-}
-
+    const timer = setTimeout(() => {
+      setHideSpinner(true)
+  }, 3000);
+  
+  return () => clearTimeout(timer);
+  }, [selectedProduct]);
 
   return (
     <section id="products-section" className="products-section" maxW="100vw">
@@ -77,34 +73,37 @@ const PS = () => {
 
     <Container maxW="100%" className= {activePanelVisible ? 'panelSwitch' : ''}> {/*makes the switch between active and inactive panels!*/}
 
-    <div className={`inactiveProductPanel ${handlePanelVision()}`}> 
+    <div className={`inactiveProductPanel`}> 
+    {hideSpinner ? <div> <Spinner opacity="0"size='xl'/></div> : 
+    
+    <div className={activePanelVisible ? 'showSpin' : 'hideSpin'}> {/* to prevent spinner showing upon initial load */}
+        <Spinner  emptyColor='gray.100' size='xl'/>
+    </div>}
     <Grid templateColumns='repeat(3, 1fr)' gap={1}> {/* if adding new items add new frames (fr) */}
     
     {productPanel.map((product, index) => (
+      <button>
               <OneProduct
               key={index}
               name={product.name}
               imgSource={product.source}
-              row={product.row}
-              col={product.col}
               onClick = { () => handleProductClick(product)}
               isSelected={selectedProduct === product} 
-              className={transformProduct(product)}
+              animateStyle={animateProduct(product)}
               ></OneProduct>
+      </button>
             ))}
     
         </Grid>
         </div>
-
-
-      {activePanelVisible && ( /* use && to make rest of rendering true */
-        <div className="activeProductPanel" maxW="100%">
-          <div className="activePanelContent">
-            <p>{selectedProduct.desc}</p>
-              <button onClick={closePanel}> X </button>
-            </div>
-          </div>
-        )}
+    
+      <ProductPanel
+          id="product-panel"
+          heading={selectedProduct.name}
+          description={selectedProduct.desc}
+          isOpen={activePanelVisible}
+          onClick={closePanel}>
+      </ProductPanel>
 
     </Container>
     <div className="ps-diag"></div>

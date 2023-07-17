@@ -13,6 +13,7 @@ import EthosElement from "./EthosElement";
 import SplashScreen from "./SplashScreen";
 import OneProduct from "./OneProduct"; 
 import Publication from "./Publication";
+import ProductPanel from "./ProductPanel";
 
 export {
     About,
@@ -30,4 +31,5 @@ export {
     SplashScreen,
     OneProduct,
     Publication,
+    ProductPanel,
 }

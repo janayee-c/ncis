@@ -30,7 +30,7 @@
     align-self:center;
 }
 
-.activeProductPanel {
+/* .activeProductPanel {
     align-items: center; 
     display: inline-flex;
     text-align: center;
@@ -44,44 +44,26 @@
     line-height: 25px;
     font-weight: 590;
     font-size: 1em;
-}
+} */
 
 .fade-out { /* for products */ 
     opacity: 0; 
-    transform: translateY(-50%) 0.25 ease; /* remove the elment from pannel */ 
-    transition: opacity 0.25s ease; /* Add transition effect for smooth fading */
+    transition: opacity 0.5s ease; /* Add transition effect for smooth fading */
 }
 
-
-.panelSwitch .inactiveProductPanel { /* makes inactiveProductPanel fade out*/
-    opacity: 0;
+.fade-out-panel { /* for products */ 
+  opacity: 0; 
+  transform: translateY(-50%) 0.25 ease; /* remove the element from pannel */ 
+  transition: opacity 8s ease; /* Add transition effect for smooth fading */
 }
 
+.showSpin {
+  opacity: 1;
+}
 
-.panelSwitch .activeProductPanel { /* makes ActiveProductPanel pop up*/
-    bottom: 0;
-    padding: 60px;
-    background-color: whitesmoke;
-    position: absolute;
-    transform: translateY(100%);
-    animation-name: slideUp;
-    animation-duration: 0.5s; /* Adjust the duration as needed */
-    animation-timing-function: ease-in-out; 
-    animation-fill-mode: forwards; 
-  }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(-10%);
-    }
-    to {
-      transform: translateY(-70%);
-    }
-  }
-
-  .hava-transformation {
-    transform: translateX(-10%); 
-  }
+.hideSpin {
+  opacity: 0;
+}
   
   .ps-diag {
     position: absolute;

@@ -1,0 +1,62 @@
+#product-panel {
+    align-self: center;
+}
+
+.product-name {
+    font-family: Beckman;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.428 em; 
+    font-size: 1.175em;
+    letter-spacing: 0.015em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.product-name.visible {
+    opacity: 1; 
+    transition-delay: 1s;
+    transform: translateY(-0.5em)
+}
+
+.product-name.invisible {
+    transform: translateY(20%);
+    color: blue; 
+}
+
+
+.product-description {
+    font-family: Montserrat;
+    font-size: 0.9em !important;
+    line-height: 1.65em;
+    letter-spacing: 0.0em;
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+.contact {
+    font-family: Montserrat;
+    font-size: 0.9em !important;
+    line-height: 1.65em;
+    letter-spacing: 0.0em;
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.button.visible {
+    transform: translateY(-5em);
+}
