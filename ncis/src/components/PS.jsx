@@ -45,16 +45,19 @@ const animateProduct = (product) => {
   if (activePanelVisible) {
     switch (product.name) {
       case 'HAVA':
-        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(100%)', transition: 'transform 1s' } : { opacity: 0 };
+        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(25%)', transition: 'transform 1s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'EDITH':
-        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-100%)', transition: 'transform 1s' } : { opacity: 0 };
+        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-300%)', transition: 'transform 1s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'GRACE':
-        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(-200%)', transition: 'transform 1s' } : { opacity: 0 };
+        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(25%)', transition: 'transform 1s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       default:
         return { opacity: 0 };
     }
   } else {
-    return { transform: 'initial', opacity: 1 };
+    return { 
+      transform: 'initial', opacity: 1,
+      transition: "transform 2s"
+    };
   }
 };
 
