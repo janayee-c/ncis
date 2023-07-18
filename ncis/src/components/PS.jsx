@@ -8,7 +8,7 @@ import { DEVICETEXTS } from '../constants/export';
 const PS = () => {
   const [isMinimizedMode] = useMediaQuery('(max-width: 1000px)');
 
-  const defaultProduct = { name: 'Default Product', desc: 'default desc' }; // Product when nothing is selected
+  const defaultProduct = { name: 'Default Product', desc: DEVICETEXTS.grace }; // Product when nothing is selected
 
   const [activePanelVisible, setActivePanelVisible] = useState(false); //toggles activity off or on 
   const [selectedProduct, setSelectedProduct] = useState(defaultProduct); //sets selectedProduct
@@ -37,7 +37,6 @@ const PS = () => {
   };
 
   const closePanel = () => {
-    setSelectedProduct(defaultProduct);
     setActivePanelVisible(false);
   };
 
@@ -122,6 +121,7 @@ const translatePanel = () => {
               description={selectedProduct.desc}
               isOpen={activePanelVisible}
               onClick={closePanel}
+              height = {productHeight}
               panelStyle={translatePanel()} // Pass the top position to the ProductPanel component
           />
         </Container>
