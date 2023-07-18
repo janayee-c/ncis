@@ -1,5 +1,6 @@
 #product-panel {
     align-self: center;
+    position: absolute; 
 }
 
 .product-name {
@@ -19,11 +20,10 @@
 .product-name.visible {
     opacity: 1; 
     transition-delay: 1s;
-    transform: translateY(-0.5em)
+    color: red; 
 }
 
 .product-name.invisible {
-    transform: translateY(20%);
     color: blue; 
 }
 
@@ -42,6 +42,16 @@
     margin-inline-end: 0px;
 }
 
+.product-description.visible {
+    opacity: 1; 
+    transition-delay: 1s;
+}
+
+.product-descriptoin.invisible {
+    transform: translateY(20%);
+    color: blue; 
+}
+
 
 .contact {
     font-family: Montserrat;
@@ -56,6 +66,18 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+.contact.visible {
+    opacity: 1; 
+    transition-delay: 1s;
+    transform: translateY(-0.5em)
+}
+
+.contact.invisible {
+    transform: translateY(20%);
+    color: blue; 
+}
+
 
 .button.visible {
     transform: translateY(-5em);

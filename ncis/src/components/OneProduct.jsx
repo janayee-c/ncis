@@ -1,19 +1,26 @@
-import React from "react";
-import { Box, Container } from "@chakra-ui/react";
+import React, { forwardRef } from 'react';
 import '../styles/OneProduct.css'
+import { Container } from '@chakra-ui/react';
 
-
-const OneProduct = (props) => {
-    const {name, imgSource, animateStyle, isSelected, onClick, onHover } = props; 
-
+const OneProduct = forwardRef((props, ref) => {
+    const { name, imgSource, animateStyle, isSelected, onClick, onHover } = props;
+  
     return (
-        <Container width="155px" height="300px" className={`product-container" ${isSelected ? 'selected' : ''}`}
-            style={animateStyle}
-            onClick={onClick}>
-            <img className="product-icon" src={imgSource}></img>
-            <h2 onMouseEnter={onHover} className="product-name">{name}</h2>
-        </Container>
+      <Container
+        ref={ref} // Forward the ref to the Container component
+        width="155px"
+        height="300px"
+        className={`product-container ${isSelected ? 'selected' : ''}`}
+        style={animateStyle}
+        onClick={onClick}
+      >
+        <img className="product-icon" src={imgSource} alt={name} />
+        <h2 onMouseEnter={onHover} className="product-name">
+          {name}
+        </h2>
+      </Container>
     );
-}
+  });
+  
 
 export default OneProduct;
