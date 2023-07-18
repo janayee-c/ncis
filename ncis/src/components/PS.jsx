@@ -14,9 +14,12 @@ const PS = () => {
   const [selectedProduct, setSelectedProduct] = useState(defaultProduct); //sets selectedProduct
   const [hideSpinner, setHideSpinner] = useState(true); //sets state on whether the spinner should be hidden or not 
 
-  const refObjects = useRef([]); //establishes an object (array) storing the references to each object 
 
-  const [productTop, setProductTop] = useState(0);
+  const refParent = useRef(); // establishes ref to the parent container 
+  const refProducts = useRef([]); //establishes an object (array) storing the references to each object 
+
+  const [productHeight, setProductHeight] = useState(0);
+
 
   const productPanel = [
     { name: 'HAVA', source: Hava, desc: DEVICETEXTS.hava },
@@ -27,10 +30,10 @@ const PS = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product);
     setActivePanelVisible(true);
-    const productRef = refObjects.current[0];
+    const productRef = refProducts.current[product.name];
     if (productRef) {
-      const top = productRef.offsetTop;
-      setProductTop(top);
+      const height = productRef.offsetHeight;
+      setProductHeight(height);
     }
     animateProduct(product);
   };
@@ -60,11 +63,13 @@ const animateProduct = (product) => {
 const translatePanel = () => {
   if (activePanelVisible) {
     return {
-      transform: `translateY(${-productTop}px)`,
+      transform: `translateY(${-productHeight}px)`,
       transition: 'transform 1s',
     };
   } else {
-    return { transform: 'initial', opacity: 1 };
+    return { 
+      transform: 'initial', opacity: 1,
+      transform: 'translateY(200px)', opacity: 1 };
   }
 };
 
@@ -80,7 +85,7 @@ const translatePanel = () => {
 
   return (
     <section id="products-section" className="products-section" maxW="100vw">
-      <Container className="products-container" maxW="100%">
+      <Container className="products-container" maxW="100%" ref={refParent}>
         <Heading center={true} title="PRODUCTS & SERVICES" />
         <Container maxW="100%" className={activePanelVisible ? 'panelSwitch' : ''}>
           <div className="inactiveProductPanel">
@@ -97,7 +102,7 @@ const translatePanel = () => {
               {productPanel.map((product, index) => (
                 <button key={index}>
                   <OneProduct
-                    ref={(element) => {refObjects.current[index] = element}} 
+                    ref={(element) => {refProducts.current[product.name] = element}} 
                     name={product.name}
                     imgSource={product.source}
                     onClick={() => handleProductClick(product)}
