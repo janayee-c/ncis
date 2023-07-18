@@ -31,9 +31,9 @@ const PS = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product);
     setActivePanelVisible(true);
-    const productRef = refObject.current[product.name];
+    const productRef = refObject.current[selectedProduct.name];
     if (productRef) {
-      const top = productRef.offsetTop;
+      const top = productRef.getBoundngClientRect().top;
       setProductTop(top);
     }
     animateProduct(product);
@@ -68,7 +68,7 @@ const translatePanel = () => {
       transition: 'transform 1s',
     };
   } else {
-    return { transform: `translateY(${-productTop}px)`, opacity: 1 };
+    return { transform: `translateY(500px)`, opacity: 0 };
   }
 };
 
