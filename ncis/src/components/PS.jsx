@@ -14,7 +14,7 @@ const PS = () => {
   const [selectedProduct, setSelectedProduct] = useState(defaultProduct); //sets selectedProduct
   const [hideSpinner, setHideSpinner] = useState(true); //sets state on whether the spinner should be hidden or not 
 
-  const refObject = useRef({}); //establishes an object storing the references to each object 
+  const refObjects = useRef([]); //establishes an object (array) storing the references to each object 
 
   const [productTop, setProductTop] = useState(0);
 
@@ -24,16 +24,12 @@ const PS = () => {
     { name: 'GRACE', source: Grace, desc: DEVICETEXTS.grace },
   ];
 
-  const handleRef=(ref, name) => {
-    refObject.current[name] = ref;
-  }
-
   const handleProductClick = (product) => {
     setSelectedProduct(product);
     setActivePanelVisible(true);
-    const productRef = refObject.current[selectedProduct.name];
+    const productRef = refObjects.current[0];
     if (productRef) {
-      const top = productRef.getBoundngClientRect().top;
+      const top = productRef.offsetTop;
       setProductTop(top);
     }
     animateProduct(product);
@@ -64,11 +60,11 @@ const animateProduct = (product) => {
 const translatePanel = () => {
   if (activePanelVisible) {
     return {
-      transform: `translateY(${productTop}px)`,
+      transform: `translateY(${-productTop}px)`,
       transition: 'transform 1s',
     };
   } else {
-    return { transform: `translateY(500px)`, opacity: 0 };
+    return { transform: 'initial', opacity: 1 };
   }
 };
 
@@ -101,7 +97,7 @@ const translatePanel = () => {
               {productPanel.map((product, index) => (
                 <button key={index}>
                   <OneProduct
-                    ref={(ref) => handleRef(product.name, ref)}
+                    ref={(element) => {refObjects.current[index] = element}} 
                     name={product.name}
                     imgSource={product.source}
                     onClick={() => handleProductClick(product)}
