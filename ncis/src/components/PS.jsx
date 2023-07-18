@@ -14,9 +14,7 @@ const PS = () => {
   const [selectedProduct, setSelectedProduct] = useState(defaultProduct); //sets selectedProduct
   const [hideSpinner, setHideSpinner] = useState(true); //sets state on whether the spinner should be hidden or not 
 
-
-  const refParent = useRef(); // establishes ref to the parent container 
-  const refProducts = useRef([]); //establishes an object (array) storing the references to each object 
+  const refProducts = useRef([]); //this is an object that stores the references to each product ! 
 
   const [productHeight, setProductHeight] = useState(0);
 
@@ -68,8 +66,9 @@ const translatePanel = () => {
     };
   } else {
     return { 
-      transform: 'initial', opacity: 1,
-      transform: 'translateY(200px)', opacity: 1 };
+      transform: 'initial',
+      transform: 'translateY(200px)', opacity: 1, 
+      transition: 'transform 1s',};
   }
 };
 
@@ -85,7 +84,7 @@ const translatePanel = () => {
 
   return (
     <section id="products-section" className="products-section" maxW="100vw">
-      <Container className="products-container" maxW="100%" ref={refParent}>
+      <Container className="products-container" maxW="100%">
         <Heading center={true} title="PRODUCTS & SERVICES" />
         <Container maxW="100%" className={activePanelVisible ? 'panelSwitch' : ''}>
           <div className="inactiveProductPanel">
