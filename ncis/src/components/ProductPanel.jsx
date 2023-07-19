@@ -1,12 +1,27 @@
-import React from 'react';
+import { useEffect, React, useState } from 'react';
 import '../styles/ProductPanel.css';
 import { Container } from '@chakra-ui/react';
 
 const ProductPanel = (props) => {
-    const { heading, description, isOpen, onClick, panelStyle, height } = props;
+    const { heading, description, isOpen, onClick, height } = props;
+
+    const [cueTransition, setCueTransition] = useState(false); 
+
+    useEffect(() => {
+      if (isOpen) {
+        const timer = setTimeout(() => {
+          setCueTransition(true);
+        }, 1500);
+
+        return () => clearTimeout(timer);
+      } else {
+        setCueTransition(false);
+      }
+    }, [isOpen]);
+
 
       const translateHeading = () => {
-        if (isOpen) {
+        if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
             transition: 'transform 0.9s',
@@ -20,7 +35,7 @@ const ProductPanel = (props) => {
       };
 
       const translateDesc = () => {
-        if (isOpen) {
+        if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
             transition: 'transform 0.8s',
@@ -34,7 +49,7 @@ const ProductPanel = (props) => {
       };
 
       const translateContact = () => {
-        if (isOpen) {
+        if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
             transition: 'transform 0.9s',
@@ -47,6 +62,8 @@ const ProductPanel = (props) => {
         }
       };
 
+
+      
   return (
     <Container className="panel-container" >
       <h3 className="product-name" style={translateHeading()}>{heading}</h3>

@@ -57,8 +57,15 @@
   transition: opacity 8s ease; /* Add transition effect for smooth fading */
 }
 
+.spinner-container {
+  align-items: center;
+  justify-content: center;
+  float: center; 
+}
+
 .showSpin {
   opacity: 1;
+  align-self: center; 
 }
 
 .hideSpin {

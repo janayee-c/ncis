@@ -44,15 +44,15 @@ const animateProduct = (product) => {
   if (activePanelVisible) {
     switch (product.name) {
       case 'HAVA':
-        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(25%)', transition: 'transform 1s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(100%)', opacity: 0, transition: 'transform 1s, opacity 2.5s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'EDITH':
-        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-300%)', transition: 'transform 1s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-300%)', opacity: 0, transition: 'transform 1s, opacity 2.5s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'GRACE':
-        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(25%)', transition: 'transform 1s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(-100%)', opacity: 0, transition: 'transform 1s, opacity 2.5s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       default:
         return { opacity: 0 };
     }
-  } else {
+  } else { //when active panel is not visible 
     return { 
       transform: 'initial', opacity: 1,
       transition: "transform 2s"
@@ -60,26 +60,11 @@ const animateProduct = (product) => {
   }
 };
 
-const translatePanel = () => {
-  if (activePanelVisible) {
-    return {
-      transform: `translateY(${-productHeight}px)`,
-      transition: 'transform 1s',
-    };
-  } else {
-    return { 
-      transform: 'initial',
-      transform: 'translateY(200px)', opacity: 1, 
-      transition: 'transform 1s',};
-  }
-};
-
-
   useEffect(() => {
     setHideSpinner(false);
     const timer = setTimeout(() => {
       setHideSpinner(true);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [selectedProduct]);
@@ -92,13 +77,15 @@ const translatePanel = () => {
           <div className="inactiveProductPanel">
             {hideSpinner ? (
               <div>
-                <Spinner opacity="0" size="xl" />
-              </div>
-            ) : (
-              <div className={activePanelVisible ? 'showSpin' : 'hideSpin'}>
+                <Spinner opacity="0" size="xl" align-self="center" />
+              </div>) 
+
+              : (
+              <div  className={`spinner-container ${activePanelVisible ? 'showSpin' : 'hideSpin'}`}>
                 <Spinner emptyColor="gray.100" size="xl" />
               </div>
             )}
+            
             <Grid templateColumns="repeat(3, 1fr)" gap={1}>
               {productPanel.map((product, index) => (
                 <button key={index}>
@@ -122,7 +109,7 @@ const translatePanel = () => {
               isOpen={activePanelVisible}
               onClick={closePanel}
               height = {productHeight}
-              panelStyle={translatePanel()} // Pass the top position to the ProductPanel component
+
           />
         </Container>
         <div className="ps-diag"></div>
