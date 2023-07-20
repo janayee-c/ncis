@@ -1,9 +1,20 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import '../styles/OneProduct.css'
 import { Container } from '@chakra-ui/react';
 
 const OneProduct = forwardRef((props, ref) => {
-    const { name, imgSource, animateStyle, isSelected, onClick, onHover } = props;
+    const { name, imgSource, animateStyle, isSelected, onClick} = props;
+
+    const [mouseOn, setMouseOn] = useState(false);
+
+    const onHover = () => {
+      setMouseOn(true); 
+    }
+
+    const onHoverLeave = () => {
+      setMouseOn(false); 
+    }
+  
   
     return (
       <Container
@@ -14,8 +25,8 @@ const OneProduct = forwardRef((props, ref) => {
         style={animateStyle}
         onClick={onClick}
       >
-        <img className="product-icon" src={imgSource} alt={name} />
-        <h2 onMouseEnter={onHover} className="product-name">
+        <img onMouseEnter={onHover} onMouseLeave={onHoverLeave} className="product-icon" src={imgSource} alt={name} />
+        <h2  className={`product-name ${mouseOn? 'animateName' : 'unanimateName'}`}>
           {name}
         </h2>
       </Container>

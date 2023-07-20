@@ -28,5 +28,14 @@
     text-align: center; 
   }
 
+  .animateName {
+    transform: translateY(30%); 
+    transition: transform 0.25s; 
+  }
+
+  .unanimateName {
+    transform: translateY(-30%); 
+    transition: transform 0.25s; 
+  }
 
 

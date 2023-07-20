@@ -24,7 +24,7 @@ const ProductPanel = (props) => {
         if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
-            transition: 'transform 0.9s',
+            transition: 'transform 0.8s',
           };
         } else {
           return { 
@@ -38,7 +38,7 @@ const ProductPanel = (props) => {
         if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
-            transition: 'transform 0.8s',
+            transition: 'transform 0.9s',
           };
         } else {
           return { 
@@ -52,7 +52,7 @@ const ProductPanel = (props) => {
         if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
-            transition: 'transform 0.9s',
+            transition: 'transform 0.75s',
           };
         } else {
           return { 
