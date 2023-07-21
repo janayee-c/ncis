@@ -16,7 +16,7 @@
     padding-top: 15px;  /* how far heading down */
     align-items: center;
     flex-direction: row;
-    min-height: 35em;
+    min-height: 45em;
 }
 
 .panelContainer {
@@ -84,7 +84,7 @@
   .ps-diag::after {
     content: '';
     position: absolute;
-    top: -70%;
+    top: -60%;
     left: 40%;
     width: 100%;
     height: 60%;

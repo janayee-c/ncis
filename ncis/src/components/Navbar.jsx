@@ -36,7 +36,7 @@ const Navbar = () => {
   function handleClose() {
     setTimeout(() => {
       onClose();
-    }, 200); // Adjust the delay value (in milliseconds) to control the ease-out transition
+    }, 200); 
   }
   
   return (

@@ -18,7 +18,7 @@ const Publication = (props) => {
 
     return (
         <a href={url} id="link" target="_blank" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor="pointer">
-        <div className= {`article-container ${isHover ? "hoveredArticle" : "" } `} maxW="30%">
+        <div className= {`article-container ${isHover ? "hoveredArticle" : "unhoveredArticle" } `} maxW="30%">
             <h5 className="article-header">{pubHead}</h5>
             <h4 className="article-title">{title}</h4>
             <p className="article-desc">{desc}</p>

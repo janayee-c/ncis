@@ -29,13 +29,13 @@
   }
 
   .animateName {
-    transform: translateY(30%); 
-    transition: transform 0.25s; 
+    transform: translateY(40%); 
+    transition: transform 0.3s; 
   }
 
   .unanimateName {
-    transform: translateY(-30%); 
-    transition: transform 0.25s; 
+    transform: translateY(initial); 
+    transition: transform 0.3s; 
   }
 
 
