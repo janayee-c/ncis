@@ -44,18 +44,18 @@ const animateProduct = (product) => {
   if (activePanelVisible) {
     switch (product.name) {
       case 'HAVA':
-        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(100%)', opacity: 0, transition: 'transform 1s, opacity 2.5s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(100%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'EDITH':
-        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-300%)', opacity: 0, transition: 'transform 1s, opacity 2.5s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-300%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'GRACE':
-        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(-100%)', opacity: 0, transition: 'transform 1s, opacity 2.5s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'GRACE' ? { transform: 'translateX(-100%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       default:
         return { opacity: 0 };
     }
   } else { //when active panel is not visible 
     return { 
       transform: 'initial', opacity: 1,
-      transition: "transform 2s"
+      transition: "transform 1s"
     };
   }
 };
@@ -75,17 +75,6 @@ const animateProduct = (product) => {
         <Heading center={true} title="PRODUCTS & SERVICES" />
         <Container maxW="100%" className={activePanelVisible ? 'panelSwitch' : ''}>
           <div className="inactiveProductPanel">
-            {hideSpinner ? (
-              <div>
-                <Spinner opacity="0" size="xl" align-self="center" />
-              </div>) 
-
-              : (
-              <div  className={`spinner-container ${activePanelVisible ? 'showSpin' : 'hideSpin'}`}>
-                <Spinner emptyColor="gray.100" size="xl" />
-              </div>
-            )}
-            
             <Grid templateColumns="repeat(3, 1fr)" gap={1}>
               {productPanel.map((product, index) => (
                 <button key={index}>

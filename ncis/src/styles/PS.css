@@ -19,13 +19,14 @@
     min-height: 45em;
 }
 
-.panelContainer {
-    padding: 100px;
-    height: 40vh;
-    position: absolute;
+@media (max-width: 500px) {
+  .products-container {
+    height: 25em; 
+  }
 }
 
 .inactiveProductPanel {
+    padding-top: 100px; 
     margin:0;
     align-self:center;
 }

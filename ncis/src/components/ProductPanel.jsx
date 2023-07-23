@@ -11,7 +11,7 @@ const ProductPanel = (props) => {
       if (isOpen) {
         const timer = setTimeout(() => {
           setCueTransition(true);
-        }, 1500);
+        }, 1000);
 
         return () => clearTimeout(timer);
       } else {
@@ -24,7 +24,7 @@ const ProductPanel = (props) => {
         if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
-            transition: 'transform 0.8s',
+            transition: 'transform 0.7s',
           };
         } else {
           return { 
@@ -38,7 +38,7 @@ const ProductPanel = (props) => {
         if (isOpen && cueTransition) {
           return {
             transform: `translateY(${-height}px)`,
-            transition: 'transform 0.9s',
+            transition: 'transform 0.8s',
           };
         } else {
           return { 
