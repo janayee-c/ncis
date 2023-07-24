@@ -14,7 +14,7 @@ import Ocean from './OceanGovernance.svg'
 import Transparency from './Transparency.svg'
 import Information from "./InformationAtHand.svg"
 import Mantra from './NCIS_logo_mantra.png'
-import Logo from './ncis_test.png'
+import Logo from './ncis-logo.svg'
 import Splash from './test.mp4'
 import Framework from './Deloitte AI Framework.png'
 import Before from './Group.svg'

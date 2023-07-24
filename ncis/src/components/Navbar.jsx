@@ -14,6 +14,7 @@ import {
   from '@chakra-ui/react';
 import { useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { Logo } from '../images/export'
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,7 +53,7 @@ const Navbar = () => {
       position="relative"
       className="navbar-box"
     >
-      <Img id="logo" src={require('../images/ncis_test.png')} /> 
+      <Img id="logo" src={Logo} /> 
       
 
       <Menu>
