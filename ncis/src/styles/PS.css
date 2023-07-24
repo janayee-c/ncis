@@ -64,6 +64,16 @@
   float: center; 
 }
 
+.products-slider-container {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 0;
+  padding-top: 100px; 
+}
+
 .showSpin {
   opacity: 1;
   align-self: center; 

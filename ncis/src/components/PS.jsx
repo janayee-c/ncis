@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import '../styles/PS.css';
 import { Heading, ProductPanel, OneProduct } from './export';
 import { Edith, Grace, Hava } from '../images/export';
 import { Container, Grid, useMediaQuery, Spinner } from '@chakra-ui/react';
 import { DEVICETEXTS } from '../constants/export';
+import Slider from 'react-slick';
 
 const PS = () => {
   const [isMinimizedMode] = useMediaQuery('(max-width: 1000px)');
@@ -12,12 +13,24 @@ const PS = () => {
 
   const [activePanelVisible, setActivePanelVisible] = useState(false); //toggles activity off or on 
   const [selectedProduct, setSelectedProduct] = useState(defaultProduct); //sets selectedProduct
-  const [hideSpinner, setHideSpinner] = useState(true); //sets state on whether the spinner should be hidden or not 
 
   const refProducts = useRef([]); //this is an object that stores the references to each product ! 
+  const sliderRef = useRef(null);
 
   const [productHeight, setProductHeight] = useState(0);
+  
+  const settings = { //for slider
+    dots: true,
+    infinite: isMinimizedMode, 
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    draggable: true,
+    autoplay: false,
 
+  }
+  
 
   const productPanel = [
     { name: 'HAVA', source: Hava, desc: DEVICETEXTS.hava },
@@ -60,21 +73,37 @@ const animateProduct = (product) => {
   }
 };
 
-  useEffect(() => {
-    setHideSpinner(false);
-    const timer = setTimeout(() => {
-      setHideSpinner(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [selectedProduct]);
-
   return (
     <section id="products-section" className="products-section" maxW="100vw">
       <Container className="products-container" maxW="100%">
         <Heading center={true} title="PRODUCTS & SERVICES" />
+         
         <Container maxW="100%" className={activePanelVisible ? 'panelSwitch' : ''}>
           <div className="inactiveProductPanel">
+          
+
+        {isMinimizedMode ? 
+
+        <Slider  {...settings} ref={sliderRef}>
+        {productPanel.map((product, index) => (
+                <button key={index}>
+                  <OneProduct
+                    ref={(element) => {refProducts.current[product.name] = element}} 
+                    name={product.name}
+                    imgSource={product.source}
+                    onClick={() => handleProductClick(product)}
+                    isSelected={selectedProduct === product}
+                    animateStyle={animateProduct(product)}
+                  />
+                </button>
+          ))}
+        </Slider>
+        
+
+        //forDesktopMode
+        
+        : 
+       
             <Grid templateColumns="repeat(3, 1fr)" gap={1}>
               {productPanel.map((product, index) => (
                 <button key={index}>
@@ -89,7 +118,10 @@ const animateProduct = (product) => {
                 </button>
               ))}
             </Grid>
-          </div>
+          
+
+        }
+        </div>
 
           <ProductPanel
               id="product-panel"
