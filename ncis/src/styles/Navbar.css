@@ -18,7 +18,7 @@
 
 #logo {
     align-self: center;
-    scale: 0.9; 
+    scale: 1; 
     margin-right: auto;
     margin-left: auto;
     padding-top: 20px;
@@ -27,21 +27,27 @@
     width: 300;
 }
 
+@media (max-width: 800px) {
+    #logo {
+        scale: 0.7;
+    }
+}
+
 .slink {
     color:black;
     font-family: 'Beckman';
-    font-weight: 600;
-    font-size: 14px;
-    padding-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 35px;
     text-indent: 1.25rem;
 }
 
 .color-navy {
     color:#2A44B5 ;
     font-family: 'Beckman';
-    font-weight: 600;
-    font-size: 14px;
-    padding-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 35px;
     text-indent: 1.25rem;
 }
 

@@ -5,8 +5,8 @@ img {
 
 .hero-section {
   position: relative;
-  max-height: 45em;
-  min-height: 30em; 
+  max-height: 40em;
+  min-height: 25em; 
   width: 100vw;
   display: flex;
   justify-content: center;

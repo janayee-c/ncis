@@ -84,11 +84,13 @@ const Navbar = () => {
         >
           <DrawerContent onMouseLeave={handleClose}>
             <DrawerBody>
-              <Box height="100px"
+              <Box height="80px"
+              justifyContent="center"
+              alignItems="center"
               >
                 <Stack
                   direction={isTopDrawer ? 'row' : 'column'}
-                  spacing={0.8}
+                  spacing={0.5}
                   textAlign="center"
                   justifyContent="center"
                 >
