@@ -102,7 +102,7 @@ const animateProduct = (product) => {
 
         //forDesktopMode
         
-        : 
+        : //colon  
        
             <Grid templateColumns="repeat(3, 1fr)" gap={1}>
               {productPanel.map((product, index) => (
