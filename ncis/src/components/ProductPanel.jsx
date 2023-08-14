@@ -1,3 +1,4 @@
+//this is the panel that rises with information about each product 
 import { useEffect, React, useState } from 'react';
 import '../styles/ProductPanel.css';
 import { Container } from '@chakra-ui/react';
