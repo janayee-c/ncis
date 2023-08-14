@@ -51,7 +51,7 @@ const PS = () => {
     const productRef = refProducts.current[product.name];
     if (productRef && isMinimizedMode) { //use switch here
 
-          const height = 525;
+          const height = 600;
           setProductHeight(height); 
 
     }
@@ -103,8 +103,8 @@ const animateProduct = (product) => {
             <Grid templateColumns="repeat(3, 1fr)" gap={1}
             templateRows='repeat(2, 1fr)'
             alignItems="center" 
-            justifyItems="center">
-
+            justifyItems="center"
+            flex-direction="row">
 
               <GridItem colStart={1} rowStart={2}>
               <button>
