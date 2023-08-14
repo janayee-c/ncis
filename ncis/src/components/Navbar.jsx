@@ -1,62 +1,63 @@
 import React, { useState, useRef } from 'react';
 import '../styles/Navbar.css';
-import { Link as ScrollLink  } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import {
   IconButton,
   Box,
-  Menu,
   Img,
   Drawer,
   DrawerBody,
   DrawerContent,
-  Stack,} 
-  from '@chakra-ui/react';
-import { useDisclosure, useMediaQuery } from '@chakra-ui/react';
+  Stack,
+  useDisclosure,
+  useMediaQuery
+} from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { Logo } from '../images/export'
+import { Logo } from '../images/export';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef(); //uses current / mutable value
-  const drawerRef= useRef();
+  const btnRef = useRef();
+  const drawerRef = useRef();
   const [isTopDrawer] = useMediaQuery('(min-width: 990px)');
-
-
   const [activeLink, setActiveLink] = useState(null);
 
-
-  function handleHoverColour(link) {
+  const handleHover = (link) => {
     setActiveLink(link);
-  }
-
-  function handleResetColour() {
-    setActiveLink(null);
-  }
+  };
 
   function handleClose() {
     setTimeout(() => {
       onClose();
-    }, 200); 
+    }, 200);
   }
-  
-  return (
-    <section id="navbar-section">
-    <Box
-      display="flex"
-      w="100%"
-      backgroundColor="#F5F5F5"
-      height="20vh"
-      justifyContent="space-between"
-      alignItems="center"
-      fontSize="40px"
-      position="relative"
-      className="navbar-box"
-    >
-      <Img id="logo" src={Logo} /> 
-      
 
-      <Menu>
+  const sections = [
+    { id: 'ethos', label: 'ETHOS' },
+    { id: 'about', label: 'ABOUT' },
+    { id: 'goals', label: 'GOALS' },
+    { id: 'products', label: 'PRODUCTS & SERVICES' },
+    { id: 'execs', label: 'EXECUTIVE TEAM' },
+    { id: 'pubs', label: 'PUBLICATIONS & MEDIA' },
+    { id: 'contact', label: 'CONTACT' }
+  ];
+
+  return (
+    <>
+      <Box
+        display="flex"
+        w="100%"
+        backgroundColor="#F5F5F5"
+        height="20vh"
+        justifyContent="space-between"
+        alignItems="center"
+        fontSize="40px"
+        position="relative"
+        className="navbar-box"
+      >
+        <Img id="logo" src={Logo} />
+
         <IconButton
           ref={btnRef}
           icon={<HamburgerIcon />}
@@ -73,148 +74,58 @@ const Navbar = () => {
         <Drawer
           isOpen={isOpen}
           onClose={onClose}
-          position="relative"
           placement={isTopDrawer ? 'top' : 'right'}
           finalFocusRef={btnRef}
-          width= "100%"
-          size= {isTopDrawer ? "xl" : "xs"}
-          isLocked={false}
+          width="100%"
+          size={isTopDrawer ? 'xl' : 'xs'}
           ref={drawerRef}
-          className="drawer-transition"  
+          className="drawer-transition"
         >
           <DrawerContent onMouseLeave={handleClose}>
             <DrawerBody>
-              <Box height="80px"
-              justifyContent="center"
-              alignItems="center"
-              >
+              <Box height="80px" justifyContent="center" alignItems="center">
                 <Stack
                   direction={isTopDrawer ? 'row' : 'column'}
                   spacing={0.5}
                   textAlign="center"
                   justifyContent="center"
                 >
-                  <ScrollLink // WILL REFACTOR TO BE A MAP 
-                    onMouseEnter={() => handleHoverColour('ethos')} 
-                    onMouseLeave={handleResetColour}
+                  {sections.map((section) => (
+                    <ScrollLink
+                      key={section.id}
+                      onMouseEnter={() => handleHover(section.id)}
+                      onMouseLeave={() => handleHover(null)}
+                      className={`${
+                        activeLink === section.id
+                          ? 'color-navy pointer'
+                          : 'slink'
+                      }`}
+                      to={`${section.id}-section`}
+                      smooth={true}
+                      offset={-50}
+                      onClick={onClose}
+                    >
+                      {section.label}
+                    </ScrollLink>
+                  ))}
+                  <Link
+                    onMouseEnter={() => handleHover('manual')}
+                    onMouseLeave={() => handleHover(null)}
                     className={`${
-                      activeLink === 'ethos' ? 'color-navy pointer' : 'slink'
+                      activeLink === 'manual' ? 'color-navy pointer' : 'slink'
                     }`}
-                    to="ethos-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    ETHOS
-                  </ScrollLink>
-
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('about')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                      activeLink === 'about' ? 'color-navy pointer' : 'slink'
-                    }`}
-                    to="about-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    ABOUT
-                  </ScrollLink>
-
-
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('goals')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                      activeLink === 'goals' ? 'color-navy pointer' : 'slink'
-                    }`}
-                    to="goals-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    GOALS
-                  </ScrollLink>
-
-
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('ps')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                      activeLink === 'ps' ? 'color-navy pointer' : 'slink'
-                    }`}
-                    to="products-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    PRODUCTS & SERVICES
-                  </ScrollLink>
-
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('execs')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                      activeLink === 'execs' ? 'color-navy pointer' : 'slink'
-                    }`}
-                    to="execs-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    EXECUTIVE TEAM
-                  </ScrollLink>
-
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('pm')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                      activeLink === 'pm' ? 'color-navy pointer' : 'slink'
-                    }`}
-                    to="pubs-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    PUBLICATIONS & MEDIA 
-                  </ScrollLink>
-                  
-
-                  <ScrollLink
-                    onMouseEnter={() => handleHoverColour('contact')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                      activeLink === 'contact' ? 'color-navy pointer' : 'slink'
-                    }`}
-                    to="contact-section"
-                    smooth={true}
-                    offset={-50}
-                    onClick={onClose}
-                  >
-                    CONTACT
-                  </ScrollLink>
-                  
-                  
-                  <Link 
-                    onMouseEnter={() => handleHoverColour('manual')}
-                    onMouseLeave={handleResetColour}
-                    className={`${
-                    activeLink === 'manual' ? 'color-navy pointer' : 'slink'
-                    }`} to="/Manual"
+                    to="/Manual"
                   >
                     MANUAL
                   </Link>
-
-            </Stack>
-            </Box>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-    </Menu>
-  </Box>
-  </section>
-  )
-}
+                </Stack>
+              </Box>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Box>
+    </>
+  );
+};
 
 export default Navbar;

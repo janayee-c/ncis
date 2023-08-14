@@ -6,20 +6,11 @@ import { Publication } from "./export"
 import { PUBTEXTS } from "../constants/export"
 
 const Pubs = () => {
-
   const [isMobile] = useMediaQuery('(max-width: 500px)');
   const [isSmall] = useMediaQuery('(max-width: 800px)');
 
-  const chooseGridStyle = () => {
-    if (isMobile) {
-      return "1fr"
-    } else {
-      if (isSmall) {
-        return "1fr 1fr"
-      }
-      return "1fr 1fr 1fr"
-    }
-  }
+  const gridStyle = isMobile ? "1fr" : (isSmall ? "1fr 1fr" : "1fr 1fr 1fr");
+
 
   const publications= [
   
@@ -55,32 +46,28 @@ const Pubs = () => {
 
     ]
 
-
-  return (
-    <section id="pubs-section" className="pubs-section" maxH="100%">
-
-<Container className="pubs-container" maxW="100%">
-<Heading center={true} title="PUBLICATIONS & MEDIA"></Heading>
-      <div className="pubs-grid">
-
-    <Grid templateColumns= {chooseGridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="30px" paddingTop="0px"> {/* if adding new items add new frames (fr) */}
-    {publications.map((publication, index) => (
-      <GridItem key={index} colSpan={1} rowSpan={1}>
-              <Publication
-              url = {publication.url}
-              pubHead = {publication.pubHead}
-              title ={publication.pubTitle}
-              desc = {publication.pubDesc}
-              ></Publication>
-      </GridItem>
-            ))}
-        </Grid>
-        
-        </div>
-        <div className="pubs-diag"></div>
-    </Container>
-    </section>
-  )
-}
-
-export default Pubs
+    return (
+      <section id="pubs-section" className="pubs-section" maxH="100%">
+        <Container className="pubs-container" maxW="100%">
+          <Heading center={true} title="PUBLICATIONS & MEDIA" />
+          <div className="pubs-grid">
+            <Grid templateColumns={gridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="30px" paddingTop="0px">
+              {publications.map((publication, index) => (
+                <GridItem key={index} colSpan={1} rowSpan={1}>
+                  <Publication
+                    url={publication.url}
+                    pubHead={publication.pubHead}
+                    title={publication.pubTitle}
+                    desc={publication.pubDesc}
+                  />
+                </GridItem>
+              ))}
+            </Grid>
+          </div>
+          <div className="pubs-diag"></div>
+        </Container>
+      </section>
+    );
+  }
+  
+  export default Pubs;

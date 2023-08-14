@@ -1,63 +1,47 @@
 .pubs-section {
   position: relative;
-  margin-top: 0px;
-  height: auto; 
-  min-height: 30em;
   width: 100vw;
+  min-height: 30em;
   z-index: 1;
 }
-
 
 .pubs-container {
   position: relative; 
   z-index: 1;
   background-color: whitesmoke;
   height: auto; 
-  padding-top: 30px;
-  padding-bottom: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  padding: 30px 0 1px;
   width: 100%; 
   margin: 10px;
-  overflow-x: hidden; 
-  overflow-y: hidden;
-  align-items: center;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .pubs-grid {
-    z-index: 2;
-    padding: 10px;
-    padding-top: 20px; 
-    padding-bottom: 80px; 
+  z-index: 2;
+  padding: 20px 10px 80px;
 }
 
 .pubs-diag {
   position: absolute;
   top: 100%;
-  left: 0%;
+  left: 0;
   width: 110%;
   height: 35%;
   z-index: 1;
 }
 
-
 .pubs-diag::after {
   content: '';
   position: absolute;
-  display: block;
   flex-shrink: 0; 
-  top: -95%;
   left: 40%;
   width: 115%;
   height: 100%;
   background: white;
   transform-origin: 100% 0%;
-  -webkit-transform: rotate(-5deg) translateX(-50%);
-  -ms-transform: rotate(-5deg) translateX(-50%);
   transform: rotate(-5deg) translateX(-50%);
 }
 
@@ -79,13 +63,11 @@
   }
 }
 
-
 @media (max-width: 800px) {
   .pubs-diag::after {
     top: -30%;
   }
 }
-
 
 @media (max-width: 600px) {
   .pubs-diag::after {
@@ -93,21 +75,8 @@
   }
 }
 
-
 @media (max-width: 400px) {
   .pubs-diag::after {
     top: -10%;
   }
 }
-
-
-
-
-
-
-
-
-
-  
-
-    

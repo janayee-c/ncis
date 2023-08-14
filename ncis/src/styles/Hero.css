@@ -1,12 +1,11 @@
-img {
+img, #cube {
   object-fit: cover;
 }
-/* important */
 
 .hero-section {
   position: relative;
-  max-height: 40em;
   min-height: 25em; 
+  max-height: 40em;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -27,9 +26,7 @@ img {
   z-index: 3;
 }
 
-
-#cube { /* sizing in below code */
-  object-fit: cover;
+#cube {
   margin-top: 5%;
   transform: translateY(15%);
   transition: all 0.25s ease;
@@ -40,30 +37,19 @@ img {
   position: relative;
 }
 
-
-  @media (max-width: 1022px) {
-    /* Cube size for small screens */
-    #cube {
-      width: 20em;
-      height: 20em; /* Adjusted height for better proportions */
-    }
+@media (max-width: 1022px) {
+  #cube {
+    width: 20em;
+    height: 20em;
   }
+}
 
-  @media (min-width: 1022px) and (max-width: 1400px) {
-    /* Cube size for medium screens */
-    #cube {
-      width: 25em;
-      height: 25em; /* Adjusted height for better proportions */
-    }
+@media (min-width: 1022px) and (max-width: 1400px) {
+  #cube {
+    width: 25em;
+    height: 25em;
   }
-
-  @media (min-width: 1400px) {
-    /* Cube size for medium screens */
-    #cube {
-      width: 40em;
-      height: 40em; /* Adjusted height for better proportions */
-    }
-  }
+}
 
 .hero-diag {
   position: absolute;
@@ -84,36 +70,19 @@ img {
   background: white;
   flex-shrink: 0; 
   transform-origin: 100% 0%;
-  -webkit-transform: rotate(-5deg) translateX(-50%);
-  -ms-transform: rotate(-5deg) translateX(-50%);
   transform: rotate(-5deg) translateX(-50%);
 }
 
 @media (min-width: 1200px) {
-  /* for xlarge screens */
   .hero-diag::after {
     top: -10%;
     height: 90%;
   }
 }
 
-@media (orientation: portrait) {
-  /* for small screens */
+@media (orientation: portrait), (max-width: 500px) {
   .hero-diag::after {
     top: 10%;
     height: 90%;
   }
 }
-
-@media (max-width: 500px) {
-  /* for xs screens */
-  .hero-diag::after {
-    top: 12%;
-    height: 90%;
-  }
-}
-
-
-
-
-
