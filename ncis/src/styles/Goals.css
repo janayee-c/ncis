@@ -1,10 +1,11 @@
 #goals-section {
   position: relative;
   margin-top: 0;
+  margin-bottom: 5em;
   padding-top: 5px;
   width: 100vw;
   height: max-content; 
-  min-height: 45em; 
+  min-height: 60em; 
   z-index: 1;
 }
 
@@ -26,12 +27,12 @@
 
 .img-container {
   width: 100%;
-  min-height: max-content;
   display: flex;
   align-items: center; 
   justify-content: center;
   margin-bottom: 0;
   border: 0; 
+  padding: 3%;
 }
 
 .desktop-image {
@@ -51,27 +52,13 @@
 }
 
 .mobile-image {
-  scale: 1;
+  scale: 1.4;
   max-width: 20em;
   max-height: 40em;
   width: auto;
   height: auto;
-  margin: 0; 
-}
-
-
-@media (min-width: 515px) and (max-width: 800px) {
-  .mobile-image {
-    width: 20%;
-    height: 15%;
-  }
-}
-
-@media (max-width: 515px) {
-  .mobile-image {
-    width: 35%;
-    height: 40%;
-  }
+  margin: 0;
+  margin-top: 6em;
 }
 
 .goals-diag {
@@ -101,14 +88,25 @@
 
 
 @media (max-width: 800px) {
+  .mobile-image {
+    width: 30%;
+    height: 40%;
+  }
+
   .goals-diag::after {
-    top: -40%;
+    top: -10%;
   }
 }
 
 @media (max-width: 515px) {
+  .mobile-image {
+    width: 30%;
+    height: 40%;
+    scale: 2;
+    margin-top: 50%;
+  }
+
   .goals-diag::after {
-    top: -15%;
+    top: -20%;
   }
 }
-
