@@ -19,11 +19,6 @@
   margin-bottom: 0; 
 }
 
-@media (min-width: 1200px) {
-  .goals-container {
-    transform:translateY(-40px);
-  }
-}
 
 .img-container {
   width: 100%;
@@ -37,8 +32,8 @@
 
 .desktop-image {
   /* Goal Image size for enlarged desktop screen */
-  max-width: 80%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
@@ -49,6 +44,13 @@
     min-height: 100%;
     
   }
+}
+
+@media (min-width: 1000px) {
+  .goals-container {
+    transform:translateY(-40px);
+  }
+
 }
 
 .mobile-image {
@@ -98,7 +100,7 @@
   }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 480px) {
   .mobile-image {
     width: 30%;
     height: 40%;
@@ -108,5 +110,11 @@
 
   .goals-diag::after {
     top: -20%;
+  }
+}
+
+@media (min-width: 800px) {
+  #goals-section {
+    min-height: 45em;
   }
 }
