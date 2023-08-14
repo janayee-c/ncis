@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react';
 import '../styles/PS.css';
 import { Heading, ProductPanel, OneProduct } from './export';
 import { Edith, Grace, Hava } from '../images/export';
-import { Container, Grid, useMediaQuery, GridItem, Spinner } from '@chakra-ui/react';
+import { Container, Grid, SimpleGrid, useMediaQuery, GridItem, Spinner } from '@chakra-ui/react';
 import { DEVICETEXTS } from '../constants/export';
 import Slider from 'react-slick';
 
@@ -51,7 +51,7 @@ const PS = () => {
     const productRef = refProducts.current[product.name];
     if (productRef && isMinimizedMode) { //use switch here
 
-          const height = 600;
+          const height = 500;
           setProductHeight(height); 
 
     }
@@ -100,11 +100,14 @@ const animateProduct = (product) => {
 
         // MOBILE MODE HERE 
 
-            <Grid templateColumns="repeat(3, 1fr)" gap={1}
+            <SimpleGrid templateColumns="1 fr 1fr 1fr" gap={0.1}
             templateRows='repeat(2, 1fr)'
             alignItems="center" 
             justifyItems="center"
-            flex-direction="row">
+            justifyContent="center"
+            flex-direction="column"
+            maxWidth="100%"
+            minChildWidth='120px'>
 
               <GridItem colStart={1} rowStart={2}>
               <button>
@@ -118,8 +121,9 @@ const animateProduct = (product) => {
                 >
                 </OneProduct>
               </button>
-
               </GridItem>
+
+
               <GridItem colStart={2} rowStart={1}>
               <button>
                 <OneProduct
@@ -149,7 +153,7 @@ const animateProduct = (product) => {
                 </OneProduct>
               </button>
               </GridItem>
-            </Grid>
+            </SimpleGrid>
 
 
 
