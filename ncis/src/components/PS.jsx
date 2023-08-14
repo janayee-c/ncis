@@ -100,15 +100,14 @@ const animateProduct = (product) => {
 
         // MOBILE MODE HERE 
 
-            <SimpleGrid templateColumns='repeat(2, 1fr)' gap={0.1}
+            <SimpleGrid templateColumns='repeat(2, 1fr)' spacing="10px"
             templateRows='repeat(2, 1fr)'
             alignItems="center" 
             justifyItems="center"
             justifyContent="center"
             flex-direction="column"
             maxWidth="100%"
-            minChildWidth='120px'
-            className="pGrid">
+            minChildWidth='120px'>
 
               <GridItem colStart={1} rowStart={2}>
               <button>

@@ -3,7 +3,7 @@
     margin-top: 0;
     width: 100vw;
     height: max-content; 
-    min-height: 35em; 
+    min-height: 30em; 
     z-index: 1;
     padding-top: 10px;
 }
@@ -33,7 +33,7 @@
 
 @media (max-width: 600px) {
   .inactiveProductPanel {
-  padding-top: 0px;
+  padding-top: 20px;
   }
 
 }
@@ -116,8 +116,22 @@
   
   @media (max-width: 600px) {
     .ps-diag::after {
-      top: -30%;
+      top: -20%;
+    }
+    
+    .products-section {
+      margin-bottom: 25%;
     }
   }
 
+    
+  @media (max-width: 400px) {
+    .ps-diag::after {
+      top: -10%;
+    }
 
+    .products-section {
+      margin-bottom: 20%;
+    }
+
+  }
