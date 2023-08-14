@@ -100,14 +100,15 @@ const animateProduct = (product) => {
 
         // MOBILE MODE HERE 
 
-            <SimpleGrid templateColumns="1 fr 1fr 1fr" gap={0.1}
+            <SimpleGrid templateColumns='repeat(2, 1fr)' gap={0.1}
             templateRows='repeat(2, 1fr)'
             alignItems="center" 
             justifyItems="center"
             justifyContent="center"
             flex-direction="column"
             maxWidth="100%"
-            minChildWidth='120px'>
+            minChildWidth='120px'
+            className="pGrid">
 
               <GridItem colStart={1} rowStart={2}>
               <button>
@@ -124,7 +125,7 @@ const animateProduct = (product) => {
               </GridItem>
 
 
-              <GridItem colStart={2} rowStart={1}>
+              <GridItem colSpan={2} rowStart={1}>
               <button>
                 <OneProduct
                 ref={(element) => {refProducts.current[HAVA.name] = element}} 
@@ -140,7 +141,7 @@ const animateProduct = (product) => {
               </GridItem>
 
 
-              <GridItem colStart={3} rowStart={2}>
+              <GridItem colStart={2} rowStart={2}>
               <button>
                 <OneProduct
                 ref={(element) => {refProducts.current[GRACE.name] = element}} 
