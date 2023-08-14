@@ -1,15 +1,13 @@
 import React from "react";
 import "../styles/EthosElement.css";
 
-const EthosElement = (props) => {
-  const { source, title, id } = props;
-  const etElementStyle = (id === 0)  ? "et-content" : "ethos-element-content" ; //styles specific for Ethical Technology content (img & caption)
-  const etImageStyle = (id === 0)  ? "et-img" : "" ;
+const EthosElement = ({ source, title, id }) => {
+  const isEthicalTechnology = id === 0;
 
   return (
     <div className="ethos-element-container">
-      <div className={etElementStyle}>
-        <img className={etImageStyle} src={source}></img>
+      <div className={isEthicalTechnology ? "et-content" : "ethos-element-content"}>
+        <img className={isEthicalTechnology ? "et-img" : ""} src={source} alt={title} />
         <h2 className="caption">{title}</h2>
       </div>
     </div>

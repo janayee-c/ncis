@@ -1,43 +1,40 @@
 .ethos-element-container {
-    justify-content: center;
-    flex-direction: column;
-    max-width: 100%;
-    align-items: center;
-    height: 100%; /* Set the desired height */
-  }
-  
-  .ethos-element-content {
-    display: inline-flex;
-    margin-top: auto;
-    width: 200px;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    max-height: 400;
-  }
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+  height: 100%; /* Set the desired height */
+}
 
-  .et-content {
-    display: inline-flex;
-    margin-top: auto;
-    flex-direction: column;
-    align-items: center;
-    width: 186px;
-    box-sizing: border-box;
-    max-height: 400;
-  }
+.ethos-element-content,
+.et-content {
+  display: inline-flex;
+  margin-top: auto;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  max-height: 400px; 
+}
 
-  .et-img {
-    width: 186px !important;
-  }
+.ethos-element-content {
+  width: 200px;
+}
 
-  .caption {
-    font-family: "Beckman";
-    font-weight: 600;
-    letter-spacing: 3px;
-    font-size: 13px;
-    margin-top: 12px;
-    text-align: center;
-    display: inline-block;
-    white-space: nowrap; /* Prevent the caption from wrapping to multiple lines */
-  }
+.et-content {
+  width: 186px;
+}
 
+.et-img {
+  width: 186px !important; 
+}
+
+.caption {
+  font-family: "Beckman";
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-top: 12px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap; /* Prevent the caption from wrapping to multiple lines */
+}
