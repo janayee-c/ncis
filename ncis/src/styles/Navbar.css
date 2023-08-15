@@ -43,8 +43,8 @@
     color: black;
 }
 
-.drawer-transition {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+.drawer-transition .chakra-modal__content{
+    transition: opacity 0.5s ease-out;
 }
 
 .centered-icon {
@@ -60,4 +60,17 @@
 
 .pointer {
     cursor: pointer;
+}
+
+.drawer-transition-entering,
+.drawer-transition-exiting,
+.drawer-transition-exited {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out;
+}
+
+.drawer-transition-entered {
+  opacity: 1;
+  visibility: visible;
 }
