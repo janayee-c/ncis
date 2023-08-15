@@ -3,9 +3,8 @@ import React, { useState, useRef } from 'react';
 import '../styles/PS.css';
 import { Heading, ProductPanel, OneProduct } from './export';
 import { Edith, Grace, Hava } from '../images/export';
-import { Container, Grid, SimpleGrid, useMediaQuery, GridItem, Spinner } from '@chakra-ui/react';
+import { Container, Grid, SimpleGrid, useMediaQuery, GridItem } from '@chakra-ui/react';
 import { DEVICETEXTS } from '../constants/export';
-import Slider from 'react-slick';
 
 const PS = () => {
 
@@ -17,21 +16,8 @@ const PS = () => {
   const [isMinimizedMode] = useMediaQuery('(max-width: 600px)');
 
   const refProducts = useRef([]); //this is an object that stores the references to each product ! 
-  const sliderRef = useRef(null);
 
   const [productHeight, setProductHeight] = useState(0);
-  
-  const settings = { //for slider
-    dots: true,
-    infinite: isMinimizedMode, 
-    speed: 3000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    draggable: true,
-    autoplay: false,
-
-  }
 
   const productPanel = [
     { name: 'HAVA', source: Hava, desc: DEVICETEXTS.hava },

@@ -1,74 +1,42 @@
 .products-section {
-    position: relative;
-    margin-top: 0;
-    width: 100vw;
-    height: max-content; 
-    min-height: 30em; 
-    z-index: 1;
-    padding-top: 10px;
+  position: relative;
+  margin-top: 0;
+  width: 100vw;
+  height: max-content; 
+  min-height: 30em;
+  z-index: 1;
+  padding-top: 10px;
 }
-
 
 .products-container {
-    position: relative;
-    background-color: whitesmoke;
-    height: max-content;
-    padding-top: 15px;  /* how far heading down */
-    align-items: center;
-    flex-direction: row;
-    min-height: 45em;
-}
-
-@media (max-width: 500px) {
-  .products-container {
-    height: 25em; 
-  }
+  position: relative;
+  background-color: whitesmoke;
+  height: max-content;
+  padding-top: 15px;
+  align-items: center;
+  flex-direction: row;
+  min-height: 45em;
 }
 
 .inactiveProductPanel {
-    padding-top: 100px; 
-    margin:0;
-    align-self:center;
+  padding-top: 100px;
+  margin: 0;
+  align-self: center;
 }
 
-@media (max-width: 600px) {
-  .inactiveProductPanel {
-  padding-top: 20px;
-  }
-
-}
-
-/* .activeProductPanel {
-    align-items: center; 
-    display: inline-flex;
-    text-align: center;
-    width: 100%;
-}
-
-.activePanelContent {
-    width: 60%;
-    text-align: center; 
-    font-family: "Montserrat";
-    line-height: 25px;
-    font-weight: 590;
-    font-size: 1em;
-} */
-
-.fade-out { /* for products */ 
-    opacity: 0; 
-    transition: opacity 0.5s ease; /* Add transition effect for smooth fading */
-}
-
-.fade-out-panel { /* for products */ 
+.fade-out, .fade-out-panel {
   opacity: 0; 
-  transform: translateY(-50%) 0.25 ease; /* remove the element from pannel */ 
-  transition: opacity 8s ease; /* Add transition effect for smooth fading */
+  transition: opacity 0.5s ease;
+}
+
+.fade-out-panel {
+  transform: translateY(-50%) 0.25 ease;
+  transition: opacity 8s ease;
 }
 
 .spinner-container {
   align-items: center;
   justify-content: center;
-  float: center; 
 }
 
 .products-slider-container {
@@ -77,61 +45,54 @@
   width: 100%;
   background-color: white;
   text-align: center;
-  padding-bottom: 0;
-  padding-top: 100px; 
+  padding: 100px 0 0;
 }
 
-.showSpin {
-  opacity: 1;
-  align-self: center; 
+.ps-diag {
+  position: absolute;
+  left: 0;
+  top: 100%; 
+  width: 110%;
+  height: 60%;
+  z-index: 1;
 }
 
-.hideSpin {
-  opacity: 0;
+.ps-diag::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: 40%;
+  width: 100%;
+  height: 60%;
+  background: white;
+  transform-origin: 100% 0%;
+  transform: rotate(-5deg) translateX(-50%);
+}
+
+@media (max-width: 600px) {
+.products-container {
+  height: 25em; 
+}
+
+.inactiveProductPanel {
+  padding-top: 20px;
+}
+
+.ps-diag::after {
+  top: -20%;
 }
   
-  .ps-diag {
-    position: absolute;
-    left: 0%;
-    top: 100%; 
-    width: 110%;
-    height: 60%;
-    z-index: 1;
-  }
+.products-section {
+  margin-bottom: 25%;
+}
+}
 
-  .ps-diag::after {
-    content: '';
-    position: absolute;
-    top: -60%;
-    left: 40%;
-    width: 100%;
-    height: 60%;
-    background: white;
-    flex-shrink: 0; 
-    transform-origin: 100% 0%;
-    -webkit-transform: rotate(-5deg) translateX(-50%);
-    -ms-transform: rotate(-5deg) translateX(-50%);
-    transform: rotate(-5deg) translateX(-50%);
-  }
-  
-  @media (max-width: 600px) {
-    .ps-diag::after {
-      top: -20%;
-    }
-    
-    .products-section {
-      margin-bottom: 25%;
-    }
-  }
+@media (max-width: 400px) {
+.ps-diag::after {
+  top: -10%;
+}
 
-    
-  @media (max-width: 400px) {
-    .ps-diag::after {
-      top: -10%;
-    }
-
-    .products-section {
-      margin-bottom: 20%;
-    }
-
-  }
+.products-section {
+  margin-bottom: 20%;
+}
+}

@@ -1,48 +1,41 @@
 .product-container {
-    position: relative;  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-  }
-  
+  position: relative;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
 .product-icon {
-    width: 140px;
-    height: 140px;
-    align-self: center; 
-    margin-left: 0; 
-    margin: 0;
+  width: 140px;
+  height: 140px;
+  align-self: center; 
+  margin-left: 0; 
+  margin: 0;
 }
 
 @media (max-width: 600px) {
-  .product-icon {
-    max-width: 100px; 
-    max-height: 100px;
-  }
+.product-icon {
+  max-width: 100px; 
+  max-height: 100px;
+}
 }
 
 .raised { 
-    margin-top: 0; 
-    margin-bottom: 0; 
-
+  margin-top: 0; 
+  margin-bottom: 0; 
 }
 
 .product-name {
-    margin-top: 30px;
-    font-family: 'Beckman';
-    font-size: 18px; 
-    text-align: center; 
-  }
+  margin-top: 30px;
+  font-family: 'Beckman';
+  font-size: 18px; 
+  text-align: center; 
+  transform: translateY(initial); 
+  transition: transform 0.3s; 
+}
 
-  .animateName {
-    transform: translateY(40%); 
-    transition: transform 0.3s; 
-  }
-
-  .unanimateName {
-    transform: translateY(initial); 
-    transition: transform 0.3s; 
-  }
-
-
+.product-icon:hover + .product-name {
+  transform: translateY(40%); 
+}
