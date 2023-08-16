@@ -38,3 +38,8 @@
   display: inline-block;
   white-space: nowrap; /* Prevent the caption from wrapping to multiple lines */
 }
+
+.invisible {
+  opacity: 0; 
+  transition: 'opacity 3s ease-in-out';
+}
