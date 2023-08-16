@@ -11,7 +11,8 @@ import {
   DrawerContent,
   Stack,
   useDisclosure,
-  useMediaQuery
+  useMediaQuery,
+  DrawerOverlay
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Logo } from '../images/export';
@@ -26,13 +27,6 @@ const Navbar = () => {
   const handleHover = (link) => {
     setActiveLink(link);
   };
-
-  function handleClose() {
-    setTimeout(() => {
-      onClose();
-    }, 200);
-  }
-
   const sections = [
     { id: 'ethos', label: 'ETHOS' },
     { id: 'about', label: 'ABOUT' },
@@ -64,6 +58,7 @@ const Navbar = () => {
           edge="end"
           float="right"
           onMouseEnter={onOpen}
+      
           variant="unstyled"
           color="black"
           size="xl"
@@ -73,15 +68,15 @@ const Navbar = () => {
 
         <Drawer
           isOpen={isOpen}
-          onClose={onClose}
+          onMouseLeave={onClose}
           placement={isTopDrawer ? 'top' : 'right'}
           finalFocusRef={btnRef}
           width="100%"
           size={isTopDrawer ? 'xl' : 'xs'}
           ref={drawerRef}
-          className="drawer-transition"
         >
-          <DrawerContent onMouseLeave={handleClose}>
+          <DrawerOverlay/>
+          <DrawerContent isOpen={isOpen} onMouseLeave={onClose}>
             <DrawerBody>
               <Box height="80px" justifyContent="center" alignItems="center">
                 <Stack
