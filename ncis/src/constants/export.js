@@ -1,5 +1,5 @@
 import { DEVICETEXTS, ABOUT, PUBTEXTS } from "./texts";
-import COLORS from "./themes";
+import { COLORS } from "./themes";
 
 export {
     COLORS,
