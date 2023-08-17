@@ -6,7 +6,7 @@ import { Ethical, Capacity, Ocean, Transparency, Information } from '../images/e
 import { Heading, EthosElement } from '../components/export';
 import { useInView } from 'react-intersection-observer';
 
-import { Container, useMediaQuery } from '@chakra-ui/react';
+import { Container, RangeSliderFilledTrack, useMediaQuery } from '@chakra-ui/react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -48,18 +48,16 @@ const Ethos = () => {
     autoplay: isMedium,
     autoplaySpeed: 2000
   };
-  //observer stuff 
+
+  //observer stuff
 
   useEffect(() => {
     // callback function that toggles classes
-    const callback = (entries, index) => {
+    const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            console.log('Element is intersecting:', entry.isIntersecting);
-            entry.target.classList.toggle('hide-element', false);
-            entry.target.classList.toggle('display-element', true);
-          }, 1000);
+            setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 1);
+          
         } else {
           entry.target.classList.toggle('hide-element', true);
           entry.target.classList.toggle('display-element', false);
@@ -71,7 +69,7 @@ const Ethos = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 1.0,
     };
 
     const ethosElements = document.querySelectorAll('.hide-element');
@@ -96,13 +94,14 @@ const Ethos = () => {
       <Container className="econtainer" maxW="100%">
         <Heading id="ethos-heading" title="ETHOS" center />
         <div className="ethos-slider-container"> 
-          <Slider className="intersection-o" {...settings} ref={sliderRef}>
+          <Slider {...settings} ref={sliderRef}>
             {ethosSources.map((element, index) => (
-              <div className="hide-element"  style={{transitionDelay:`${index * 0.5}s`}} key={index}>
+              <div key={index}>
                 <EthosElement 
                   id={index} 
                   source={element.source} 
-                  title={element.title}>   
+                  title={element.title}
+                  className={visibleProducts > index ? "display-element" : "hide-element"}>
                   </EthosElement>
               </div>
             ))}
