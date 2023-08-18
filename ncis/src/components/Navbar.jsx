@@ -103,6 +103,8 @@ const Navbar = () => {
                       {section.label}
                     </ScrollLink>
                   ))}
+
+                  {isTopDrawer ?
                   <Link
                     onMouseEnter={() => handleHover('manual')}
                     onMouseLeave={() => handleHover(null)}
@@ -113,6 +115,7 @@ const Navbar = () => {
                   >
                     MANUAL
                   </Link>
+                  : <></>}
                 </Stack>
               </Box>
             </DrawerBody>
