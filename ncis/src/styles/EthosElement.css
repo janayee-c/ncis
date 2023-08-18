@@ -39,7 +39,33 @@
   white-space: nowrap; /* Prevent the caption from wrapping to multiple lines */
 }
 
-.invisible {
+.invisibe {
   opacity: 0; 
-  transition: 'opacity 3s ease-in-out';
+}
+/* Initial state for hidden elements */
+.hide-element {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Display state for visible elements */
+.display-element {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blue {
+  background-color: blue;
 }
