@@ -4,7 +4,6 @@ import '../styles/Ethos.css';
 /* Ethos Components */
 import { Ethical, Capacity, Ocean, Transparency, Information } from '../images/export';
 import { Heading, EthosElement } from '../components/export';
-import { useInView } from 'react-intersection-observer';
 
 import { Container, useMediaQuery } from '@chakra-ui/react';
 import Slider from 'react-slick';
@@ -15,7 +14,6 @@ import 'slick-carousel/slick/slick-theme.css';
 const Ethos = () => {
   const sliderRef = useRef(null);
   const [visibleProducts, setVisibleProducts] = useState(0);
-
 
   const [isMedium] = useMediaQuery('(max-width: 1200px)');
   const [isSmall] = useMediaQuery('(max-width: 900px)');
@@ -47,43 +45,66 @@ const Ethos = () => {
     autoplay: isMedium,
     autoplaySpeed: 2000
   };
-  //observer stuff 
 
-  const { ref, inView } = useInView ({
-    threshold: 1,
-    root: null,
-    rootMargin:"0px"
-  });
+  //observer stuff
+
+     // callback function used in the observer 
+     const callback = (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+
+          const timeout = setTimeout(() => {
+            setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 1);
+          }, (index + 1) * 250); 
+    
+          return () => clearTimeout(timeout); 
+
+        }
+      });
+    };
+
+    // observer options 
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0,
+    };
 
   useEffect(() => {
-    if (inView) {
-      const timeout = setTimeout(() => {
-        setVisibleProducts(visibleProducts + 1);
-      }, 7000); 
+    const ethosElement = document.querySelectorAll(".ethical-element");
+    const observer = new IntersectionObserver(callback, options);
 
-      return () => clearTimeout(timeout); 
-    }
-  }, [inView, visibleProducts]); 
+    if (sliderRef.current)
 
+    // Observe each ethos element
+    ethosElement.forEach((el) => {
 
-  //end of observer stuff 
+      observer.observe(el);
+    });
+
+    // Remove observer after each one 
+    return () => {
+      ethosElement.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
 
   
   return (
-    <section id="ethos-section" className="ethos-section" ref={ref} inView={inView}>
+    <section id="ethos-section" className="ethos-section">
       <Container className="econtainer" maxW="100%">
         <Heading id="ethos-heading" title="ETHOS" center />
         <div className="ethos-slider-container"> 
           <Slider {...settings} ref={sliderRef}>
             {ethosSources.map((element, index) => (
-              <div key={index}>
+              <div key={index}
+              className={`ethical-element ${index <= visibleProducts ? 'display-element' : 'hide-element'}`}>
                 <EthosElement 
-                
-                  id={index} 
-                  source={element.source} 
-                  title={element.title} 
-                  startAppear={ visibleProducts > index }>
-                    
+                    id={index} 
+                    className="ethical-element"
+                    source={element.source} 
+                    title={element.title}>
                   </EthosElement>
               </div>
             ))}
