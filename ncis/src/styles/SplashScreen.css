@@ -16,10 +16,17 @@ video {
     vertical-align: baseline;
     object-fit: contain;
     overflow: clip;
+    
 }
 
 .hidden {
     transition: 1s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
     -webkit-transform: translate(-0, -100%);
     transform: translate(0, -100%);
+}
+
+@media (max-width: 800px) {
+    .hidden {
+    transform: translate (0, -300%); 
+    }
 }
