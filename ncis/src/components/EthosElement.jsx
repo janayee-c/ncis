@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/EthosElement.css";
 
-const EthosElement = ({ source, title, id, startAppear }) => {
+const EthosElement = ({ source, title, id}) => {
   const isEthicalTechnology = id === 0;
 
   return (

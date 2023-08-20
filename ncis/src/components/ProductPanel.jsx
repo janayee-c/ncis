@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import '../styles/ProductPanel.css';
-import { Container } from '@chakra-ui/react';
+import { Container, CloseButton } from '@chakra-ui/react';
 
 const ProductPanel = (props) => {
     const { heading, description, isOpen, onClick, height } = props;
@@ -35,12 +35,16 @@ const ProductPanel = (props) => {
 
     return (
       <Container className="panel-container">
-        <h3 className="product-name" style={translateStyle(0.7)}>{heading}</h3>
-        <p className="product-description" style={translateStyle(0.8)}>{description}</p>
-        <p className="contact" style={translateStyle(0.75)}>
+        <h3 className="product-name" style={translateStyle(0.6)}>{heading}</h3>
+        <p className="product-description" style={translateStyle(0.9)}>{description}</p>
+        <p className="contact" style={translateStyle(0.7)}>
           <a href="mailto:info@ncis-tech.com">Contact Us</a> to learn more.
         </p>
-        <button className="close-button" style={translateStyle(0.8)} onClick={onClick}>X</button>
+        <div></div>
+        <button className="close-button" 
+                style={translateStyle(0.8)} 
+                onClick={onClick}><CloseButton size="sm"
+                marginLeft="-6px"></CloseButton></button>
       </Container>
     );
 };

@@ -46,3 +46,7 @@
 .button.visible {
     transform: translateY(-5em);
 }
+
+.close-button {
+    align-self: left;
+}
