@@ -70,27 +70,23 @@
 /* Initial state for hidden elements */
 .hide-element {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 
 /* Display state for visible elements */
 .display-element {
   opacity: 1;
   transform: translateY(0);
-  animation: fade-in 1s ease-out forwards;
+  animation: fade-in 0.4s ease-out forwards;
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.blue {
-  background-color: blue;
 }

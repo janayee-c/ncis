@@ -55,7 +55,7 @@ const Ethos = () => {
 
           const timeout = setTimeout(() => {
             setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 1);
-          }, (index + 1) * 250); 
+          }, (index + 1) * 150); 
     
           return () => clearTimeout(timeout); 
 
