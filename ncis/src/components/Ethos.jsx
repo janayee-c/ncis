@@ -22,7 +22,7 @@ const Ethos = () => {
     { title: "ETHICAL TECHNOLOGY", source: Ethical },
     { title: "OCEAN GOVERNANCE", source: Ocean },
     { title: "TRANSPARENCY", source: Transparency },
-    { title: "CAPACITY", source: Capacity },
+    { title: "CAPACITY BUILDING", source: Capacity },
     { title: "INFORMATION AT HAND", source: Information }
   ];
 
