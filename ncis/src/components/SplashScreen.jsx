@@ -18,7 +18,7 @@ const SplashScreen = () => {
         onEnded={handleVideoEnded}
         width="500"
         height="500"
-        playsinline
+        webkit-playsinline 
       >
         <source src={Splash} type="video/mp4" />
         Your browser does not support videos.
