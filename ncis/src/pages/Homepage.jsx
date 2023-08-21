@@ -13,9 +13,9 @@ function Homepage() {
     <>
     <div className="homePage-container">
 
-      {/* {isMobileMode ? 
+      {isMobileMode ? 
       null
-    : <SplashScreen></SplashScreen>} */}
+    : <SplashScreen></SplashScreen>}
 
     <Navbar></Navbar>
     <Hero></Hero>
