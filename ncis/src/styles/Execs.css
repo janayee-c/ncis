@@ -29,6 +29,12 @@
     min-height: 50em; 
 }
 
+@media (max-width: 600px) {
+    .profiles-container {
+        max-width: 95%;
+    }
+}
+
 .profile {
     height: fit-content;
     width: 500px;
@@ -38,6 +44,8 @@
 
 .profile-img {
     float: center; 
+    display: flex; 
+    flex-direction: row;
     margin-bottom: -40px; 
 }
 
