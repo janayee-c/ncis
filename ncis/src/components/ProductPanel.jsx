@@ -45,9 +45,9 @@ const ProductPanel = (props) => {
                 style={translateStyle(0.8)} 
                 onClick={onClick}>
                   <div class="close-container">
-  <div class="leftright"></div>
-  <div class="rightleft"></div>
-</div>
+                      <div class="leftright"></div>
+                      <div class="rightleft"></div>
+                  </div>
                 </button>
       </Container>
     );
