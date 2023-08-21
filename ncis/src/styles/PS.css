@@ -89,7 +89,7 @@
 
 @media (max-width: 400px) {
 .ps-diag::after {
-  top: -10%;
+  top: -15%;
 }
 
 .products-section {

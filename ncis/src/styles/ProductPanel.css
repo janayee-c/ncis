@@ -50,3 +50,54 @@
 .close-button {
     align-self: left;
 }
+
+
+body{
+  background-color: black;
+}
+
+.close-container{
+  position: relative;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 24px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftright{
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: black;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all .3s ease-in;
+}
+
+.rightleft{
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: black;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all .3s ease-in;
+}
+
+.close-container:hover .leftright{
+  transform: rotate(-45deg);
+  background-color: grey;
+}
+.close-container:hover .rightleft{
+  transform: rotate(45deg);
+  background-color: grey;
+}
+.close-container:hover label{
+  opacity: 1;
+}
+

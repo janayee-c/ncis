@@ -29,16 +29,19 @@ const PS = () => {
   const EDITH = productPanel[1]; // Access the second element
   const GRACE = productPanel[2]; // Access the third element
 
-  const handleProductClick = (product) => {
+  const handleProductClick = (product) => { //using current product (not prev)
     
     setSelectedProduct(product); //set the product 
     setActivePanelVisible(true); //make conditions true 
 
     const productRef = refProducts.current[product.name];
-    if (productRef && isMinimizedMode) { //use switch here
+    if (productRef && isMinimizedMode) { 
 
-          const height = 500;
-          setProductHeight(height); 
+      let height = 560;
+      if (product.name === "GRACE") { //current product for the argument 
+        height = 600;
+      }
+      setProductHeight(height);
 
     }
     else if (productRef) {

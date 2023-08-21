@@ -25,11 +25,12 @@
   align-items: center;
   justify-content: center;
   z-index: 3; 
+  
 }
 
 .about-txt {
   font-family: "Montserrat";
-  line-height: 2rem;
+  line-height: 1em;
   font-weight: medium;
   font-size: 1.5em; 
   text-align: justify;
@@ -37,6 +38,10 @@
   margin: 2rem 0;
   width: 100%;
   overflow: auto;
+  width: 80vw;
+  align-self: center;
+  scale: 1; 
+  word-spacing: 0.2em; /* You can adjust the value as needed */
 }
 
 @media (max-width: 2000px) {
@@ -46,6 +51,22 @@
     font-weight: 400;
   }
 }
+
+@media (max-width: 700px) {
+  .about-txt {
+    text-align: left; /* Align text to the left */
+    word-spacing: normal; /* Reset word spacing to the default */
+    font-size: 18px; /* Adjust font size to match the reference site */
+    line-height: 1.7; /* Adjust line height for better readability */
+    margin: 0; /* Remove top and bottom margin */
+    padding: 10px 5%; /* Add padding for space around the text */
+    width: 100%; /* Make the text width 100% for mobile */
+    max-width: 100%; /* Ensure the text doesn't exceed the screen width */
+    overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+  }
+}
+
+
 
 @media (max-width: 1200px) {
   .about-txt {
@@ -57,7 +78,7 @@
   position: absolute;
   left: 0;
   top: 100%; 
-  width: 110%;
+  width: 120%;
   height: 60%;
   z-index: 1;
 }
@@ -99,18 +120,18 @@
 
 @media (max-width: 600px) {
   .about-diag::after {
-    top: -30%;
+    top: -25%;
   }
 }
 
 @media (max-width: 500px) {
   .about-diag::after {
-    top: -27%;
+    top: -20%;
   }
 }
 
 @media (max-width: 400px) {
   .about-diag::after {
-    top: -15%;
+    top: -10%;
   }
 }

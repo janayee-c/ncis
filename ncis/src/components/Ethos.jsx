@@ -36,7 +36,7 @@ const Ethos = () => {
 
   const settings = {
     dots: false,
-    infinite: isMedium,
+    infinite: isMedium || isSmall,
     speed: 3000,
     slidesToShow: slidesToShowValue,
     slidesToScroll: slidesToScrollValue,

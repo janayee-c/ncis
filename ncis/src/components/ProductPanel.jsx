@@ -43,8 +43,12 @@ const ProductPanel = (props) => {
         <div></div>
         <button className="close-button" 
                 style={translateStyle(0.8)} 
-                onClick={onClick}><CloseButton size="sm"
-                marginLeft="-6px"></CloseButton></button>
+                onClick={onClick}>
+                  <div class="close-container">
+  <div class="leftright"></div>
+  <div class="rightleft"></div>
+</div>
+                </button>
       </Container>
     );
 };
