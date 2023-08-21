@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../styles/Navbar.css';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
+import { Sling as Hamburger} from 'hamburger-react';
 import {
   IconButton,
   Box,
@@ -12,9 +13,9 @@ import {
   Stack,
   useDisclosure,
   useMediaQuery,
-  DrawerOverlay
+  DrawerOverlay,
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+
 import { Logo } from '../images/export';
 
 const Navbar = () => {
@@ -37,6 +38,21 @@ const Navbar = () => {
     { id: 'contact', label: 'CONTACT' }
   ];
 
+  const [isHamburgerToggled, setIsHamburgerToggled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0 && isHamburgerToggled) {
+      setIsHamburgerToggled(false); //when not in original position, toggle is set as false 
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isHamburgerToggled]);
+
   return (
     <>
       <Box
@@ -51,17 +67,34 @@ const Navbar = () => {
         className="navbar-box"
       >
         <Img id="logo" src={Logo} />
+        
 
         <IconButton
           ref={btnRef}
-          icon={<HamburgerIcon />}
+          icon={<Hamburger
+
+            onToggle={(toggled) => {
+              setIsHamburgerToggled(toggled);
+              if (toggled) {
+                onOpen();
+              } else {
+                onClose();
+              }
+            }}
+
+            toggled={isHamburgerToggled} 
+          />}
           edge="end"
           float="right"
+          marginLeft="20px"
           onMouseEnter={onOpen}
+          zIndex={isTopDrawer ? 1 : 9999}
+          onClick={isOpen ? onClose : onOpen}
+
       
           variant="unstyled"
           color="black"
-          size="xl"
+          size={isTopDrawer ? 'xl' : 'sm'}
           aria-label="Open Dropdown"
           className="centered-icon"
         />
@@ -81,9 +114,11 @@ const Navbar = () => {
               <Box height="80px" justifyContent="center" alignItems="center">
                 <Stack
                   direction={isTopDrawer ? 'row' : 'column'}
-                  spacing={0.5}
+                  spacing={0.8}
                   textAlign="center"
                   justifyContent="center"
+                  verticalAlign="flex-end"
+                  marginTop={isTopDrawer ? '0' : '4vh'}
                 >
                   {sections.map((section) => (
                     <ScrollLink
@@ -121,7 +156,7 @@ const Navbar = () => {
             </DrawerBody>
           </DrawerContent>
         </Drawer>
-      </Box>
+      </Box> 
     </>
   );
 };
