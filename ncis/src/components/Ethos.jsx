@@ -67,7 +67,7 @@ const Ethos = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 1.0,
+      threshold: isSmall ? 0 : 1.0
     };
 
   useEffect(() => {
