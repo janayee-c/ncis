@@ -6,7 +6,7 @@
   z-index: 1;
   display: flex;
   height: auto; 
-  min-height: 30em; 
+  min-height: 40em; 
 }
 
 .econtainer {
@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 1;
   justify-content: center;
-  min-height: 25em; 
+  min-height: 30em; 
 }
 
 .ethos-slider-container {

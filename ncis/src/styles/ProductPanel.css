@@ -2,6 +2,10 @@
     position: absolute; 
 }
 
+.panel-container {
+  min-height: max-content; 
+}
+
 .product-name, .product-description, .contact {
     display: block;
     margin: 1em 0;

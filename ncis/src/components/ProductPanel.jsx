@@ -27,9 +27,9 @@ const ProductPanel = (props) => {
         };
       }
       return {
-        transform: 'translateY(200px)',
-        opacity: 1,
-        transition: 'transform 1s',
+      transform: `translateY(${height}px)`,
+      opacity: 0, // Set text to transparent when transitioning
+      transition: `transform ${delay + 1.5}s, background ${0.3}s, opacity ${0.15}s`, // Apply transitions
       };
     };
 
@@ -42,7 +42,7 @@ const ProductPanel = (props) => {
         </p>
         <div></div>
         <button className="close-button" 
-                style={translateStyle(0.8)} 
+                style={translateStyle(0.7)} 
                 onClick={onClick}>
                   <div class="close-container">
                       <div class="leftright"></div>
