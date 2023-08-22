@@ -26,6 +26,12 @@
   padding: 30px 0 0; 
 }
 
+.slick-slider {
+  width: 85%; /* Adjust the width as needed */
+  max-width: 100%; /* Ensure it doesn't exceed parent's width */
+  margin: 0 auto; /* Center horizontally */
+}
+
 .ethos-diag {
   position: absolute;
   left: 0;
@@ -89,4 +95,8 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.et-img {
+  margin-top: 2px; 
 }

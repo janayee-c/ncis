@@ -7,7 +7,7 @@ const EthosElement = ({ source, title, id}) => {
   return (
     <div className={"ethos-element-container"}>
       <div className={isEthicalTechnology ? "et-content" : "ethos-element-content"}>
-        <img className={isEthicalTechnology ? "et-img" : ""}src={source} alt={title} />
+        <img className={isEthicalTechnology ? "et-img" : "ethos-element-image"}src={source} alt={title} />
         <h2 className={"caption"}>{title}</h2>
       </div>
     </div>

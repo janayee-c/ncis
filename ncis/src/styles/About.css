@@ -8,6 +8,12 @@
   z-index: 1;
 }
 
+@media (max-width: 800px) {
+  #about-section {
+    min-height: 30em; 
+  }
+}
+
 .about-container {
   position: relative; 
   z-index: 1;
@@ -15,6 +21,12 @@
   margin: 0 20%;
   min-height: 35em; 
   background-color: whitesmoke;
+}
+
+@media (max-width: 800px) {
+  .about-container {
+    min-height: 25em; 
+  }
 }
 
 .about-content {
@@ -32,7 +44,7 @@
   font-family: "Montserrat";
   line-height: 1em;
   font-weight: medium;
-  font-size: 1.5em; 
+  font-size: 12px; 
   text-align: justify;
   padding: 0 5%;
   margin: 2rem 0;
@@ -46,7 +58,7 @@
 
 @media (max-width: 2000px) {
   .about-txt {
-    font-size: 1em; 
+    font-size: 12px; 
     line-height: 1.85rem;
     font-weight: 400;
   }

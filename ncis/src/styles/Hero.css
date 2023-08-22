@@ -37,19 +37,34 @@ img, #cube {
   position: relative;
 }
 
-@media (max-width: 1022px) {
+@media (min-width: 1022px) and (max-width: 1400px) {
   #cube {
-    width: 20em;
-    height: 20em;
+    width: 35em;
+    height: 35em;
   }
 }
 
-@media (min-width: 1022px) and (max-width: 1400px) {
+@media (max-width: 1022px) {
+  #cube {
+    width: 35em;
+    height: 35em;
+  }
+}
+
+@media (max-width: 700px) {
+  #cube {
+    width: 30em;
+    height: 30em;
+  }
+}
+
+@media (max-width: 500px) {
   #cube {
     width: 25em;
     height: 25em;
   }
 }
+
 
 .hero-diag {
   position: absolute;
