@@ -10,7 +10,7 @@ const Goals = () => {
 
   return (
     <section id="goals-section" className="goals-section">
-      <Container maxW="100%">
+      <Container maxW="100%" className="goals-container">
         <Heading center={true} title="GOALS"/>
         <div className="img-container">
           <img src={image} alt="goals" className={`${isDesktopMode ? 'desktop' : 'mobile'}-image`} />

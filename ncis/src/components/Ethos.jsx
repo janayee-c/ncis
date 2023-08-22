@@ -16,7 +16,7 @@ const Ethos = () => {
   const [visibleProducts, setVisibleProducts] = useState(0);
 
   const [isMedium] = useMediaQuery('(max-width: 1200px)');
-  const [isSmall] = useMediaQuery('(max-width: 900px)');
+  const [isSmall] = useMediaQuery('(max-width: 600px)');
 
   const ethosSources = [
     { title: "ETHICAL TECHNOLOGY", source: Ethical },
@@ -31,18 +31,18 @@ const Ethos = () => {
   
   if (isMedium) {
     slidesToShowValue = isSmall ? 1 : 3;
-    slidesToScrollValue = isSmall ? 1 : 3;
+    slidesToScrollValue = 1;
   }
 
   const settings = {
     dots: false,
     infinite: isMedium || isSmall,
-    speed: 3000,
+    speed: 2500,
     slidesToShow: slidesToShowValue,
     slidesToScroll: slidesToScrollValue,
     swipeToSlide: true,
     draggable: true,
-    autoplay: isMedium,
+    autoplay: true,
     autoplaySpeed: 2000
   };
 

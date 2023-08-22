@@ -10,7 +10,7 @@
 
 @media (max-width: 800px) {
   #about-section {
-    min-height: 30em; 
+    min-height: 32em; 
   }
 }
 
@@ -25,7 +25,7 @@
 
 @media (max-width: 800px) {
   .about-container {
-    min-height: 25em; 
+    min-height: 30em; 
   }
 }
 
@@ -138,12 +138,12 @@
 
 @media (max-width: 500px) {
   .about-diag::after {
-    top: -20%;
+    top: -15%;
   }
 }
 
 @media (max-width: 400px) {
   .about-diag::after {
-    top: -10%;
+    top: -20%;
   }
 }

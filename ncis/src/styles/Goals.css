@@ -14,7 +14,7 @@
   z-index: 1;
   width: 100%;
   height: max-content;
-  min-height: 40em;
+  min-height: 65em;
   flex-shrink: 0;
   margin-bottom: 0;
 }
@@ -74,7 +74,7 @@
 @media (max-width: 800px) {
   .mobile-image {
     width: 30%;
-    height: 40%;
+    height: 30%;
   }
 
   .goals-diag::after {
@@ -84,10 +84,10 @@
 
 @media (max-width: 480px) {
   .mobile-image {
-    width: 30%;
-    height: 40%;
+    width: 45%;
+    height: 45%;
     scale: 2;
-    margin-top: 50%;
+    margin-top: 65%;
   }
 
   .goals-diag::after {
@@ -95,14 +95,3 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .goals-container {
-    transform: translateY(-40px);
-  }
-}
-
-@media (min-width: 800px) {
-  #goals-section {
-    min-height: 45em;
-  }
-}
