@@ -12,10 +12,8 @@ function Homepage() {
   return (
     <>
     <div className="homePage-container">
-
-      {isMobileMode ? 
-      null
-    : <SplashScreen></SplashScreen>}
+    
+    <SplashScreen></SplashScreen>
 
     <Navbar></Navbar>
     <Hero></Hero>
