@@ -10,6 +10,13 @@
   float: center;
 }
 
+@media (max-width: 800px) {
+  .web-heading {
+  font-size: 1.2rem; 
+  letter-spacing: 1px;
+  }
+}
+
 .triangle {
   display: inline-block;
   width: 15px;

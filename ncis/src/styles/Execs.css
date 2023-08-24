@@ -61,12 +61,8 @@
    
 }
 
-.d-heading {
-    text-align: center;
-    font-weight: bold; 
-}
 
-.d-desc {
+.d-desc, .s-desc {
     margin-block-start: 0; 
     margin-block-end: 0; 
     font-family: Montserrat; 
@@ -77,6 +73,12 @@
     width: 100%; 
     line-height: 1.65em; 
     white-space: pre-line; /* Preserve line breaks */
+}
+
+@media (max-width: 900px) {
+    .d-desc, .s-desc {
+        font-size: 0.7em; 
+    }
 }
 
 .s-team {
@@ -89,23 +91,18 @@
     font-weight: medium; 
 }
 
-.s-heading {
+.s-heading, .d-heading {
     text-align: center;
     font-weight: bold; 
 }
 
-.s-desc {
-    margin-block-start: 0; 
-    margin-block-end: 0; 
-    font-family: Montserrat; 
-    font-size: 0.9em;
-    font-weight: medium;
-    display: inline-block;
-    padding-right: 0em;
-    width: 100%; 
-    line-height: 1.65em; 
-    white-space: pre-line; /* Preserve line breaks */
+@media (max-width: 900px) {
+    .s-heading, .d-heading {
+        font-size: 0.9em; 
+    }
 }
+
+
 
 .execs-diag {
     position: absolute;

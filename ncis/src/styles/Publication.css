@@ -8,6 +8,22 @@
     text-size-adjust: 100%;
 }
 
+@media (max-width: 900px) {
+    .article-container {
+        padding-left: 10px;
+        padding-right: 10px; 
+        margin: auto; 
+    }
+}
+
+@media (max-width: 700px) {
+    .article-container {
+        padding-left: 0px;
+        padding-right: 0px; 
+    }
+}
+
+
 .article-header {
     display: block;
     font-size: 13px;
