@@ -39,17 +39,20 @@
 }
 
 .events-desc {
-  margin: 1em 10vw;
+  margin: auto; 
+  margin-top: 40px; 
   text-align: left;
   line-height: 1.65em; 
   font-family: "Montserrat";
   font-weight: medium;
   font-size: 0.9rem;
+  word-spacing: 0.05em;
+  width: 90%
 }
 
 .events-diag {
   position: absolute;
-  top: 100%;
+  top: 103%;
   left: 0;
   width: 110%;
   height: 60%;

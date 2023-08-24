@@ -9,11 +9,11 @@ import { DEVICETEXTS } from '../constants/export';
 const PS = () => {
 
 
-  const defaultProduct = { name: 'Default Product', desc: DEVICETEXTS.grace }; // Product when nothing is selected
+  const defaultProduct = { name: 'Default Product', desc: DEVICETEXTS.grace, style:{opacity:0} }; // Product when nothing is selected
 
   const [activePanelVisible, setActivePanelVisible] = useState(false); //toggles activity off or on 
   const [selectedProduct, setSelectedProduct] = useState(defaultProduct); //sets selectedProduct
-  const [isMinimizedMode] = useMediaQuery('(max-width: 600px)');
+  const [isMinimizedMode] = useMediaQuery('(max-width: 800px)');
 
   const refProducts = useRef([]); //this is an object that stores the references to each product ! 
 
@@ -37,10 +37,10 @@ const PS = () => {
     const productRef = refProducts.current[product.name];
     if (productRef && isMinimizedMode) { 
 
-      let height = 560;
-      if (product.name === "GRACE") { //current product for the argument 
-        height = 600;
-      }
+      let height = 450;
+      // if (product.name === "GRACE") { //uncomment if grace is higher
+      //   height = 450;
+      // }
       setProductHeight(height);
 
     }
@@ -60,9 +60,9 @@ const animateProduct = (product) => {
   if (activePanelVisible) {
     switch (product.name) {
       case 'HAVA':
-        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(100%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'HAVA' ? { transform: 'translateX(50%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'EDITH':
-        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-300%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
+        return selectedProduct.name === 'EDITH' ? { transform: 'translateX(-150%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       case 'GRACE':
         return selectedProduct.name === 'GRACE' ? { transform: 'translateX(-100%)', opacity: 0, transition: 'transform 0.5s, opacity 2s' } : { opacity: 0, transform: 'translateY(200%)', transition: 'opacity 1s, transform 2s' };
       default:
@@ -71,7 +71,7 @@ const animateProduct = (product) => {
   } else { //when active panel is not visible 
     return { 
       transform: 'initial', opacity: 1,
-      transition: "transform 1s"
+      transition: "transform 0.5s"
     };
   }
 };

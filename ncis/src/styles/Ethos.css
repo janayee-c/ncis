@@ -1,12 +1,12 @@
 .ethos-section {
   position: relative;
-  padding-top: 5px;
+  padding-top: 0.5em;
   background: #fff;
   width: 100vw;
   z-index: 1;
   display: flex;
   height: auto; 
-  min-height: 40em; 
+  min-height: 32em; 
 }
 
 .econtainer {
@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 1;
   justify-content: center;
-  min-height: 30em; 
+  height: 30em; 
 }
 
 .ethos-slider-container {
@@ -51,7 +51,7 @@
 .ethos-diag {
   position: absolute;
   left: 0;
-  top: 100%; 
+  top: 93%; 
   width: 110%;
   height: 60%;
   z-index: 1;

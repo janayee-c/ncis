@@ -76,6 +76,7 @@
     padding-right: 0em;
     width: 100%; 
     line-height: 1.65em; 
+    white-space: pre-line; /* Preserve line breaks */
 }
 
 .s-team {
@@ -98,11 +99,12 @@
     margin-block-end: 0; 
     font-family: Montserrat; 
     font-size: 0.9em;
-    font-weight: light;
+    font-weight: medium;
     display: inline-block;
     padding-right: 0em;
     width: 100%; 
     line-height: 1.65em; 
+    white-space: pre-line; /* Preserve line breaks */
 }
 
 .execs-diag {

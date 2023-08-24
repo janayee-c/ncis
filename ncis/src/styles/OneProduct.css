@@ -8,18 +8,18 @@
 }
 
 
-
 .product-icon {
-  width: 200px;
-  height: 160px;
+  width: 160px;
+  height: 180px;
   align-self: center; 
   margin: 0;
+
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 .product-icon {
-  max-width: 100px; 
-  max-height: 100px;
+  max-width: 120px; 
+  max-height: 125px;
 }
 }
 

@@ -7,7 +7,7 @@ import { Sogol, Dyhia } from "../images/export";
 const profilesData = [
   {
     name: "DYHIA BELHABIB",
-    title: "Director, Maritime Criminality and Maritime Domain Awareness",
+    title: "Director, Maritime Criminality\n and Maritime Domain Awareness",
     image: Dyhia,
     className: "d-team",
     headingClass: "d-heading",
@@ -15,7 +15,7 @@ const profilesData = [
   },
   {
     name: "SOGOL GHATTAN",
-    title: "Director, Responsible Development of Emerging Technologies",
+    title: "Director, Responsible Development\n of Emerging Technologies",
     image: Sogol,
     className: "s-team",
     headingClass: "s-heading",

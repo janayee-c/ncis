@@ -8,8 +8,9 @@ const OneProduct = forwardRef((props, ref) => {
     return (
       <Container
         ref={ref}
-        width="200px"
-        height="200px"
+        width="225px"
+        height="280px"
+        padding="20px"
         className={`product-container ${isSelected ? 'selected' : ''}`}
         style={animateStyle}
         onClick={onClick}
