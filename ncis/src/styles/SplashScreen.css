@@ -16,6 +16,7 @@ video {
     vertical-align: baseline;
     object-fit: contain;
     overflow: clip;
+    scale: 1.5;
     
 }
 

@@ -12,12 +12,14 @@
 
 #logo {
     align-self: center;
-    scale: 1; 
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    object-fit: fill;
-    height: 80vh; 
+    display: block;
+    margin-left: auto;
+    scale: 0.9; 
+    margin-right: auto;
+    scale:1.1;
+    margin-left: auto;
+    object-fit: contain;
+    height: 180; 
     width: 300;
 }
 
