@@ -8,8 +8,15 @@ import '../../styles/Manual.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
-const After = () => {
+const After = ({curr}) => {
   const [page, setPage] = useState(0);
+
+
+  useEffect(() => {
+    if (curr !== 3) {
+      setPage(0);
+    }
+  }, [curr]);
 
   useEffect(() => {
     const scrollToTop = () => {
