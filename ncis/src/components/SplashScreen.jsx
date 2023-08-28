@@ -12,14 +12,14 @@ const SplashScreen = () => {
   return (
     <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
       <video
-        className="vid"
-        autoPlay
-        muted
-        onEnded={handleVideoEnded}
-        width="500"
-        height="500"
-        playsInline
-        webkit-playsInline 
+    className="vid"
+    autoPlay
+    muted
+    onEnded={handleVideoEnded}
+    width="500"
+    height="500"
+    webkit-playsinline 
+    playsInline
       >
         <source src={Splash} type="video/mp4" />
         Your browser does not support videos.
