@@ -4,8 +4,8 @@ img, #cube {
 
 .hero-section {
   position: relative;
-  min-height: 25em; 
-  max-height: 40em;
+  min-height: 30em; 
+  max-height: 60em;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ img, #cube {
   margin-bottom: 20px; 
 }
 
-@media (orientation:landscape) and (max-height:600px) {
+@media (max-height:600px) {
   .hero-section {
     min-height: 45em; 
   }
@@ -60,8 +60,8 @@ img, #cube {
 
 @media (max-width: 500px) {
   #cube {
-    width: 25em;
-    height: 25em;
+    width: 30em;
+    height: 30em;
   }
 }
 

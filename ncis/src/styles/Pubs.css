@@ -45,6 +45,18 @@
   transform: rotate(-5deg) translateX(-50%);
 }
 
+@media (min-width: 1500px) {
+  .pubs-diag::after {
+    top: -133%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .pubs-diag::after {
+    top: -155%;
+  }
+}
+
 @media (max-width: 1500px) {
   .pubs-diag::after {
     top: -95%;
