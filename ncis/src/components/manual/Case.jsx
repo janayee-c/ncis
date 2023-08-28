@@ -12,7 +12,16 @@ import 'slick-carousel/slick/slick-theme.css';
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
-const Case = () => {
+const Case = ({curr}) => {
+
+
+  useEffect(() => {
+    if (curr !== 4) {
+      setPage(0);
+    }
+  }, [curr]);
+
+  
   const settings = { //for slider
     dots: true,
     infinite: true, 

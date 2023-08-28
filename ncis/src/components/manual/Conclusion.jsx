@@ -1,7 +1,5 @@
 
 import React from 'react'
-import { useEffect } from 'react'
-import { Page } from './export'
 import { Heading } from '../export'
 import { Systems } from '../../images/export'
 import '../../styles/Manual.css'

@@ -8,12 +8,19 @@ import '../../styles/Manual.css'
 
 /* Note that styles such as .page, .head, .next, etc. are in Manual.css to reduce repetition */
 
-const Before = () => {
+const Before = ({curr}) => {
   const [page, setPage] = useState(0);
   const [prevId, setPrevId] = useState(0);
   const [text, setText] = useState('');
   const [text2, setText2] = useState('');
   const { isOpen, onToggle } = useDisclosure();
+
+
+  useEffect(() => {
+    if (curr !== 1) {
+      setPage(0);
+    }
+  }, [curr]);
 
   useEffect(() => {
     const scrollToTop = () => {
