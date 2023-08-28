@@ -55,21 +55,16 @@ const Navbar = () => {
 
   return (
     <>
-      <Box
-        display="flex"
+    <Box display="flex"
         w="100%"
         backgroundColor="#F5F5F5"
-        height="20vh"
-        justifyContent="space-between"
-        alignItems="center"
+        height="23vh"
         fontSize="40px"
-        position="relative"
+        position="relative"  
         className="navbar-box"
-      >
-        <Img id="logo" src={Logo} />
-        
+        flexDirection='row-reverse'>
 
-        <IconButton
+<IconButton
           ref={btnRef}
           icon={<Hamburger
 
@@ -85,19 +80,32 @@ const Navbar = () => {
             toggled={isHamburgerToggled} 
           />}
           edge="end"
-          float="right"
-          marginLeft="20px"
           onMouseEnter={onOpen}
           zIndex={isTopDrawer ? 1 : 9999}
           onClick={isOpen ? onClose : onOpen}
-
-      
+          right={isTopDrawer? 'auto' : '-1em'}
+          marginTop='0.5em'
           variant="unstyled"
           color="black"
           size={isTopDrawer ? 'xl' : 'sm'}
           aria-label="Open Dropdown"
           className="centered-icon"
         />
+        <Box
+        display="flex"
+        w="100%"
+        backgroundColor="#F5F5F5"
+        height="23vh"
+        justifyContent="space-between"
+        alignItems="center"
+        fontSize="40px"
+        position="relative"
+        flexDirection={isTopDrawer ? 'row-reverse' : 'column'}  
+        marginTop={isTopDrawer ? '0' : '1em'}
+      >
+
+        <Img id="logo" src={Logo} />
+      
 
         <Drawer
           isOpen={isOpen}
@@ -157,6 +165,7 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
       </Box> 
+      </Box>
     </>
   );
 };
