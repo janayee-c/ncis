@@ -57,16 +57,28 @@
   position: absolute;
   top: -60%;
   left: 40%;
-  width: 100%;
-  height: 60%;
+  width: 110%;
+  height: 80%;
   background: white;
   transform-origin: 100% 0%;
-  transform: rotate(-5deg) translateX(-50%);
+  transform: rotate(-5deg) translateX(-50%) translateY(-10%);
 }
 
 @media (max-width: 600px) {
 .products-container {
   height: 25em; 
+}
+
+.ps-diag::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: 40%;
+  width: 110%;
+  height: 80%;
+  background: white;
+  transform-origin: 100% 0%;
+  transform: rotate(-5deg) translateX(-50%) translateY(-20%);
 }
 
 .inactiveProductPanel {

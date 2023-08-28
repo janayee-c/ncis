@@ -102,6 +102,7 @@ const Navbar = () => {
         position="relative"
         flexDirection={isTopDrawer ? 'row-reverse' : 'column'}  
         marginTop={isTopDrawer ? '0' : '1em'}
+        marginLeft='1.2em'
       >
 
         <Img id="logo" src={Logo} />
