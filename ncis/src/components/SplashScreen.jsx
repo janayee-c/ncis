@@ -18,6 +18,7 @@ const SplashScreen = () => {
         onEnded={handleVideoEnded}
         width="500"
         height="500"
+        playsInline
         webkit-playsInline 
       >
         <source src={Splash} type="video/mp4" />
