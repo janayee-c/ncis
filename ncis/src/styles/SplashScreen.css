@@ -15,15 +15,10 @@
 .vid {
     vertical-align: baseline;
     object-fit: contain;
+    object-position: center bottom; 
     overflow: clip;
     scale: 1.5;
     
-}
-
-@media (max-width: 800px) {
-    .vid {
-    vertical-align: bottom; 
-    }
 }
 
 .hidden {
