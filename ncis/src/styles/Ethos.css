@@ -102,9 +102,6 @@
   animation: fade-in 0.4s ease-out forwards;
 }
 
-.always-display {
-  opacity: 1; 
-}
 
 @keyframes fade-in {
   0% {
@@ -116,6 +113,11 @@
     transform: translateY(0);
   }
 }
+
+.always-display {
+  opacity: 1; 
+}
+
 
 .et-img {
   margin-top: 2px; 

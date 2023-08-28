@@ -1,7 +1,7 @@
 .article-container {
     display: block;
     margin-top: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-left: 40px;
     padding-right: 40px; 
     position: relative;
@@ -26,14 +26,14 @@
 
 .article-header {
     display: block;
-    font-size: 13px;
+    font-size: 0.8em;
     color: #103A9C;
     font-family: Beckman;
-    font-weight: 430;
+    font-weight: 450;
 }
 
 .article-title {
-    font-size: 15px;
+    font-size: 0.92em;
     font-family: Beckman; 
     font-weight: 400; 
 }
@@ -46,8 +46,8 @@
     font-weight: 400;
     word-spacing:2px;
 
-    font-size: 0.7em;
-    line-height: 1.6;
+    font-size: 0.87em;
+    line-height: 1.7;
     color: #333;
     margin-bottom: 15px;
 
@@ -73,7 +73,7 @@
 .read-link {
     font-family: Beckman;
     color: #103A9C;
-    font-size: 13px; 
+    font-size: 0.8em; 
     font-weight: 300; 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -86,4 +86,11 @@
 
 .hideRead {
     opacity: 0%;
+}
+
+.always-show-read {
+    font-family: Beckman;
+    color: #103A9C;
+    font-size: 0.8em; 
+    font-weight: 300;
 }

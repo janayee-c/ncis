@@ -21,7 +21,7 @@
 
 .pubs-grid {
   z-index: 2;
-  padding: 20px 10px 80px;
+  padding: 20px 5px 80px;
 }
 
 .pubs-diag {
@@ -47,36 +47,36 @@
 
 @media (max-width: 1500px) {
   .pubs-diag::after {
-    top: -90%;
+    top: -95%;
   }
 }
 
 @media (max-width: 1200px) {
   .pubs-diag::after {
-    top: -65%;
+    top: -70%;
   }
 }
 
 @media (max-width: 1000px) {
   .pubs-diag::after {
-    top: -55%;
+    top: -72%;
   }
 }
 
 @media (max-width: 800px) {
   .pubs-diag::after {
-    top: -30%;
+    top: -35%;
   }
 }
 
 @media (max-width: 600px) {
   .pubs-diag::after {
-    top: -20%;
+    top: -25%;
   }
 }
 
 @media (max-width: 400px) {
   .pubs-diag::after {
-    top: -10%;
+    top: -15%;
   }
 }

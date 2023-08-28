@@ -1,8 +1,10 @@
+import { useMediaQuery } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import '../styles/Publication.css';
 
 const Publication = ({ pubHead, title, desc, url }) => {
     const [isHover, setIsHover] = useState(false);
+    const [isMinimizedMode] = useMediaQuery('(max-width: 600px)');
 
     return (
         <a 
@@ -17,7 +19,10 @@ const Publication = ({ pubHead, title, desc, url }) => {
                 <h5 className="article-header">{pubHead}</h5>
                 <h4 className="article-title">{title}</h4>
                 <p className="article-desc">{desc}</p>
-                <h6 className={`read-link ${isHover ? "showRead" : "hideRead"}`}> - Read </h6>
+                <h6   className={`${
+                  (isMinimizedMode) ? 'always-show-read' : `read-link ${isHover ? "showRead" : "hideRead"}`
+                }`}>- Read </h6>
+              
             </div>
         </a>
     );
