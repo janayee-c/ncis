@@ -6,7 +6,7 @@
   z-index: 1;
   display: flex;
   height: auto; 
-  min-height: 32em; 
+  min-height: 34em; 
 }
 
 .econtainer {
@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 1;
   justify-content: center;
-  height: 30em; 
+  height: 35em; 
 }
 
 .ethos-slider-container {
@@ -71,7 +71,7 @@
 
 @media (max-width: 1200px) {
   .ethos-section {
-    min-height: 32em;  
+    min-height: 35em;  
   }
 
   .slider-container {
