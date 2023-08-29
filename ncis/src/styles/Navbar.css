@@ -23,6 +23,12 @@
     width: 300;
 }
 
+@media (max-width: 1000px) {
+    #logo {
+        scale: 0.75;
+    }
+}
+
 @media (max-width: 800px) {
     #logo {
         scale: 0.7;
