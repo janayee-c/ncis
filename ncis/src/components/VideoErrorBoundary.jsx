@@ -17,13 +17,18 @@ class VideoErrorBoundary extends Component {
       }
     });
 
-    // Log the error 
+    // Error is logged in console 
     console.error('Video Error:', error, info);
   }
 
   render() {
     if (this.state.hasError) {
-      return <div>Sorry, something went wrong.</div>;
+      // Render a centred play button for users 
+      return (
+        <div className="centered-play-button" onClick={this.props.onRetry}>
+          Play Video
+        </div>
+      );
     }
 
     return this.props.children;
