@@ -22,9 +22,10 @@ const SplashScreen = () => {
         console.error('Video autoplay error:', error);
         setErrorMessage('Error while trying to play the video.');
         
-         // Try playing the video again
-         videoElement.play().catch(err => {
+        // Try playing the video again
+        videoElement.play().catch(err => {
           console.error('Unable to play video:', err);
+        });
       });
   }, []);
 
