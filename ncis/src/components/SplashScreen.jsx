@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Splash } from '../images/export'
 import '../styles/SplashScreen.css'
+import VideoErrorBoundary from './VideoErrorBoundary'; 
 
 const SplashScreen = () => {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -10,9 +11,10 @@ const SplashScreen = () => {
   };
 
   return (
+    <VideoErrorBoundary>
     <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
       <video
-        className="vid"
+        id="splashVideo"
         autoPlay
         muted
         onEnded={handleVideoEnded}
@@ -25,6 +27,7 @@ const SplashScreen = () => {
         Your browser does not support videos.
       </video>
     </div>
+    </VideoErrorBoundary>
   );
 }
 
