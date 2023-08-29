@@ -17,6 +17,7 @@ video {
     object-fit: contain;
     overflow: clip;
     scale: 1.5;
+    controls: none; 
     
 }
 
@@ -47,11 +48,11 @@ video {
     border-radius: 5px;
   }
 
-  /* Add this to your existing SplashScreen.css */
-video::-webkit-media-controls-start-playback-button {
-    /* Override default styles to center the play button */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+video::-webkit-media-controls{
+    display: none;
+    -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+    display: none;
   }

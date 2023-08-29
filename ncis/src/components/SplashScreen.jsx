@@ -47,7 +47,7 @@ const SplashScreen = () => {
           </div>
         </div>
       )}
-      
+
       <video
         id="splashVideo"
         autoPlay
