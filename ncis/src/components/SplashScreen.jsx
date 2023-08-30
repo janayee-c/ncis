@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Splash } from '../images/export';
 import '../styles/SplashScreen.css';
 
-const SplashScreen = () => {
+const SplashScreen = ({onVideoEnd}) => {
   const [videoEnded, setVideoEnded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false); // Track playing state
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
@@ -16,6 +16,13 @@ const SplashScreen = () => {
       setIsPlaying(true);
     }
   };
+
+  useEffect(() => {
+    document.body.classList.add('no-scroll');
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, []);
 
   useEffect(() => {
     const videoElement = document.getElementById('splashVideo');
@@ -35,10 +42,10 @@ const SplashScreen = () => {
 
   const handleVideoEnded = () => {
     setVideoEnded(true);
+    onVideoEnd(); 
     setTimeout(() => {
       setIsPlaying(false);
-    }, 4000); // 2000 milliseconds (2 seconds)
-    
+    }, 4000); // 4000 milliseconds (4 seconds)
   };
 
   return (

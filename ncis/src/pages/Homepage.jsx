@@ -1,33 +1,36 @@
-import React from 'react'
-import '../styles/Homepage.css'
-import { About, Contact, Ethos, Events, Execs, Goals, Hero, Navbar, PS, Pubs, SplashScreen } from '../components/export'
-import "../styles/Homepage.css"
-import { useMediaQuery } from '@chakra-ui/react'
+import React, { useState } from 'react';
+import '../styles/Homepage.css';
+import { About, Contact, Ethos, Events, Execs, Goals, Hero, Navbar, PS, Pubs, SplashScreen } from '../components/export';
+import { useMediaQuery } from '@chakra-ui/react';
+
 function Homepage() {
+  const [isMobileMode] = useMediaQuery('(max-width: 800px)');
+  const [splashScreenEnded, setSplashScreenEnded] = useState(false);
 
-  const [isMobileMode] = (useMediaQuery('(max-width: 800px)'));
-
-  //ids below are for link for navbar page
+  const handleSplashScreenEnd = () => {
+    setSplashScreenEnded(true);
+  };
 
   return (
     <>
-    <div className="homePage-container">
-    
-    <SplashScreen></SplashScreen>
-
-    <Navbar></Navbar>
-    <Hero></Hero>
-    <Ethos></Ethos>
-    <About></About>
-    <Goals></Goals>
-    <PS></PS>
-    <Execs></Execs>
-    <Pubs></Pubs>
-    <Events></Events>
-    <Contact></Contact>
-    </div>
+      {splashScreenEnded ? (
+        <div className="homePage-container">
+          <Navbar />
+          <Hero />
+          <Ethos />
+          <About />
+          <Goals />
+          <PS />
+          <Execs />
+          <Pubs />
+          <Events />
+          <Contact />
+        </div>
+      ) : (
+        <SplashScreen onVideoEnd={handleSplashScreenEnd} />
+      )}
     </>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

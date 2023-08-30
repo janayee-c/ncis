@@ -69,4 +69,8 @@ video {
     z-index: 1000; 
   }
 
+  /* CSS */
+.no-scroll {
+    overflow: hidden;
+  }
   
