@@ -13,22 +13,26 @@ function Homepage() {
 
   return (
     <>
-      {splashScreenEnded ? (
-        <div className="homePage-container">
-          <Navbar />
-          <Hero />
-          <Ethos />
-          <About />
-          <Goals />
-          <PS />
-          <Execs />
-          <Pubs />
-          <Events />
-          <Contact />
-        </div>
-      ) : (
+      <div className="homePage-container">
+        {/* Render SplashScreen with the handleSplashScreenEnd callback */}
         <SplashScreen onVideoEnd={handleSplashScreenEnd} />
-      )}
+
+        {/* Render other components only when splashScreenEnded is true */}
+        {splashScreenEnded && (
+          <>
+            <Navbar />
+            <Hero />
+            <Ethos />
+            <About />
+            <Goals />
+            <PS />
+            <Execs />
+            <Pubs />
+            <Events />
+            <Contact />
+          </>
+        )}
+      </div>
     </>
   );
 }

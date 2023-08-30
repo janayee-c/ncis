@@ -1,8 +1,9 @@
 .execs-section {
     position: relative;
     width: 100vw;
-    min-height: 70em;
+    min-height: 35em;
     z-index: 1;
+    height: auto; 
 }
 
 .execs-container {
@@ -14,7 +15,7 @@
     background-color: white;
     padding-top: 0; 
     padding-bottom: 4em; 
-    min-height: 40em; 
+    min-height: 25em; 
     height: fit-content; 
     align-items: center;
     display: flex;
@@ -33,12 +34,11 @@
 @media (max-width: 900px) {
     .profiles-container {
         max-width: 95%;
-        min-height: 30em;
+        min-height: 25em;
     }
 
     .execs-container {
         bottom: 9em;
-       
     }
 }
 
@@ -123,7 +123,7 @@
     left: 0%;
     top: 100%; 
     width: 110%;
-    height: 30%;
+    height: 20%;
     z-index: 1;
   }
     
@@ -178,7 +178,7 @@
 
 .execs-container{
     min-height: 20em; 
-    max-height: 40em; 
+    max-height: 30em; 
 }
 }
 
@@ -198,18 +198,7 @@
     }
 }
 
-@media (max-aspect-ratio: 2.5/4) {
-    .execs-section {
-        min-height: 10em; 
-    }
-    
-    }
-    
-@media (min-aspect-ratio: 1.75/3) {
- .execs-section {
-            min-height: 45em; 
-    }
-}
+
 
 
 
