@@ -36,7 +36,7 @@ const SplashScreen = () => {
   const handleVideoEnded = () => {
     setVideoEnded(true);
     setTimeout(() => {
-      setisPlaying(false);
+      setIsPlaying(false);
     }, 4000); // 2000 milliseconds (2 seconds)
     
   };
