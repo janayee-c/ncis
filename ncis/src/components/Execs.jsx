@@ -26,7 +26,7 @@ const profilesData = [
 const Execs = () => {
   return (
     <section id="execs-section" className="execs-section">
-      <Container className="execs-container" maxW="100%">
+      <Container className="execs-container" maxW="100%" paddingBottom="5%" paddingRight="0" paddingLeft="0">
         <Heading center title="EXECUTIVE TEAM" />
 
         <div className="profiles-container">

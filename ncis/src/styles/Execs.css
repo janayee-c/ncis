@@ -13,8 +13,6 @@
     flex-shrink: 0;
     margin-bottom: 0; 
     background-color: white;
-    padding-top: 0; 
-    padding-bottom: 4em; 
     min-height: 25em; 
     height: fit-content; 
     align-items: center;
@@ -38,7 +36,7 @@
     }
 
     .execs-container {
-        bottom: 9em;
+        bottom: 5em;
     }
 }
 
@@ -82,10 +80,11 @@
     font-family: Montserrat; 
     font-size: 0.9em;
     font-weight: medium;
-    display: inline-block;
+    display: block;
     padding-right: 0em;
     width: 100%; 
     line-height: 1.65em; 
+    max-height: 3.3em; /* Adjust this value as needed */
     white-space: pre-line; /* Preserve line breaks */
 }
 
@@ -116,6 +115,13 @@
     }
 }
 
+@media (max-width: 600px) {
+    .s-desc, .d-desc {
+        font-size: 0.5em;
+
+    }
+}
+
 
 
 .execs-diag {
@@ -131,7 +137,7 @@
   .execs-diag::after {
     content: "";
     position: absolute;
-    top: -85%;
+    top: -105%;
     left: 40%;
     width: 110%;
     height: 160%;
@@ -146,13 +152,13 @@
 
   @media (min-width: 1999px) { /*large screens */
     .execs-diag::after {
-    top: -100%; 
+    top: -130%; 
     }
 }
 
   @media (min-width: 1500px) { /*large screens */
     .execs-diag::after {
-    top: -80%; 
+    top: -120%; 
     }
 }
 
