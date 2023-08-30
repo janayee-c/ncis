@@ -4,6 +4,7 @@ import '../styles/SplashScreen.css';
 
 const SplashScreen = () => {
   const [videoEnded, setVideoEnded] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false); // Track playing state
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
 
   const handlePlayButton = () => {
@@ -12,6 +13,7 @@ const SplashScreen = () => {
       videoElement.play().catch(err => {
         console.error('Unable to play video:', err);
       });
+      setIsPlaying(true);
     }
   };
 
@@ -23,28 +25,27 @@ const SplashScreen = () => {
       .then(() => {
         if (videoElement.paused) {
           setErrorMessage('Video playback started but was immediately paused.');
-          handlePlayButton(); // Trigger play button 
         }
       })
       .catch(error => {
         console.error('Video autoplay error:', error);
         setErrorMessage('Play to Access Site');
-        handlePlayButton(); // Trigger play button
       });
   }, []);
 
   const handleVideoEnded = () => {
     setVideoEnded(true);
+    setTimeout(() => {
+      setisPlaying(false);
+    }, 4000); // 2000 milliseconds (2 seconds)
+    
   };
 
   return (
     <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
-      
       {errorMessage && (
-        <div className="error-message">
-          <div className="centered-play-button" onClick={handlePlayButton}>
-            Play Video
-          </div>
+        <div className={`centered-play-button ${isPlaying ? 'hide-play' : ''}`} onClick={handlePlayButton}>
+          ENTER
         </div>
       )}
 
@@ -57,6 +58,8 @@ const SplashScreen = () => {
         height="500"
         webkit-playsinline
         playsInline
+        disablePictureInPicture
+        disableRemotePlayback
       >
         <source src={Splash} type="video/mp4" />
         Your browser does not support videos.
