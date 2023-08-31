@@ -4,6 +4,13 @@
 
 .panel-container {
   min-height: max-content; 
+  transform: translateX(-5vw);
+}
+
+.product-header-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; 
 }
 
 .product-name, .product-description, .contact {
@@ -53,7 +60,7 @@
 }
 
 .close-button {
-    align-self: left;
+    align-self: right;
     height: 40px;
     width: 40px;
 }
@@ -68,8 +75,8 @@ body{
   margin: auto;
   width: 40px;
   height: 40px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -79,7 +86,7 @@ body{
   height: 2px;
   width: 20px;
   position: absolute;
-  margin-top: 24px;
+  margin-top: 0px;
   background-color: black;
   border-radius: 2px;
   transform: rotate(45deg);
@@ -90,7 +97,7 @@ body{
   height: 2px;
   width: 20px;
   position: absolute;
-  margin-top: 24px;
+  margin-top: 0px;
   background-color: black;
   border-radius: 2px;
   transform: rotate(-45deg);

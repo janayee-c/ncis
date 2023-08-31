@@ -34,23 +34,29 @@ const ProductPanel = (props) => {
     };
 
     return (
-      <Container className="panel-container">
-        <h3 className="product-name" style={translateStyle(0.6)}>{heading}</h3>
+      <Container className="panel-container" height="500px">
+        <div className="product-header-container" style={translateStyle(0.6)}>
+          <h3 className="product-name">{heading}</h3>
+          <button className="close-button" onClick={onClick}>
+            <div className="close-container">
+              <div className="leftright"></div>
+              <div className="rightleft"></div>
+            </div>
+          </button>
+        </div>
         <p className="product-description" style={translateStyle(0.9)}>{description}</p>
         <p className="contact" style={translateStyle(0.7)}>
           <a href="mailto:info@ncis-tech.com">Contact Us</a> to learn more.
         </p>
-        <div></div>
-        <button className="close-button" 
-                style={translateStyle(0.7)} 
-                onClick={onClick}>
-                  <div class="close-container">
-                      <div class="leftright"></div>
-                      <div class="rightleft"></div>
-                  </div>
-                </button>
+        {/* ... */}
       </Container>
     );
 };
 
 export default ProductPanel;
+
+
+
+
+
+
