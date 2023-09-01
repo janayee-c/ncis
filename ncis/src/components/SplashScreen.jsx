@@ -4,18 +4,7 @@ import '../styles/SplashScreen.css';
 
 const SplashScreen = ({onVideoEnd}) => {
   const [videoEnded, setVideoEnded] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false); // Track playing state
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
-
-  const handlePlayButton = () => {
-    const videoElement = document.getElementById('splashVideo');
-    if (videoElement) {
-      videoElement.play().catch(err => {
-        console.error('Unable to play video:', err);
-      });
-      setIsPlaying(true);
-    }
-  };
 
   useEffect(() => {
     document.body.classList.add('no-scroll');
@@ -43,36 +32,53 @@ const SplashScreen = ({onVideoEnd}) => {
   const handleVideoEnded = () => {
     setVideoEnded(true);
     onVideoEnd();
-    setTimeout(() => {
-      setIsPlaying(false);
-    }, 4000); // 4000 milliseconds (4 seconds)
   };
 
+
   return (
-    <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
-      {errorMessage && (
-        <div className={`centered-play-button ${isPlaying ? 'hide-play' : ''}`} onClick={handlePlayButton}>
-          ENTER
+    <>
+      {errorMessage ? (
+        <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
+          
+          <video
+            id="splashVideo"
+            autoPlay
+            muted
+            onEnded={handleVideoEnded}
+            width="500"
+            height="500"
+            webkit-playsinline
+            playsInline
+            disablePictureInPicture
+            disableRemotePlayback
+          >
+            <source src={Splash} type="video/mp4" />
+            Your browser does not support videos.
+          </video>
+        </div>
+      ) : (
+        <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
+          
+          <video
+            id="splashVideo"
+            autoPlay
+            muted
+            onEnded={handleVideoEnded}
+            width="500"
+            height="500"
+            webkit-playsinline
+            playsInline
+            disablePictureInPicture
+            disableRemotePlayback
+          >
+            <source src={Splash} type="video/mp4" />
+            Your browser does not support videos.
+          </video>
         </div>
       )}
-
-      <video
-        id="splashVideo"
-        autoPlay
-        muted
-        onEnded={handleVideoEnded}
-        width="500"
-        height="500"
-        webkit-playsinline
-        playsInline
-        disablePictureInPicture
-        disableRemotePlayback
-      >
-        <source src={Splash} type="video/mp4" />
-        Your browser does not support videos.
-      </video>
-    </div>
+    </>
   );
 };
+  
 
 export default SplashScreen;

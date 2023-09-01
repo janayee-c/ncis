@@ -37,7 +37,16 @@
 .product-description.invisible, 
 .contact.invisible {
     transform: translateY(20%);
-    color: blue; 
+    display: none; 
+    line-height: 0px; 
+    font-size: 0.05px; 
+
+}
+
+/* make the closed description smaller  */
+.minimized-description { 
+  font-size: 0.1em; 
+  line-height: 0px; 
 }
 
 .product-name.visible, 

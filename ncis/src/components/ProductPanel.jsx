@@ -34,7 +34,7 @@ const ProductPanel = (props) => {
     };
 
     return (
-      <Container className="panel-container" height="500px">
+      <Container className="panel-container" height="50px">
         <div className="product-header-container" style={translateStyle(0.6)}>
           <h3 className="product-name">{heading}</h3>
           <button className="close-button" onClick={onClick}>
@@ -44,7 +44,7 @@ const ProductPanel = (props) => {
             </div>
           </button>
         </div>
-        <p className="product-description" style={translateStyle(0.9)}>{description}</p>
+        <p className={`${isOpen ? 'product-description' : 'minimized-description'}`} style={translateStyle(0.9)}>{description}</p>
         <p className="contact" style={translateStyle(0.7)}>
           <a href="mailto:info@ncis-tech.com">Contact Us</a> to learn more.
         </p>

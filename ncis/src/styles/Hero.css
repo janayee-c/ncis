@@ -1,5 +1,6 @@
 img, #cube {
   object-fit: cover;
+  margin-left: 12px; 
 }
 
 .hero-section {
