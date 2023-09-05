@@ -137,7 +137,7 @@
   .execs-diag::after {
     content: "";
     position: absolute;
-    top: -105%;
+    top: -120%;
     left: 40%;
     width: 110%;
     height: 160%;
@@ -162,9 +162,15 @@
     }
 }
 
+@media (min-width: 900px) { /*large screens */
+    .execs-diag::after {
+    top: -140%; 
+    }
+}
+
   @media (max-width: 900px) { /*large screens */
     .execs-diag::after {
-    top: -40%; 
+    top: -20%; 
     }
 }
 
@@ -195,12 +201,6 @@
 
     .profile {
         width: 300px;
-    }
-}
-
-@media (min-width: 1022px) {
-    .profile {
-        margin: 20px; 
     }
 }
 

@@ -4,7 +4,7 @@
   padding-top: 5px;
   width: 100vw;
   height: max-content;
-  min-height: 45em;
+  min-height: 40em;
   z-index: 1;
 }
 
@@ -13,7 +13,7 @@
   z-index: 1;
   width: 100%;
   height: max-content;
-  min-height: 50em;
+  min-height: 40em;
   flex-shrink: 0;
   margin-bottom: 0;
 }

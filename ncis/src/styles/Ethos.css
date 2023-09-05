@@ -85,6 +85,12 @@
 
 @media (min-width: 1100px) {
   .ethos-diag::after {
+    top: -45%; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .ethos-diag::after {
     top: -75%; 
   }
 }

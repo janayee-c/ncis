@@ -7,7 +7,7 @@ import { TLMDS } from "../images/export";
 const Events = () => {
   return (
     <section id="events-section" className="events-section">
-      <Container className="events-container" maxW="100%">
+      <Container className="events-container" maxW="100%" paddingLeft="0" paddingRight="0">
         <Heading center title="EVENTS" />
         <div className="events-content">
           Annual Event: <a href="https://tlmdsummit.com/">Tech, Law, and Maritime Defense Summit</a>

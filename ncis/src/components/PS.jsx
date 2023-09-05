@@ -37,7 +37,7 @@ const PS = () => {
     const productRef = refProducts.current[product.name];
     if (productRef && isMinimizedMode) { 
 
-      let height = 550;
+      let height = 450;
       // if (product.name === "GRACE") { //uncomment if grace is higher
       //   height = 450;
       // }
@@ -81,7 +81,7 @@ const animateProduct = (product) => {
       <Container className="products-container" maxW="100%">
         <Heading center={true} title="PRODUCTS & SERVICES" />
          
-        <Container maxW="100%" className={activePanelVisible ? 'panelSwitch' : ''}>
+        <Container maxW="100%" padding="0" className={activePanelVisible ? 'panelSwitch' : ''}>
           <div className="inactiveProductPanel">
           
 

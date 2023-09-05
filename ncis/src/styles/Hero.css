@@ -29,8 +29,8 @@ img, #cube {
 
 #cube {
   margin-top: 5%;
-  transform: translateY(15%);
-  transition: all 0.25s ease;
+  transform: translateY(25%);
+  transition: all 0.3s ease;
   scale: 1;
   width: 40em;
   height: 40em;  

@@ -44,11 +44,11 @@ const ProductPanel = (props) => {
             </div>
           </button>
         </div>
+
         <p className={`${isOpen ? 'product-description' : 'minimized-description'}`} style={translateStyle(0.9)}>{description}</p>
         <p className="contact" style={translateStyle(0.7)}>
-          <a href="mailto:info@ncis-tech.com">Contact Us</a> to learn more.
+          <span className="contact-text"><u>Contact Us</u></span> to learn more.
         </p>
-        {/* ... */}
       </Container>
     );
 };

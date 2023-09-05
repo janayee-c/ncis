@@ -1,16 +1,20 @@
 import React, { forwardRef } from 'react';
 import '../styles/OneProduct.css';
-import { Container } from '@chakra-ui/react';
+import { Container, useMediaQuery } from '@chakra-ui/react';
+
+
 
 const OneProduct = forwardRef((props, ref) => {
     const { name, imgSource, animateStyle, isSelected, onClick } = props;
 
+    const [isMinimizedMode] = useMediaQuery('(max-width: 800px)');
+    const [isMobileMode] = useMediaQuery('(max-width: 400px)');
     return (
       <Container
         ref={ref}
-        width="225px"
-        height="280px"
-        padding="20px"
+        width={isMinimizedMode ? (isMobileMode ? "225px" : "280px") : "225px"}
+        height={isMinimizedMode ?  "270px" : "280px" }
+        padding="15px"
         className={`product-container ${isSelected ? 'selected' : ''}`}
         style={animateStyle}
         onClick={onClick}

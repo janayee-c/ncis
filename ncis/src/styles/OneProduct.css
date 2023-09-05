@@ -23,6 +23,14 @@
 }
 }
 
+@media (max-width: 600px) {
+  .product-icon {
+    max-width: 110px; 
+    max-height: 110px;
+  }
+  }
+  
+
 .raised { 
   margin-top: 0; 
   margin-bottom: 0; 

@@ -7,6 +7,12 @@
   transform: translateX(-5vw);
 }
 
+@media (max-width: 800px) {
+  .panel-container {
+    transform: translateX(-3); 
+  }
+}
+
 
 .product-header-container {
   display: flex;
@@ -20,6 +26,19 @@
     font-weight: normal;
     font-style: normal;
     line-height: 1.65em;
+    letter-spacing: 0.01em; 
+    word-spacing: 0.05em; 
+    
+}
+
+@media (max-width: 800px) {
+  .product-description {
+    display: flex; 
+    margin-top: 10px; 
+    width: 95vw; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .product-name {
@@ -29,9 +48,11 @@
     text-align: left; 
 }
 
-.product-description, .contact {
+@media (max-width: 600px) {
+.product-description, .contact, .contact-text {
     font-family: Montserrat;
-    font-size: 0.9em;
+    font-size: 0.8em;
+}
 }
 
 .product-name.invisible, 
@@ -71,6 +92,7 @@
 
 .close-button {
     align-self: right;
+    transform: translateX(40px);
     height: 40px;
     width: 40px;
 }
@@ -124,5 +146,16 @@ body{
 }
 .close-container:hover label{
   opacity: 1;
+}
+
+.contact {
+  font-family: Montserrat; 
+  font-weight: normal; 
+  font-size: 0.9em;
+}
+
+.contact-text {
+  font-family: Montserrat;
+  font-weight: 450;
 }
 
