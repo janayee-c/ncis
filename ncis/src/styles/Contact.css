@@ -1,8 +1,7 @@
 .contact-section {
     position: relative;
     background-color: whitesmoke;  
-    height: max-content; 
-    min-height: 30em;
+    height: auto;
     padding-top: 30px;
     width: 100vw;
     align-items: center;
@@ -23,8 +22,17 @@
 }
 
 .contact-content {
-    padding-top: 70px; 
+    padding-top: 60px; 
 }
+
+@media (min-width: 600px) {
+    .contact-content {
+        height: 40px; 
+    }
+
+}
+
+
 
 #contact-grid {
     place-items: start; 
@@ -36,16 +44,40 @@
     padding-left: 70px; 
 }
 
+
 .contact-block > img {
-   width: 40px; 
+   width: 35px; 
+   margin: 0; 
 }
 
 .contact-block > p {
     padding-left: 10px; 
 }
 
+@media (max-width: 600px) {
+    .contact-block {
+    padding: 0; 
+    height: auto; 
+    }
+
+    .contact-block > p {
+        margin: 0; 
+        padding: 0; 
+        padding-left: 10px; 
+        margin-top: 0;
+    }
+}
+
 .NCIS-contact-logo {
     transform: scale(0.65);
+    margin-bottom: 30px; 
+}
+
+@media (max-width: 600px) {
+    .NCIS-contact-logo {
+    transform: scale(1); 
+    }
+
 }
 
 .contact-divider {
@@ -55,10 +87,24 @@
     width: 87.5%;
 }
 
+@media (max-width: 600px) {
+    .contact-divider {
+        margin: 0; 
+        width: 100%;
+    }
+
+}
+
 .socials-block {
     padding-left: 75px; 
     display: flex; 
     align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+    .socials-block {
+        padding: 0; 
+    }
 }
 
 .socials-icon {

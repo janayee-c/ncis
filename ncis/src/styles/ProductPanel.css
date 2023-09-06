@@ -22,12 +22,13 @@
 
 .product-name, .product-description, .contact {
     display: block;
-    margin: 1em 0;
+    margin: 1em 20px;
     font-weight: normal;
     font-style: normal;
     line-height: 1.65em;
     letter-spacing: 0.01em; 
     word-spacing: 0.05em; 
+    font-family: Montserrat;
     
 }
 
@@ -38,6 +39,7 @@
     width: 95vw; 
     left: 50%;
     transform: translateX(-50%);
+    font-family: Montserrat;
   }
 }
 
