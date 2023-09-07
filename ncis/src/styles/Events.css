@@ -82,3 +82,10 @@
       top: -60%; 
   }
 }
+
+@media (max-width: 900px) {
+  .events-diag::after {
+      top: -40%; 
+  }
+}
+

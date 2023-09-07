@@ -35,6 +35,12 @@
   }
 }
 
+@media (max-width: 500px) {
+  .about-container {
+    min-height: 25em; 
+  }
+}
+
 .about-content {
   padding: 10px 2px 40px;
   word-break: break-word;
@@ -144,7 +150,7 @@
 
 @media (max-width: 500px) {
   .about-diag::after {
-    top: -15%;
+    top: -20%;
   }
 }
 

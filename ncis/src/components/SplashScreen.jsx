@@ -3,7 +3,7 @@ import { Splash } from '../images/export';
 import '../styles/SplashScreen.css';
 import { NCISLoadingImage } from '../images/export';
 
-const SplashScreen = ({onVideoEnd}) => {
+const SplashScreen = ({ onVideoEnd }) => {
   const [videoEnded, setVideoEnded] = useState(false);
   const [showPicture, setShowPicture] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
@@ -25,7 +25,7 @@ const SplashScreen = ({onVideoEnd}) => {
           setErrorMessage('Video playback started but was immediately paused.');
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Video autoplay error:', error);
         setErrorMessage('Play to Access Site');
       });
@@ -41,26 +41,27 @@ const SplashScreen = ({onVideoEnd}) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [ ,onVideoEnd]);
-
+  }, [onVideoEnd]);
 
   const handleVideoEnded = () => {
     setVideoEnded(true);
     onVideoEnd();
   };
 
-
   return (
     <>
       {errorMessage ? (
-       <div className={`splashscreen ${showPicture ? '' : 'hidden'}`}>
-       {showPicture && (
-         <img src={NCISLoadingImage} alt="Placeholder" className="placeholder-image" />
-       )}
-     </div>
+        <div className={`splashscreen ${showPicture ? '' : 'hidden'}`}>
+          {showPicture && (
+            <img
+              src={NCISLoadingImage}
+              alt="Placeholder"
+              className={`ncisloading ${showPicture ? 'fade-out' : ''}`}
+            />
+          )}
+        </div>
       ) : (
         <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
-          
           <video
             id="splashVideo"
             autoPlay

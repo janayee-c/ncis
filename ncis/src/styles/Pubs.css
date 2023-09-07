@@ -59,7 +59,7 @@
 
 @media (max-width: 1500px) {
   .pubs-diag::after {
-    top: -95%;
+    top: -108%;
   }
 }
 
@@ -75,9 +75,15 @@
   }
 }
 
+@media (max-width: 900px) {
+  .pubs-diag::after {
+    top: -70%;
+  }
+}
+
 @media (max-width: 800px) {
   .pubs-diag::after {
-    top: -35%;
+    top: -50%;
   }
 }
 

@@ -12,13 +12,17 @@
     transition: transform 1.25s ease-in-out;
 }
 
+.ncisloading {
+    scale: 1.5; 
+}
+
 
 video {
     vertical-align: baseline;
     align-self: center; 
     object-fit: contain;
     overflow: clip;
-    scale: 1.5; 
+    scale: 1.6; 
 
 }
 
@@ -78,4 +82,15 @@ video {
     z-index: 1000; 
   }
 
+  .fade-out {
+    animation: fadeOut 1.5s ease-in-out;
+  }
   
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
