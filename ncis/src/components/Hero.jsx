@@ -1,16 +1,34 @@
-import { Container } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
+import { Container, useMediaQuery } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Hero.css';
 
 const Hero = () => {
-  const scrollAnimate = () => {
-    var scrollPosition = window.scrollY || window.pageYOffset;
-    var cubeElement = document.getElementById('cube');
-    cubeElement.style.transform = 'translateY(' + (-scrollPosition / 10) + 'px)'; 
-  };
+  const [isMinimizedMode] = useState(useMediaQuery('max-width:900px'));
+  const [scrollDirection, setScrollDirection] = useState('down');
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
-  /* scrollAnimate must be defined before useEffect() or else a new reference to scrollAnimate is defined 
-  each time and the original is not unmounted */
+  const scrollAnimate = () => {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const cubeElement = document.getElementById('cube');
+
+    if (isMinimizedMode) {
+      if (scrollY > prevScrollY) {
+        // Scrolling down, translate the cube by 20px
+        cubeElement.style.transform = 'translateY(-80px)';
+        setScrollDirection('down');
+      } else {
+        // Scrolling up, reset the cube to its normal position
+        cubeElement.style.transform = 'translateY(0)';
+        setScrollDirection('up');
+      }
+    } else {
+      // In non-minimized mode, apply your original transformation
+      cubeElement.style.transform = 'translateY(' + (-scrollY / 4) + 'px)';
+    }
+
+    // Update the previous scroll position
+    setPrevScrollY(scrollY);
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', scrollAnimate);
@@ -21,12 +39,12 @@ const Hero = () => {
   }, []);
 
   return (
-<section id="hero-section" className="hero-section">
-  <div className="cubic-container">
-    <img id="cube" src={require('../images/cube.png')} alt="Cube" />
-  </div>
-  <div className="hero-diag"></div>
-</section>
+    <section id="hero-section" className="hero-section">
+      <div className="cubic-container">
+        <img id="cube" src={require('../images/cube.png')} alt="Cube" />
+      </div>
+      <div className="hero-diag"></div>
+    </section>
   );
 };
 

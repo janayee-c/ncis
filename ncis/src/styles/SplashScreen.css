@@ -37,6 +37,15 @@ video {
     -webkit-transform: translate(-0, -100%);
 }
 
+.mobile-hidden {
+    transform: translate(0, -100%);
+    -webkit-transform: translate(-0, -100%);
+    transition: all 1s ease-in-out;
+    position: fixed;
+    top: 0; /* Adjust the value as needed to position the image */
+    left: 0;
+}
+
 .hide-play {
     opacity: 0;
     display: none; 

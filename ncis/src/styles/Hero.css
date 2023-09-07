@@ -29,13 +29,20 @@ img, #cube {
 
 #cube {
   margin-top: 5%;
-  transform: translateY(25%);
+  transform: translateY(5%);
   transition: all 0.3s ease;
   scale: 1;
   width: 40em;
   height: 40em;  
   z-index: 300;
   position: relative;
+}
+
+@media (max-width: 1000px) {
+  #cube {
+  transition: all 0.5s ease-in-out; 
+  -webkit-transition: all 0.75s ease-in-out;
+  }
 }
 
 @media (min-width: 1022px) and (max-width: 1400px) {
@@ -102,3 +109,9 @@ img, #cube {
     height: 90%;
   }
 }
+
+/* Add this CSS class to your stylesheet */
+.cube-scroll-animation {
+  transition: transform 0.2s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+

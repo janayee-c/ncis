@@ -30,6 +30,7 @@ import Laws from './laws.svg'
 import Decisions from './decisions.svg'
 import Misusing from './misusing.svg'
 import Deploy from './deploy.svg'
+import NCISLoadingImage from "./NCISLOADING.png"
 
 export {
     Cube,
@@ -37,6 +38,7 @@ export {
     Dyhia,
     Sogol,
     mobileGoals,
+    NCISLoadingImage,
     desktopGoals,
     TLMDS,
     Twitter,
