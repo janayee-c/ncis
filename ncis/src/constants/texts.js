@@ -1,7 +1,7 @@
 export const DEVICETEXTS = {
     grace: "Get actionable and legal proof intelligence for risk assessment, situational awareness, and MDA needs. From accessing criminal records to comprehensive investigations, Grace provides actionable intelligence for targeting patrolling, and informed decisions.",
     hava: "Access ownership networks, financial flows, and crime intelligence.",
-    edith: "Track vessels of all sizes in real time using Edith Premium Tracking Technology. Edith is built on the notion of adaptability and access.",
+    edith: "Track vessels of all sizes in real time using Edith Premium Tracking Technology. \n Edith is built on the notion of adaptability and access.",
     clark: "n/a",
 } 
 

@@ -30,7 +30,7 @@ import Laws from './laws.svg'
 import Decisions from './decisions.svg'
 import Misusing from './misusing.svg'
 import Deploy from './deploy.svg'
-import NCISLoadingImage from "./NCISLOADING.png"
+import NCISLoadingImage from "./ncisload.png"
 
 export {
     Cube,

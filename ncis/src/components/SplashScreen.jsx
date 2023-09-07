@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Splash } from '../images/export';
 import '../styles/SplashScreen.css';
-import { NCISLoadingImage } from '../images/export';
+import { NCISLoadingImage, Logo } from '../images/export';
 
 const SplashScreen = ({ onVideoEnd }) => {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -17,31 +17,40 @@ const SplashScreen = ({ onVideoEnd }) => {
 
   useEffect(() => {
     const videoElement = document.getElementById('splashVideo');
-    const playPromise = videoElement.play();
 
-    playPromise
-      .then(() => {
-        if (videoElement.paused) {
-          setErrorMessage('Video playback started but was immediately paused.');
-        }
-      })
-      .catch((error) => {
+    const playVideo = () => {
+      videoElement.play().catch((error) => {
         console.error('Video autoplay error:', error);
         setErrorMessage('Play to Access Site');
       });
+    };
+
+    // Check if the video element is ready (loadedmetadata event) before attempting to play
+    videoElement.addEventListener('loadedmetadata', () => {
+      // Delay autoplay by 2 seconds
+      setTimeout(() => {
+        playVideo();
+      }, 800);
+    });
+
+    // Cleanup: Remove the event listener when the component unmounts
+    return () => {
+      videoElement.removeEventListener('loadedmetadata', playVideo);
+    };
   }, []);
 
   useEffect(() => {
-    // After 2 seconds, hide the picture
-    const timer = setTimeout(() => {
-      onVideoEnd();
-      setShowPicture(false);
-    }, 1000);
+    if (errorMessage) {
+      const timer = setTimeout(() => {
+        onVideoEnd();
+        setShowPicture(false);
+      }, 1500);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [onVideoEnd]);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [errorMessage, onVideoEnd]);
 
   const handleVideoEnded = () => {
     setVideoEnded(true);
@@ -56,6 +65,7 @@ const SplashScreen = ({ onVideoEnd }) => {
             <img
               src={NCISLoadingImage}
               alt="Placeholder"
+              style={{ alignSelf: 'center', transform: 'translateY(0)' }}
               className={`ncisloading ${showPicture ? 'fade-out' : ''}`}
             />
           )}
@@ -64,7 +74,6 @@ const SplashScreen = ({ onVideoEnd }) => {
         <div className={`splashscreen ${videoEnded ? 'hidden' : ''}`}>
           <video
             id="splashVideo"
-            autoPlay
             muted
             onEnded={handleVideoEnded}
             width="500"
@@ -73,6 +82,10 @@ const SplashScreen = ({ onVideoEnd }) => {
             playsInline
             disablePictureInPicture
             disableRemotePlayback
+            style={{
+              position: 'absolute', // Adjust as needed
+              alignSelf: 'center',
+            }}
           >
             <source src={Splash} type="video/mp4" />
             Your browser does not support videos.
