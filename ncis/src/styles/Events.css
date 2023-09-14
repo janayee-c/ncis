@@ -22,12 +22,17 @@
   justify-content: center;
   flex-direction: column;
   background-color: white; 
+  font-family: Montserrat;
 }
 
 .events-content {
   text-align: center;
-  align-items: center;
+  font-family: Montserrat;
+  font-size: 0.9rem;
+  word-spacing: 0.05em;
+  z-index: 2; 
 }
+
 
 .events-image {
   padding: 50px 0;

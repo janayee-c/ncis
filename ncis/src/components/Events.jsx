@@ -10,7 +10,7 @@ const Events = () => {
       <Container className="events-container" maxW="100%" paddingLeft="0" paddingRight="0">
         <Heading center title="EVENTS" />
         <div className="events-content">
-          Annual Event: <a href="https://tlmdsummit.com/">Tech, Law, and Maritime Defense Summit</a>
+          <p>Annual Event: <u><a href="https://tlmdsummit.com/">Tech, Law and Maritime Defense </a></u></p>
           <img className="events-image" src={TLMDS} alt="Tech, Law, and Maritime Defense Summit" />
           <p className="events-desc">The Tech, Law, and Maritime Defense Summit is a three-day symposium that brings together researchers, government leaders, and industry practitioners concerned with the application of emerging technologies such as Artificial Intelligence in addressing challenges in the maritime domain.</p>
         </div>
@@ -21,3 +21,5 @@ const Events = () => {
 }
 
 export default Events;
+
+
