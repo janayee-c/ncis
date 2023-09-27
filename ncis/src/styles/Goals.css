@@ -48,6 +48,7 @@
     max-height: 102%;
     position: static;
     transform: none;
+    margin-left: -10px; 
   }
 
   .goals-section {

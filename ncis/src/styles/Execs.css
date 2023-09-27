@@ -111,13 +111,13 @@
 
 @media (max-width: 900px) {
     .s-heading, .d-heading {
-        font-size: 0.9em; 
+        font-size: 0.65em; 
     }
 }
 
 @media (max-width: 600px) {
     .s-desc, .d-desc {
-        font-size: 0.65em;
+        font-size: 0.5em;
 
     }
 }
@@ -202,6 +202,7 @@
 
 @media (max-width: 1022px) {
     .profile-img {
+        margin: 0; 
         margin-bottom: -10px;
     }
 

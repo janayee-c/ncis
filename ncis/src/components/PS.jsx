@@ -37,7 +37,7 @@ const PS = () => {
     const productRef = refProducts.current[product.name];
     if (productRef && isMinimizedMode) { 
 
-      let height = 450;
+      let height = 350;
       // if (product.name === "GRACE") { //uncomment if grace is higher
       //   height = 450;
       // }

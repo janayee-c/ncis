@@ -13,14 +13,14 @@ const OneProduct = forwardRef((props, ref) => {
       <Container
         ref={ref}
         width={isMinimizedMode ? (isMobileMode ? "225px" : "280px") : "225px"}
-        height={isMinimizedMode ?  "270px" : "280px" }
+        height={isMinimizedMode ?  "200px" : "280px" }
         padding="15px"
         className={`product-container ${isSelected ? 'selected' : ''}`}
         style={animateStyle}
         onClick={onClick}
       >
         <img className="product-icon" src={imgSource} alt={name} />
-        <h2 className="product-name">
+        <h2 className="display-product-name">
           {name}
         </h2>
       </Container>
