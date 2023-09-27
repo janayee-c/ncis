@@ -18,8 +18,16 @@
 }
 
 .triangle {
-  display: inline-block;
+  display: inline;
   width: 15px;
+  margin-right: 2px;
+  transform: translateY(1px);
+}
+
+@media (min-width: 600px) {
+  .triangle {
+  width: 20px; 
+  }
 }
 
 .centered {
