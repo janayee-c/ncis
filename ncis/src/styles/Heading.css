@@ -21,10 +21,10 @@
   display: inline;
   width: 15px;
   margin-right: 2px;
-  transform: translateY(1px);
+  transform: translateY(1.5px);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .triangle {
   width: 20px; 
   }
