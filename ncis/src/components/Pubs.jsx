@@ -51,7 +51,7 @@ const Pubs = () => {
         <Container className="pubs-container" maxW="100%">
           <Heading center={true} title="PUBLICATIONS & MEDIA" />
           <div className="pubs-grid">
-            <Grid templateColumns={gridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="10px" paddingTop="0px">
+            <Grid templateColumns={gridStyle} templateRows="repeat(300px)" justifyItems="center" gap={1} padding="0px" paddingTop="0px">
               {publications.map((publication, index) => (
                 <GridItem key={index} colSpan={1} rowSpan={1}>
                   <Publication

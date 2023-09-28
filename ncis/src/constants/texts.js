@@ -6,7 +6,7 @@ export const DEVICETEXTS = {
 } 
 
 export const PUBTEXTS = {
-    fishCrimes: "This study provides a global assessment of the linkages between observed fisheries-related offenses across the oceans between 200 and 2020.",
+    fishCrimes: "This study provides a global assessment of the linkages between observed fisheries-related offenses across the oceans between 2000 and 2020.",
     highSeas: "In part IV of The Catch, the host examines the international efforts to curb illegal, unregulated, and unreported fishing.",
     narcoFish: "A key obstacle to understanding the scope of this problem is the limited data on activities that are intentionally obscured, such as drug trafficking.",
     behaviouralResearch: "Behavioural science can enhance ocean sustainability by providing insights onto illegal fishing. Current enforcement criminalizes small-scale fishers and fails to address root causes, letting large-scale illegal fishing off the hook.",
